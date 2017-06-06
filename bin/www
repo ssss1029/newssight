@@ -1,6 +1,15 @@
 #!/usr/bin/env node
 
 /**
+ * Setting up process.env stuff
+ */
+var addons = require("../process-env-addons");
+for (var item in addons) {
+  process.env[item] = addons[item];
+}
+
+
+/**
  * Module dependencies.
  */
 
