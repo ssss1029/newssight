@@ -52,7 +52,9 @@ var ArticleSchema = new Schema({
             score : Number // From -1.0 to 1.0
             label : String // e.g. negative 
         }
-    }
+    },
+
+    analyzedText : String // The entire contents of the article
 });
 
 var Article = mongoose.model('Article', ArticleSchema);
