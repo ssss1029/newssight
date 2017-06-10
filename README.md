@@ -6,5 +6,7 @@ To run:
 
 ```
 npm install 
+sudo mongod
+redis-server
 node serve
 ```
