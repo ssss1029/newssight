@@ -57,4 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
-process-env-addons.js
+./process-env-addons.js
