@@ -3,5 +3,5 @@
 module.exports = {
 	DEBUG : 'newssight:*',
 	NEWS_API_KEY : 'HI',
-	IBM_API_KEY : 'HI'
+	IBM_API_KEY : 'HELLO'
 }
