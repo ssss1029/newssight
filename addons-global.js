@@ -3,14 +3,10 @@
  */
 
 module.exports = {
-    NEWS_API_ALLOWED_SOURCES : [
-        "bbc-news", 
-        "cnn",
-        "usa-today", 
-        "the-guardian-uk", 
-        "google-news", 
-        "the-washington-post", 
-        "time", 
-        "breitbart-news"
-    ]
+    NEWS_API_ALLOWED_SOURCES : { 
+        // undefined means that this isnt passed into the HTTP query
+        category : undefined,
+        language : "en",
+        country : undefined
+    }
 }

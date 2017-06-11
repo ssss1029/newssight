@@ -33,24 +33,38 @@ if (process.env.NODE_ENV == 'development') {
 }
 
 
+/**
+ * Process for updating the database of news articles and watson results
+ */
 queue.process('main-update-db-worker', function(job, ctx, done) {
     var delay =  5000; // Delay is in milliseconds : 300000 ms = 5 minutes
     var job = createDelayedMainUpdateJob(delay);
     setupJobDebuggingMessages(job);
-    updateDB(job);
+    mainUpdateDB(job);
     done();
 });
 
-queue.process('get-newsAPI-updates', function(job, ctx, done) {
+/**
+ * Process for updating the database of news sources
+ */
+queue.process('update-news-source-info', function(job, ctx, done) {
+    var delay =  7000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
+    var sourceUpdateJob = createDelayedSourceUpdateJob(sourceUpdateOptions, delay);
+    setupJobDebuggingMessages(sourceUpdateJob);
 
+    sourceUpdateDB(job);
+    done();
 });
 
-queue.process('get-watsonAPI-updates', function(job, ctx, done) {
 
-});
+var mainJob = createMainUpdateJob();
+setupJobDebuggingMessages(mainJob);
 
-var job = createMainUpdateJob();
-setupJobDebuggingMessages(job);
+var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
+var sourceUpdateJob = createSourceUpdateJob(sourceUpdateOptions);
+setupJobDebuggingMessages(sourceUpdateJob);
+
 
 /**
  *  ########################### HELPER FUNCTIONS ############################
@@ -59,11 +73,17 @@ setupJobDebuggingMessages(job);
 /**
  * The meat of this file
  */
-function updateDB(job) {
-    debug("Updating DB!!!");
+function mainUpdateDB(job) {
+    debug("Updating Main DB");
 
     // Query the News API and run it through Watson.
+}
 
+function sourceUpdateDB(job) {
+    debug("Updating Sources DB");
+
+    // Query the News API to update the DB of sources
+    
 }
 
 function clearAllMainJobs(status) {
@@ -72,6 +92,21 @@ function clearAllMainJobs(status) {
             job.remove();
         });
     });
+}
+
+function createSourceUpdateJob(options) {
+    return queue.create('update-news-source-info', options)
+        .attempts(2)
+        .backoff( {delay: 15000, type : "fixed"} ) // Delay is in ms. 15000 ms = 15 seconds
+        .save(handleErr);
+}
+
+function createDelayedSourceUpdateJob(options, delay) {
+    return queue.create('update-news-source-info', options)
+        .delay(delay)
+        .attempts(2)
+        .backoff( {delay: 15000, type : "fixed"} ) // Delay is in ms. 15000 ms = 15 seconds
+        .save(handleErr);
 }
 
 function createMainUpdateJob() {
@@ -85,7 +120,7 @@ function createDelayedMainUpdateJob(delay) {
     return queue.create('main-update-db-worker')
         .delay(delay)
         .attempts(2)
-        .backoff( {delay: 15000, type: "fixed"} )
+        .backoff( {delay: 15000, type: "fixed"} ) // Delay is in ms. 15000 ms = 15 seconds
         .save(handleErr);
 }
 
