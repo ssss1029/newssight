@@ -38,7 +38,15 @@ queue.process('main-update-db-worker', function(job, ctx, done) {
     setupJobDebuggingMessages(job);
     updateDB(job);
     done();
-})
+});
+
+queue.process('get-newsAPI-updates', function(job, ctx, done) {
+
+});
+
+queue.process('get-watsonAPI-updates', function(job, ctx, done) {
+
+});
 
 var job = createMainUpdateJob();
 setupJobDebuggingMessages(job);
@@ -52,6 +60,9 @@ setupJobDebuggingMessages(job);
  */
 function updateDB(job) {
     debug("Updating DB!!!");
+
+    // Query the News API and run it through Watson.
+
 }
 
 function clearAllMainJobs(status) {
