@@ -8,6 +8,14 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 
 var app = express();
+var kue = require('kue');
+var queue = kue.createQueue();
+
+var debug = require("debug")('newssight:app.js');
+
+if (process.env.NODE_ENV == "development") {
+  app.use('/api', kue.app);
+} 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,9 +44,16 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  if (err) {
+    console.log(err);
+  }
+
   // render the error page
   res.status(err.status || 500);
   res.render('error');
 });
+
+// Set up the server
+require('./server/main');
 
 module.exports = app;

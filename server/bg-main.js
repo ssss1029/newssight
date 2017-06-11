@@ -2,10 +2,15 @@
  * Handles processes that will run in the background (using kue)
  */
 
+var express = require("express");
+var app = express();
+var debug = require("debug")('newssight:bg-main');
+
 var kue = require('kue');
 var queue = kue.createQueue();
-var Article = require('schemas/article');
-var debug = require("debug")('newssight:bg-main');
+
+var Article = require('./schemas/article');
+
 
 function handleErr(err) {
     if (err != undefined) {
@@ -14,10 +19,25 @@ function handleErr(err) {
     }
 }
 
-queue.process('main-update-db-worker', function(job, done) {
-    var delay =  300000; // Delay is in milliseconds : 300000 ms = 5 minutes
-    var job = createDelayedMainUpdateJob();
+/**
+ * Reset the Queue on startup
+ */
+if (process.env.NODE_ENV == 'development') {
+    // Clear all jobs
+    clearAllMainJobs("inactive");
+    clearAllMainJobs("active");
+    clearAllMainJobs("complete");
+    clearAllMainJobs("failed");
+    clearAllMainJobs("delayed");
+}
+
+
+queue.process('main-update-db-worker', function(job, ctx, done) {
+    var delay =  5000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var job = createDelayedMainUpdateJob(delay);
     setupJobDebuggingMessages(job);
+    updateDB(job);
+    done();
 })
 
 var job = createMainUpdateJob();
@@ -26,6 +46,22 @@ setupJobDebuggingMessages(job);
 /**
  *  ########################### HELPER FUNCTIONS ############################
  */
+
+/**
+ * The meat of this file
+ */
+function updateDB(job) {
+    debug("Updating DB!!!");
+}
+
+function clearAllMainJobs(status) {
+    kue.Job.rangeByState(status, 0, 1000, 'asc', function( err, jobs ) {
+        jobs.forEach( function( job ) {
+            job.remove();
+        });
+    });
+}
+
 function createMainUpdateJob() {
     return queue.create('main-update-db-worker')
         .attempts(2)
@@ -33,7 +69,7 @@ function createMainUpdateJob() {
         .save(handleErr);
 }
 
-function createDelayedMainUpdateJob() {
+function createDelayedMainUpdateJob(delay) {
     return queue.create('main-update-db-worker')
         .delay(delay)
         .attempts(2)

@@ -13,7 +13,7 @@ var ArticleSchema = new Schema({
     url : String, 
     urlToImage : String,
     publishedAt : Date,
-    savedAt : { type: Date, default: Date.now } // Date at which this article was stored into the database
+    savedAt : { type: Date, default: Date.now }, // Date at which this article was stored into the database
     
     watsonEntityResults : [{
         type : String,
@@ -49,7 +49,7 @@ var ArticleSchema = new Schema({
             label : String // e.g. "neutral"
         }],
         document : { // analysis for the entire document
-            score : Number // From -1.0 to 1.0
+            score : Number, // From -1.0 to 1.0
             label : String // e.g. "negative" 
         }
     },
