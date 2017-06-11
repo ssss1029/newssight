@@ -3,9 +3,17 @@
 /**
  * Setting up process.env stuff
  */
-var addons = require("../process-env-addons");
+var addons = require("../addons-process-env");
 for (var item in addons) {
   process.env[item] = addons[item];
+}
+
+/**
+ * Setup other global variables
+ */
+var addons_global = require("../addons-global");
+for (var item in addons_global) {
+  global[item] = addons_global[item];
 }
 
 

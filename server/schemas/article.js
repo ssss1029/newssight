@@ -50,7 +50,7 @@ var ArticleSchema = new Schema({
         }],
         document : { // analysis for the entire document
             score : Number // From -1.0 to 1.0
-            label : String // e.g. negative 
+            label : String // e.g. "negative" 
         }
     },
 
