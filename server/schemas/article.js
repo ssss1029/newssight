@@ -7,6 +7,7 @@ var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
     _id : String, // Will be the SHA256 hash of the url
+    order : Number,
     title : String,
     author : String,
     source : String, // using the News API naming convention for sources
@@ -58,6 +59,13 @@ var ArticleSchema = new Schema({
     analyzedText : String // The entire contents of the article
 });
 
-var Article = mongoose.model('Article', ArticleSchema);
+ArticleSchema.statics.findByID = function(id, cb) {
+    return this.find({ _id : id }, cb)
+}
 
+ArticleSchema.statics.findBySource = function(source, cb) {
+    return this.find({ source : new RegExp(source, "i") }, cb)
+}
+
+var Article = mongoose.model('Article', ArticleSchema);
 module.exports = Article;
