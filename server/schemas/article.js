@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
+    _id : String, // Will be the SHA256 hash of the url
     title : String,
     author : String,
     source : String, // using the News API naming convention for sources

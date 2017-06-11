@@ -9,6 +9,7 @@ var debug = require("debug")('newssight:bg-main');
 var kue = require('kue');
 var queue = kue.createQueue();
 
+// Schemas
 var Article = require('./schemas/article');
 
 
