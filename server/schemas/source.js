@@ -17,5 +17,17 @@ var SourceSchema = new Schema({
     sortBysAvailable : [] // Can contain one of more of : "top", "latest", "popular"
 });
 
+SourceSchema.statics.findByName = function(name, cb) {
+    return this.find({ name : new RegExp(name, 'i')}, cb);
+}
+
+SourceSchema.statics.findByCountry = function (country, cb) {
+    return this.find({ country : new RegExp(country, 'i')}, cb);    
+}
+
+SourceSchema.statics.findByLanguage = function (language, cb) {
+    return this.find({ language : new RegExp(language, 'i')}, cb);    
+}
+
 var Source = mongoose.model('Source', SourceSchema);
 module.exports = Source; 

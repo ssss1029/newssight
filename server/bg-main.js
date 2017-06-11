@@ -5,7 +5,7 @@
 var express = require("express");
 var app = express();
 var debug = require("debug")('newssight:bg-main');
-
+var mongoose = require("mongoose");
 var kue = require('kue');
 var queue = kue.createQueue();
 
