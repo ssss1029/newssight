@@ -79,6 +79,7 @@ function mainUpdateDB(job) {
     job.debuggerOBJ("Main Updating DB");
 
     // Query the News API and run it through Watson.
+
 }
 
 function sourceUpdateDB(job) {
@@ -86,6 +87,8 @@ function sourceUpdateDB(job) {
     job.debuggerOBJ("Main Updating DB");
 
     // Query the News API to update the DB of sources
+    var allowed_categories = job.data.categories;
+    var allowed_langauges = job.data.language;
 }
 
 

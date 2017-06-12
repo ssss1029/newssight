@@ -3,9 +3,15 @@
 /**
  * Setting up process.env stuff
  */
-var addons = require("../addons-process-env");
-for (var item in addons) {
-  process.env[item] = addons[item];
+try {
+  var addons = require("../addons-process-env");
+  for (var item in addons) {
+    process.env[item] = addons[item];
+  }
+} catch (e) {
+  if (e) {
+    console.log("Hey there, it looks like youre missing an essential addon file. Contact me at sauravkadavath@gmail.com for more info!");
+  }
 }
 
 /**
