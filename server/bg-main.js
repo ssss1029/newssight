@@ -57,7 +57,7 @@ queue.process('update-news-source-info', function(job, ctx, done) {
     var sourceUpdateJob = createDelayedSourceUpdateJob(sourceUpdateOptions, delay);
     setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
 
-    sourceUpdateDB(job);
+    sourceUpdateDB(sourceUpdateJob);
     done();
 });
 
@@ -74,21 +74,20 @@ setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
  *  ########################### HELPER FUNCTIONS ############################
  */
 
-/**
- * The meat of this file
- */
 function mainUpdateDB(job) {
-    debug("Updating Main DB");
+    var debug = job.debuggerOBJ;
+    job.debuggerOBJ("Main Updating DB");
 
     // Query the News API and run it through Watson.
 }
 
 function sourceUpdateDB(job) {
-    debug("Updating Sources DB");
+    var debug = job.debuggerOBJ;
+    job.debuggerOBJ("Main Updating DB");
 
     // Query the News API to update the DB of sources
-    
 }
+
 
 
 /**
@@ -133,6 +132,8 @@ function createDelayedMainUpdateJob(delay) {
 }
 
 function setupJobDebuggingMessages(job, debug) {
+    job.debuggerOBJ = debug;
+
     job.on('complete', function(result){
         debug('Job completed with data ', result);
     });
