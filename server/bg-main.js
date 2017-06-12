@@ -78,7 +78,7 @@ function mainUpdateDB(job) {
     var debug = job.debuggerOBJ;
     job.debuggerOBJ("Main Updating DB");
 
-    // Query the News API and run it through Watson.
+    // Query the News API and run it through Watson!
 
 }
 
