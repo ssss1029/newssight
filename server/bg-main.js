@@ -4,13 +4,17 @@
 
 var express = require("express");
 var app = express();
-var debug = require("debug")('newssight:bg-main');
+var debug = require("debug");
 var mongoose = require("mongoose");
 var kue = require('kue');
 var queue = kue.createQueue();
 
 // Schemas
-var Article = require('./schemas/article');
+var Article = require('./schemas/schema-article');
+
+// Debuggers 
+var debug_main_worker = debug('newssight:main-worker');
+var debug_source_update_worker = debug('newssight:source-worker');
 
 
 function handleErr(err) {
@@ -39,7 +43,7 @@ if (process.env.NODE_ENV == 'development') {
 queue.process('main-update-db-worker', function(job, ctx, done) {
     var delay =  5000; // Delay is in milliseconds : 300000 ms = 5 minutes
     var job = createDelayedMainUpdateJob(delay);
-    setupJobDebuggingMessages(job);
+    setupJobDebuggingMessages(job, debug_main_worker);
     mainUpdateDB(job);
     done();
 });
@@ -51,7 +55,7 @@ queue.process('update-news-source-info', function(job, ctx, done) {
     var delay =  7000; // Delay is in milliseconds : 300000 ms = 5 minutes
     var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
     var sourceUpdateJob = createDelayedSourceUpdateJob(sourceUpdateOptions, delay);
-    setupJobDebuggingMessages(sourceUpdateJob);
+    setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
 
     sourceUpdateDB(job);
     done();
@@ -59,11 +63,11 @@ queue.process('update-news-source-info', function(job, ctx, done) {
 
 
 var mainJob = createMainUpdateJob();
-setupJobDebuggingMessages(mainJob);
+setupJobDebuggingMessages(mainJob, debug_main_worker);
 
 var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
 var sourceUpdateJob = createSourceUpdateJob(sourceUpdateOptions);
-setupJobDebuggingMessages(sourceUpdateJob);
+setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
 
 
 /**
@@ -86,6 +90,10 @@ function sourceUpdateDB(job) {
     
 }
 
+
+/**
+ * Job helpers
+ */
 function clearAllMainJobs(status) {
     kue.Job.rangeByState(status, 0, 1000, 'asc', function( err, jobs ) {
         jobs.forEach( function( job ) {
@@ -124,7 +132,7 @@ function createDelayedMainUpdateJob(delay) {
         .save(handleErr);
 }
 
-function setupJobDebuggingMessages(job) {
+function setupJobDebuggingMessages(job, debug) {
     job.on('complete', function(result){
         debug('Job completed with data ', result);
     });
@@ -137,11 +145,11 @@ function setupJobDebuggingMessages(job) {
         debug('Job started');        
     });
     
-    job.on('failed', function(errorMessage){
+    job.on('failed', function(errorMessage) {
         debug('Job failed');
     });
     
-    job.on('progress', function(progress, data){
+    job.on('progress', function(progress, data) {
         debug('\r  job #' + job.id + ' ' + progress + '% complete with data ', data );
     });
 }
