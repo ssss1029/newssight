@@ -156,7 +156,7 @@ function processArticle(articleObj, debug, source) {
         if (data.length == 0) {
             // Put it into the DB
             debug("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);
-
+            
         } else {
             // Need to do some more processing
             
@@ -372,7 +372,7 @@ function clearAllSources() {
 /**
  * Removes all the Article items from the DB
  */
-function clearcllArticles() {
+function clearAllArticles() {
     Article.find({}, function (err, docList) {
         for (var i = 0; i < docList.length; i++) {
             docList[i].remove();

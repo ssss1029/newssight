@@ -71,9 +71,8 @@ ArticleSchema.statics.findBySource = function(source, cb) {
     return this.find({ source : new RegExp(source, "i") }, cb)
 }
 
-ArticleSchema.index({ 
-    topArticle : 1,
-    publishedAt : 1,
+ArticleSchema.index({
+    id : 1,
     title : "text",
     description : "text"
 });
