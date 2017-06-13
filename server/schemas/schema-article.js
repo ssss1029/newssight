@@ -9,7 +9,8 @@ var Schema = mongoose.Schema;
 mongoose.Promise = require('bluebird');
 
 var ArticleSchema = new Schema({
-    _id : String, // Will be the SHA256 hash of the url
+    id : String, // Will be the SHA256 hash of the url
+    topArticle : Number, // = 1 if this article is currently a top article for its particular news source, and = 2 else.
     order : Number,
     title : String,
     author : String,
@@ -69,6 +70,8 @@ ArticleSchema.statics.findByID = function(id, cb) {
 ArticleSchema.statics.findBySource = function(source, cb) {
     return this.find({ source : new RegExp(source, "i") }, cb)
 }
+
+ArticleSchema.index({ topArticle : 1 });
 
 var Article = mongoose.model('Article', ArticleSchema);
 module.exports = Article;

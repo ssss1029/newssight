@@ -11,5 +11,13 @@ module.exports = {
          * a particular category, query MONGO.
          **/ 
         language : "en"
+    },
+
+    /**
+     * Will be filled up later. right now, pics are loaded from
+     * https://placeholder.com/
+     */
+    SOURCE_LOGO_PICS : {
+        
     }
 }
