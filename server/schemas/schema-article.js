@@ -36,7 +36,7 @@ var ArticleSchema = new Schema({
     }],
 
     watsonKeywordsResults : [{
-        text : String, 
+        text : [String], // The original text is spliced by " " and made into an array here 
         sentiment : { score : Number },
         relevance : Number,
         emotions : {
