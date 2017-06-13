@@ -5,6 +5,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// Stupid shit
+mongoose.Promise = require('bluebird');
+
 var ArticleSchema = new Schema({
     _id : String, // Will be the SHA256 hash of the url
     order : Number,

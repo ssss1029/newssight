@@ -6,6 +6,9 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
+// Stupid shit
+mongoose.Promise = require('bluebird');
+
 var SourceSchema = new Schema({
     name_id : String, // The NewsAPI ID of the source (e.g. abc-news-au)
     name : String, // Source name
