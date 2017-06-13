@@ -17,12 +17,15 @@ var Source = require('./schemas/schema-source');
 // Debuggers 
 var debug_main_worker = debug('newssight:main-worker');
 var debug_source_update_worker = debug('newssight:source-worker');
+var debug_error = debug('newssight:ERROR!');
 
+// Stupid shit
+mongoose.Promise = require('bluebird');
 
 function handleErr(err) {
     if (err != undefined) {
         console.log("Error: ")
-        debug(JSON.stringify(error));
+        debug_error(JSON.stringify(error));
     }
 }
 
@@ -108,7 +111,7 @@ function sourceUpdateDB(job) {
             });
 
             response.on('error', function(err) {
-                debug(err);
+                debug_error(err);
             });
         });
 
@@ -122,7 +125,7 @@ function sourceUpdateDB(job) {
 function processNewSourceData(data, debug) {
     var data = JSON.parse(data);
     if (data.status != "ok") {
-        debug("We messed up: " + data);
+        debug_error("We messed up: " + data);
         return;
     }
 
@@ -158,7 +161,7 @@ function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
             var current_source_in_db = docList[0];
             Source.update({ name_id : source_name_id }, sourceDocument, function(err, raw) {
                 if (err != undefined) {
-                    debug("Something went wrong when trying to put into db: " + err.toString());
+                    debug_error("Something went wrong when trying to put into db: " + err.toString());
                 }
             })
         } else {
@@ -233,7 +236,7 @@ function setupJobDebuggingMessages(job, debug) {
     });
     
     job.on('failed', function(errorMessage) {
-        debug('Job failed');
+        debug_error('Job failed');
     });
     
     job.on('progress', function(progress, data) {
