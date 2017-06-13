@@ -19,9 +19,11 @@ var Source = require('./schemas/schema-source');
 var debug_main_worker = debug('newssight:main-worker');
 var debug_source_update_worker = debug('newssight:source-worker');
 var debug_error = debug('newssight:ERROR!');
+var debug_important = debug('newssight:IMPORTANT_INFO');
 
 // Stupid shit
 mongoose.Promise = require('bluebird');
+
 
 function handleErr(err) {
     if (err != undefined) {
@@ -31,15 +33,21 @@ function handleErr(err) {
 }
 
 /**
- * Reset the Queue on startup
+ * Reset the Queue on startup, and clear everything from the databases
  */
 if (process.env.NODE_ENV == 'development') {
     // Clear all jobs
+    debug_important("Clearing all redis jobs now");
     clearAllMainJobs("inactive");
     clearAllMainJobs("active");
     clearAllMainJobs("complete");
     clearAllMainJobs("failed");
     clearAllMainJobs("delayed");
+
+    // Clear the databases
+    debug_important("Wiping the databases of Sources and Articles");
+    clearAllSources();
+    clearAllArticles();
 }
 
 
@@ -81,12 +89,15 @@ setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
  *  ########################### HELPER FUNCTIONS ############################
  */
 
-
+/**
+ * Updates the main Article documents
+ * @param {Job} job
+ */
 function mainUpdateDB(job) {
     var debug = job.debuggerOBJ;
     job.debuggerOBJ("Main Updating DB");
 
-    // Query the News API
+    // Query the News API for all the sources in the DB
     Source.find({}, function(err, data) {
         for (var i = 0; i < data.length; i++) {
             var sortBysAvailable = data[i].sortBysAvailable;
@@ -133,14 +144,22 @@ function processNewArticleData(data, debug) {
     }
 }
 
+/**
+ * Processes a single Article Object, and correctly adds it to the database
+ * @param {Object} articleObj 
+ * @param {Function} debug 
+ * @param {String} source 
+ */
 function processArticle(articleObj, debug, source) {
 
     Article.find({ id : sha1(articleObj.url) }, function (err, data) {
         if (data.length == 0) {
             // Put it into the DB
             debug("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);
+
         } else {
-            // Need to do some more processing!
+            // Need to do some more processing
+            
         }
     });
 
@@ -336,5 +355,27 @@ function setupJobDebuggingMessages(job, debug) {
     
     job.on('progress', function(progress, data) {
         debug('\r  job #' + job.id + ' ' + progress + '% complete with data ', data );
+    });
+}
+
+/**
+ * Removes all the Source items from the DB
+ */
+function clearAllSources() {
+    Source.find({}, function (err, docList) {
+        for (var i = 0; i < docList.length; i++) {
+            docList[i].remove();
+        }
+    });
+}
+
+/**
+ * Removes all the Article items from the DB
+ */
+function clearcllArticles() {
+    Article.find({}, function (err, docList) {
+        for (var i = 0; i < docList.length; i++) {
+            docList[i].remove();
+        }
     });
 }
