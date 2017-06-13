@@ -100,17 +100,17 @@ function sourceUpdateDB(job) {
 
             response.on('data', function(chunk) {
                 responseData += chunk;
-            })
+            });
 
             response.on('end', function() {
                 debug("Done Receiving new info from API")
-                processNewSourceData(responseData);
-            })
+                processNewSourceData(responseData, debug);
+            });
 
             response.on('error', function(err) {
                 debug(err);
-            })
-        })
+            });
+        });
 
     // If we want to expand past the NEWS API, we can do so here.
 
@@ -119,9 +119,14 @@ function sourceUpdateDB(job) {
 /**
  * Processes new data from the NEWS API
  */
-function processNewSourceData(data) {
+function processNewSourceData(data, debug) {
     var data = JSON.parse(data);
+    if (data.status != "ok") {
+        debug("We messed up: " + data);
+        return;
+    }
 
+    
 }
 
 
