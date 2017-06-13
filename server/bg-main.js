@@ -126,7 +126,43 @@ function processNewSourceData(data, debug) {
         return;
     }
 
-    
+    var sourceList = data.sources;
+    for (var i = 0; i < sourceList.length; i++) {
+        var source = sourceList[i];
+        var sourceSchemaObj = new Source({
+                name_id : source.id,
+                name : source.name, 
+                description : source.description,
+                url : source.url,
+                category : source.category,
+                language : source.language,
+                country : source.country,
+                sortBysAvailable : source.sortBysAvailable
+        });
+
+        addSourceToDb(sourceSchemaObj, source.id);
+    }
+}
+
+function addSourceToDb(sourceSchemaObj, source_name_id) {
+    // Check if the db is already populated with the given source
+    Source.find({ name_id : source_name_id }).exec(function(err, docList) {
+        if (docList.length == 0) {
+            // Put it in
+        } else if (docList.length == 1) {
+            // Update the given one with this new information
+        } else {
+            // Something is wrong. Remove all instance and re-insert them. 
+            debug("Looks like there is a duplicate in the databse. \n "
+                + "Removing and re-inserting now.");
+            for (var k = 0; k < docList.length; k++) {
+                docList[i].remove();
+            }
+
+            // Recursion!
+            addSourceToDb(sourceSchemaObj, source_name_id);
+        }
+    });  
 }
 
 
