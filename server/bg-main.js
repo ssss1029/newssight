@@ -9,6 +9,7 @@ var mongoose = require("mongoose");
 var kue = require('kue');
 var queue = kue.createQueue();
 var request = require('request');
+var sha1 = require('sha1')
 
 // Schemas
 var Article = require('./schemas/schema-article');
@@ -66,10 +67,10 @@ queue.process('update-news-source-info', function(job, ctx, done) {
     done();
 });
 
-/*
+
 var mainJob = createMainUpdateJob();
 setupJobDebuggingMessages(mainJob, debug_main_worker);
-*/
+
 
 var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
 var sourceUpdateJob = createSourceUpdateJob(sourceUpdateOptions);
@@ -85,7 +86,63 @@ function mainUpdateDB(job) {
     var debug = job.debuggerOBJ;
     job.debuggerOBJ("Main Updating DB");
 
-    // Query the News API and run it through Watson!
+    // Query the News API
+    Source.find({}, function(err, data) {
+        for (var i = 0; i < data.length; i++) {
+            var sortBysAvailable = data[i].sortBysAvailable;
+            var sortBy = "";
+            if (!sortBysAvailable.includes("top")) {
+                debug_error("Source does not support sorting by top: " + data[i].name);
+                sortBy = sortBysAvailable[0];
+            } else {
+                sortBy = "top";
+            }
+
+            var url = 'https://newsapi.org/v1/articles?source=' + data[i].name_id + '&sortBy=' + sortBy + '&apiKey=' + process.env.NEWS_API_KEY;
+            request.get(url).on('response', function(response) {
+                responseData = "";
+
+                response.on('data', function(chunk) {
+                    responseData += chunk;
+                });
+
+                response.on('end', function() {
+                    processNewArticleData(responseData, debug);
+                });
+
+                response.on('error', function(err) {
+                    debug_error(err);
+                });
+            });
+        }
+    });
+}
+
+/**
+ * Processes the data received from querying the news api for a source
+ * @param {Object} data 
+ * @param {Function} debug 
+ */
+function processNewArticleData(data, debug) {
+    data = JSON.parse(data);
+    var newArticles = data.articles;
+    var source = data.source;
+
+    for (var i = 0; i < newArticles.length; i++) {
+        processArticle(newArticles[i], debug, source);
+    }
+}
+
+function processArticle(articleObj, debug, source) {
+
+    Article.find({ id : sha1(articleObj.url) }, function (err, data) {
+        if (data.length == 0) {
+            // Put it into the DB
+            debug("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);
+        } else {
+            // Need to do some more processing!
+        }
+    });
 
 }
 
@@ -171,7 +228,7 @@ function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
             sourceSchemaObj.save();
         } else if (docList.length == 1) {
             // Update the given one with this new information
-            debug("Updating to match id: " + source_name_id);
+            // debug("Updating to match id: " + source_name_id);
             var current_source_in_db = docList[0];
             Source.update({ name_id : source_name_id }, sourceDocument, function(err, raw) {
                 if (err != undefined) {
