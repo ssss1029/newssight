@@ -80,6 +80,7 @@ setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
  *  ########################### HELPER FUNCTIONS ############################
  */
 
+
 function mainUpdateDB(job) {
     var debug = job.debuggerOBJ;
     job.debuggerOBJ("Main Updating DB");
@@ -88,6 +89,10 @@ function mainUpdateDB(job) {
 
 }
 
+/**
+ * Called directly from the job, in order to update the DB 
+ * @param {Job} job 
+ */
 function sourceUpdateDB(job) {
     var debug = job.debuggerOBJ;
     debug("Beginning source updating for DB");
@@ -120,7 +125,9 @@ function sourceUpdateDB(job) {
 }
 
 /**
- * Processes new data from the NEWS API
+ * Process raw data returned from the News API
+ * @param {Object} data 
+ * @param {Function} debug 
  */
 function processNewSourceData(data, debug) {
     var data = JSON.parse(data);
@@ -148,6 +155,13 @@ function processNewSourceData(data, debug) {
     }
 }
 
+/**
+ * 
+ * @param {Source} sourceSchemaObj 
+ * @param {String} source_name_id 
+ * @param {Object} sourceDocument 
+ * @param {Function} debug 
+ */
 function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
     // Check if the db is already populated with the given source
     Source.find({ name_id : source_name_id }).exec(function(err, docList) {
@@ -180,7 +194,8 @@ function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
 
 
 /**
- * Job helpers
+ * Clears all the queued up jobs with the given status
+ * @param {String} status // Job statuses. See Kue docs for more info
  */
 function clearAllMainJobs(status) {
     kue.Job.rangeByState(status, 0, 1000, 'asc', function( err, jobs ) {
@@ -190,6 +205,10 @@ function clearAllMainJobs(status) {
     });
 }
 
+/**
+ * Creates the first, non-delayed job for source updates
+ * @param {Object} options 
+ */
 function createSourceUpdateJob(options) {
     return queue.create('update-news-source-info', options)
         .attempts(2)
@@ -197,6 +216,12 @@ function createSourceUpdateJob(options) {
         .save(handleErr);
 }
 
+
+/**
+ * Creates the delayed jobs for source updates
+ * @param {Object} options 
+ * @param {Integer} delay 
+ */
 function createDelayedSourceUpdateJob(options, delay) {
     return queue.create('update-news-source-info', options)
         .delay(delay)
@@ -205,6 +230,9 @@ function createDelayedSourceUpdateJob(options, delay) {
         .save(handleErr);
 }
 
+/**
+ * Creates the first, non-delayed job for main updates
+ */
 function createMainUpdateJob() {
     return queue.create('main-update-db-worker')
         .attempts(2)
@@ -212,6 +240,10 @@ function createMainUpdateJob() {
         .save(handleErr);
 }
 
+/**
+ * Creates the delayed jobs for main updates
+ * @param {Integer} delay 
+ */
 function createDelayedMainUpdateJob(delay) {
     return queue.create('main-update-db-worker')
         .delay(delay)
@@ -220,6 +252,12 @@ function createDelayedMainUpdateJob(delay) {
         .save(handleErr);
 }
 
+/**
+ * Sets up debugger messages for they look nice on the console.
+ * Also sets up a job.debuggerOBJ property for each job it gets
+ * @param {Job} job 
+ * @param {Function} debug 
+ */
 function setupJobDebuggingMessages(job, debug) {
     job.debuggerOBJ = debug;
 
