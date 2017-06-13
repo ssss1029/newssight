@@ -10,8 +10,6 @@ module.exports = {
          * used one time - during startup. If, at any point, you wanna see the sources with 
          * a particular category, query MONGO.
          **/ 
-        category : undefined, 
-        language : ["en"],
-        country : undefined
+        language : "en"
     }
 }

@@ -15,6 +15,7 @@
     "kue-ui-express": "^1.0.2",
     "mongoose": "^4.10.5",
     "morgan": "~1.8.1",
+    "request": "^2.81.0",
     "serve-favicon": "~2.4.2"
   }
 }
