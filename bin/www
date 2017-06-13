@@ -15,6 +15,13 @@ try {
 }
 
 /**
+ * Set up mongo
+ */
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URL);
+
+
+/**
  * Setup other global variables
  */
 var addons_global = require("../addons-global");

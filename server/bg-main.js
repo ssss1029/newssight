@@ -129,7 +129,7 @@ function processNewSourceData(data, debug) {
     var sourceList = data.sources;
     for (var i = 0; i < sourceList.length; i++) {
         var source = sourceList[i];
-        var sourceSchemaObj = new Source({
+        var sourceDocument = {
                 name_id : source.id,
                 name : source.name, 
                 description : source.description,
@@ -138,29 +138,39 @@ function processNewSourceData(data, debug) {
                 language : source.language,
                 country : source.country,
                 sortBysAvailable : source.sortBysAvailable
-        });
+        };
+        var sourceSchemaObj = new Source(sourceDocument);
 
-        addSourceToDb(sourceSchemaObj, source.id);
+        addSourceToDb(sourceSchemaObj, source.id, sourceDocument, debug);
     }
 }
 
-function addSourceToDb(sourceSchemaObj, source_name_id) {
+function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
     // Check if the db is already populated with the given source
     Source.find({ name_id : source_name_id }).exec(function(err, docList) {
         if (docList.length == 0) {
+            debug("Nothing found to match id: " + source_name_id + ". putting it in now.");
             // Put it in
+            sourceSchemaObj.save();
         } else if (docList.length == 1) {
             // Update the given one with this new information
+            debug("Updating to match id: " + source_name_id);
+            var current_source_in_db = docList[0];
+            Source.update({ name_id : source_name_id }, sourceDocument, function(err, raw) {
+                if (err != undefined) {
+                    debug("Something went wrong when trying to put into db: " + err.toString());
+                }
+            })
         } else {
             // Something is wrong. Remove all instance and re-insert them. 
-            debug("Looks like there is a duplicate in the databse. \n "
+            debug("Looks like there is a duplicate in the databse for id: " + source_name_id + "\n "
                 + "Removing and re-inserting now.");
             for (var k = 0; k < docList.length; k++) {
                 docList[i].remove();
             }
 
             // Recursion!
-            addSourceToDb(sourceSchemaObj, source_name_id);
+            addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug);
         }
     });  
 }
