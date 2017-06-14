@@ -8,15 +8,15 @@ var Schema = mongoose.Schema;
 // Stupid shit
 mongoose.Promise = require('bluebird');
 
-var TopArticlesSchema = new Schema({
+var DateOrderedArticlesSchema = new Schema({
     topness : Number, // More "top" articles will be smaller numbers
     id : String // Will be the hash of the URL - can then be used for quick lookup in schema-article 
 });
 
-TopArticlesSchema.index({
+DateOrderedArticlesSchema.index({
     topness : 1,
     id : 1
 });
 
-var TopArticles = mongoose.model('TopArticles', TopArticlesSchema);
+var DateOrderedArticles = mongoose.model('DateOrderedArticles', DateOrderedArticlesSchema);
 module.exports = TopArticles;
