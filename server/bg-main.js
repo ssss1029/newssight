@@ -14,6 +14,8 @@ var sha1 = require('sha1')
 // Schemas
 var Article = require('./schemas/schema-article');
 var Source = require('./schemas/schema-source');
+var TopOrderedArticle = require('./schemas/schema-top-article');
+var DateOrderedArticle = require('./schemas/schema-date-ordered-articles');
 
 // Debuggers 
 var debug_main_worker = debug('newssight:main-worker');
@@ -33,7 +35,7 @@ function handleErr(err) {
 }
 
 /**
- * Reset the Queue on startup, and clear everything from the databases
+ * Reset and clear everything from Mongo and Redis on startup if development
  */
 if (process.env.NODE_ENV == 'development') {
     // Clear all jobs
@@ -155,14 +157,96 @@ function processArticle(articleObj, debug, source) {
     Article.find({ id : sha1(articleObj.url) }, function (err, data) {
         if (data.length == 0) {
             // Put it into the DB
-            debug("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);
-            
+            debug("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);            
+            addToTopDB(articleObj, debug, source);
+            addToArticleDB(articleObj, debug, source);
         } else {
             // Need to do some more processing
-            
+            // JK there is nothing to do here
         }
     });
 
+}
+
+/**
+ * Bumps down EVERYTHING currently in the TopArticle Schema for the current Source and adds this at the top
+ * @param {Object} articleObj 
+ * @param {Function} debug 
+ * @param {String} source 
+ */
+function addToTopDB(articleObj, debug, source) {
+    TopOrderedArticle.find({ source : source }, function(err, results) {
+        if (err) {
+            debug_error(err);
+        }
+
+        // Increment all the existing topness numbers
+        for (var i = 0; i < results.length; i++) {
+            incrementTopnessNumber(results[i].id);
+        }
+
+        // Add the current one into the db
+        var article = new TopOrderedArticle({
+            topness_based_on_source : 0, 
+            id : sha1(articleObj.url),
+            source : source
+        });
+
+        article.save()
+    });
+}
+
+function incrementTopnessNumber(id) {
+    TopOrderedArticle.update({ id : id }, { $inc: { topness_based_on_source: 1 }}, { multi: true },  function(err, numAffected) {
+        if (err) {
+            debug_error("ERROR when updateing TopOrderedArticles : " + err);
+        } else if (numAffected != 1) {
+            debug_error("numAffected != 1 in addToTopDB");
+        }
+    });
+}
+
+/**
+ * Just adds the article to the main DB
+ * @param {Object} articleObj 
+ * @param {Function} debug 
+ * @param {String} source 
+ */
+function addToArticleDB(articleObj, debug, source) {
+    var article = {};
+
+    // Dumb bullshit & horrible code incoming
+    if (articleObj.author != undefined) {
+        article.author = articleObj.author;
+    }
+
+    if (articleObj.title != undefined) {
+        article.title = articleObj.title;
+    }
+
+    if (articleObj.url != undefined) {
+        article.id = sha1(articleObj.url);
+        article.url = articleObj.url;
+    }
+
+    if (articleObj.description != undefined) {
+        article.description = articleObj.description;
+    }
+
+    if (articleObj.urlToImage != undefined) {
+        article.urlToImage = articleObj.urlToImage;
+    }
+
+    if (articleObj.publishedAt != undefined) {
+        article.publishedAt = articleObj.publishedAt;
+    }
+
+    article.source = articleObj.source
+
+    // What the hell is happening lol
+    article = new Article(article);
+
+    article.save();
 }
 
 /**

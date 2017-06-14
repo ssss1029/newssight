@@ -9,12 +9,14 @@ var Schema = mongoose.Schema;
 mongoose.Promise = require('bluebird');
 
 var TopArticlesSchema = new Schema({
-    topness : Number, // More "top" articles will be smaller numbers
-    id : String // Will be the hash of the URL - can then be used for quick lookup in schema-article 
+    topness_based_on_source : Number, // More "top" articles will be smaller numbers
+    id : String, // Will be the hash of the URL - can then be used for quick lookup in schema-article 
+    source : String
 });
 
 TopArticlesSchema.index({
-    topness : 1,
+    topness_based_on_source : 1,
+    source : String,
     id : 1
 });
 

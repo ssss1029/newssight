@@ -10,8 +10,6 @@ mongoose.Promise = require('bluebird');
 
 var ArticleSchema = new Schema({
     id : String, // Will be the SHA1 hash of the url
-    topArticle : Number, // = 1 if this article is currently a top article for its particular news source, and = 2 else.
-    order : Number,
     title : String,
     author : String,
     source : String, // using the News API naming convention for sources
@@ -76,6 +74,12 @@ ArticleSchema.index({
     title : "text",
     description : "text"
 });
+
+ArticleSchema.index({
+    title : "text",
+    description : "text"
+});
+
 
 var Article = mongoose.model('Article', ArticleSchema);
 module.exports = Article;
