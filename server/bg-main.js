@@ -60,23 +60,27 @@ if (process.env.NODE_ENV == 'development') {
  * Process for updating the database of news articles and watson results
  */
 queue.process('main-update-db-worker', function(job, ctx, done) {
-    var delay =  10000; // Delay is in milliseconds : 300000 ms = 5 minutes
-    var job = createDelayedMainUpdateJob(delay);
+    var options = global.NEWS_API_ALLOWED_SOURCES
+
+    var delay =  15000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var job = createDelayedMainUpdateJob(options, delay);
     setupJobDebuggingMessages(job, debug_main_worker);
+
+    var delay =  7000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var job_sources = createDelayedSourceUpdateJob(options, delay);
+    setupJobDebuggingMessages(job_sources, debug_source_update_worker);
+
+
     mainUpdateDB(job);
     done();
 });
+
 
 /**
  * Process for updating the database of news sources
  */
 queue.process('update-news-source-info', function(job, ctx, done) {
-    var delay =  7000; // Delay is in milliseconds : 300000 ms = 5 minutes
-    var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
-    var sourceUpdateJob = createDelayedSourceUpdateJob(sourceUpdateOptions, delay);
-    setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
-
-    sourceUpdateDB(sourceUpdateJob);
+    sourceUpdateDB(job);
     done();
 });
 
@@ -84,11 +88,11 @@ queue.process('update-news-source-info', function(job, ctx, done) {
 var mainJob = createMainUpdateJob();
 setupJobDebuggingMessages(mainJob, debug_main_worker);
 
-
+/*
 var sourceUpdateOptions = global.NEWS_API_ALLOWED_SOURCES
 var sourceUpdateJob = createSourceUpdateJob(sourceUpdateOptions);
 setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
-
+*/
 
 /**
  *  ########################### HELPER FUNCTIONS ############################
@@ -99,8 +103,8 @@ setupJobDebuggingMessages(sourceUpdateJob, debug_source_update_worker);
  * @param {Job} job
  */
 function mainUpdateDB(job) {
-    var debug = job.debuggerOBJ;
-    job.debuggerOBJ("Main Updating DB");
+    var debug = debug_main_worker;
+    debug("Main Updating DB");
 
     // Query the News API for all the sources in the DB
     Source.find({}, function(err, data) {
@@ -114,22 +118,24 @@ function mainUpdateDB(job) {
             }
 
             var url = 'https://newsapi.org/v1/articles?source=' + data[i].name_id + '&sortBy=' + sortBy + '&apiKey=' + process.env.NEWS_API_KEY;
-            request.get(url).on('response', function(response) {
-                responseData = "";
-
-                response.on('data', function(chunk) {
-                    responseData += chunk;
-                });
-
-                response.on('end', function() {
-                    processNewArticleData(responseData, debug);
-                });
-
-                response.on('error', function(err) {
-                    debug_error(err);
-                });
-            });
+            request.get(url).on('response', processArticlesResponse);
         }
+    });
+}
+
+function processArticlesResponse(response) {
+    responseData = "";
+
+    response.on('data', function(chunk) {
+        responseData += chunk;
+    });
+
+    response.on('end', function() {
+        processNewArticleData(responseData, debug);
+    });
+
+    response.on('error', function(err) {
+        debug_error(err);
     });
 }
 
@@ -256,7 +262,7 @@ function addToArticleDB(articleObj, debug, source) {
  * @param {Job} job 
  */
 function sourceUpdateDB(job) {
-    var debug = job.debuggerOBJ;
+    var debug = debug_source_update_worker;
     debug("Beginning source updating for DB");
 
     // Query the News API to update the DB of sources
@@ -264,26 +270,27 @@ function sourceUpdateDB(job) {
     var news_api_key = process.env.NEWS_API_KEY;
     
     request.get('https://newsapi.org/v1/sources?language=' + allowed_langauge)
-        .on('response', function(response) {
-            
-            responseData = "";
-
-            response.on('data', function(chunk) {
-                responseData += chunk;
-            });
-
-            response.on('end', function() {
-                debug("Done Receiving new info from API")
-                processNewSourceData(responseData, debug);
-            });
-
-            response.on('error', function(err) {
-                debug_error(err);
-            });
-        });
+        .on('response', processSourcesResponse);
 
     // If we want to expand past the NEWS API, we can do so here.
 
+}
+
+function processSourcesResponse(response) {            
+    responseData = "";
+
+    response.on('data', function(chunk) {
+        responseData += chunk;
+    });
+
+    response.on('end', function() {
+        debug("Done Receiving new info from API")
+        processNewSourceData(responseData, debug);
+    });
+
+    response.on('error', function(err) {
+        debug_error(err);
+    });
 }
 
 /**
@@ -395,8 +402,8 @@ function createDelayedSourceUpdateJob(options, delay) {
 /**
  * Creates the first, non-delayed job for main updates
  */
-function createMainUpdateJob() {
-    return queue.create('main-update-db-worker')
+function createMainUpdateJob(options) {
+    return queue.create('main-update-db-worker', options)
         .attempts(2)
         .backoff( {delay: 15000, type: "fixed"} ) // Delay is in ms. 15000 ms = 15 seconds
         .save(handleErr);
@@ -406,8 +413,8 @@ function createMainUpdateJob() {
  * Creates the delayed jobs for main updates
  * @param {Integer} delay 
  */
-function createDelayedMainUpdateJob(delay) {
-    return queue.create('main-update-db-worker')
+function createDelayedMainUpdateJob(options, delay) {
+    return queue.create('main-update-db-worker', options)
         .delay(delay)
         .attempts(2)
         .backoff( {delay: 15000, type: "fixed"} ) // Delay is in ms. 15000 ms = 15 seconds
@@ -421,8 +428,6 @@ function createDelayedMainUpdateJob(delay) {
  * @param {Function} debug 
  */
 function setupJobDebuggingMessages(job, debug) {
-    job.debuggerOBJ = debug;
-
     job.on('complete', function(result){
         debug('Job completed with data ', result);
     });
