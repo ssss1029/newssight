@@ -14,6 +14,7 @@ var sha1 = require('sha1')
 // Schemas
 var Article = require('./schemas/schema-article');
 var Source = require('./schemas/schema-source');
+var CurrentTopArticle = require('./schemas/schema-current-top-article');
 
 // Debuggers 
 var debug_main_worker = debug('newssight:main-worker');
@@ -207,11 +208,41 @@ function addToArticleDB(articleObj, source) {
 
     article.source = articleObj.source
 
-    // Here is where we will add all of the watson data
+    // TODO: Here is where we will add all of the watson data
 
-    // What the hell is happening lol
-    article2 = new Article(article);
-    article2.save();
+
+
+    // Save our shit
+    article_main = new Article(article);
+    article_main.save();
+    
+    insertIntoCurrent(article);
+}
+
+function insertIntoCurrent(article) {
+    CurrentTopArticle.find({source : article.source}).sort({savedAt : 1}).exec(function(err, docs) {
+        if (err) {
+            debug_error(err);
+            return;
+        }
+
+        if (docs.length >= 10) {
+            // We need to delete one before adding 
+            // Recursion is the only way FML
+            docs[docs.length - 1].remove(function(err, res) {
+                if (err) {
+                    debug_error(err)
+                } else {
+                    // Try again
+                    insertIntoCurrent(article);
+                }
+            })
+        } else {
+            // It is okay to add right now            
+            article_top = new CurrentTopArticle(article);
+            article_top.save();
+        }
+    })
 }
 
 /**
