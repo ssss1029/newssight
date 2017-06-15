@@ -46,10 +46,13 @@ if (process.env.NODE_ENV == 'development') {
     clearAllMainJobs("failed");
     clearAllMainJobs("delayed");
 
+    
     // Clear the databases
     debug_important("Wiping the databases of Sources and Articles");
+    
     clearAllSources();
     clearAllArticles();
+    
 }
 
 
@@ -57,7 +60,7 @@ if (process.env.NODE_ENV == 'development') {
  * Process for updating the database of news articles and watson results
  */
 queue.process('main-update-db-worker', function(job, ctx, done) {
-    var delay =  5000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var delay =  10000; // Delay is in milliseconds : 300000 ms = 5 minutes
     var job = createDelayedMainUpdateJob(delay);
     setupJobDebuggingMessages(job, debug_main_worker);
     mainUpdateDB(job);
@@ -105,7 +108,6 @@ function mainUpdateDB(job) {
             var sortBysAvailable = data[i].sortBysAvailable;
             var sortBy = "";
             if (!sortBysAvailable.includes("top")) {
-                debug_error("Source does not support sorting by top: " + data[i].name);
                 sortBy = sortBysAvailable[0];
             } else {
                 sortBy = "top";
@@ -244,9 +246,9 @@ function addToArticleDB(articleObj, debug, source) {
     article.source = articleObj.source
 
     // What the hell is happening lol
-    article = new Article(article);
+    article2 = new Article(article);
 
-    article.save();
+    article2.save();
 }
 
 /**
@@ -462,4 +464,10 @@ function clearAllArticles() {
             docList[i].remove();
         }
     });
+
+    TopOrderedArticle.find({}, function(err, docList) {
+        for (var i = 0; i < docList.length; i++) {
+            docList[i].remove();
+        }        
+    })
 }

@@ -19,4 +19,4 @@ DateOrderedArticlesSchema.index({
 });
 
 var DateOrderedArticles = mongoose.model('DateOrderedArticles', DateOrderedArticlesSchema);
-module.exports = TopArticles;
+module.exports = DateOrderedArticles;
