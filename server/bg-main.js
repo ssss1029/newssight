@@ -14,8 +14,6 @@ var sha1 = require('sha1')
 // Schemas
 var Article = require('./schemas/schema-article');
 var Source = require('./schemas/schema-source');
-var TopOrderedArticle = require('./schemas/schema-top-article');
-var DateOrderedArticle = require('./schemas/schema-date-ordered-articles');
 
 // Debuggers 
 var debug_main_worker = debug('newssight:main-worker');
@@ -150,7 +148,7 @@ function processNewArticleData(data, debug) {
     var source = data.source;
 
     for (var i = 0; i < newArticles.length; i++) {
-        processArticle(newArticles[i], source);
+        processArticle(newArticles[i], source, 0);
     }
 }
 
@@ -160,57 +158,18 @@ function processNewArticleData(data, debug) {
  * @param {String} source 
  */
 function processArticle(articleObj, source) {
-
     Article.find({ id : sha1(articleObj.url) }, function (err, data) {
         if (data.length == 0) {
             // Put it into the DB
             debug_main_worker("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);            
-            addToTopDB(articleObj, source);
             addToArticleDB(articleObj, source);
         } else {
             // Need to do some more processing
             // JK there is nothing to do here
         }
     });
-
 }
 
-/**
- * Bumps down EVERYTHING currently in the TopArticle Schema for the current Source and adds this at the top
- * @param {Object} articleObj 
- * @param {String} source 
- */
-function addToTopDB(articleObj, source) {
-    TopOrderedArticle.find({ source : source }, function(err, results) {
-        if (err) {
-            debug_error(err);
-        }
-
-        // Increment all the existing topness numbers
-        for (var i = 0; i < results.length; i++) {
-            incrementTopnessNumber(results[i].id);
-        }
-
-        // Add the current one into the db
-        var article = new TopOrderedArticle({
-            topness_based_on_source : 0, 
-            id : sha1(articleObj.url),
-            source : source
-        });
-
-        article.save()
-    });
-}
-
-function incrementTopnessNumber(id) {
-    TopOrderedArticle.update({ id : id }, { $inc: { topness_based_on_source: 1 }},  function(err, numAffected) {
-        if (err) {
-            debug_error("ERROR when updateing TopOrderedArticles : " + err);
-        } else if (numAffected != 1) {
-            debug_error("numAffected != 1 in addToTopDB. It is equal to: " + numAffected + " For id: " + id);
-        }
-    });
-}
 
 /**
  * Just adds the article to the main DB
@@ -248,9 +207,10 @@ function addToArticleDB(articleObj, source) {
 
     article.source = articleObj.source
 
+    // Here is where we will add all of the watson data
+
     // What the hell is happening lol
     article2 = new Article(article);
-
     article2.save();
 }
 
@@ -464,10 +424,4 @@ function clearAllArticles() {
             docList[i].remove();
         }
     });
-
-    TopOrderedArticle.find({}, function(err, docList) {
-        for (var i = 0; i < docList.length; i++) {
-            docList[i].remove();
-        }        
-    })
 }

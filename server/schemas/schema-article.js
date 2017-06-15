@@ -70,9 +70,11 @@ ArticleSchema.statics.findBySource = function(source, cb) {
 }
 
 ArticleSchema.index({
-    id : 1,
-    title : "text",
-    description : "text"
+    id : 1
+});
+
+ArticleSchema.index({
+    publishedAt : 1
 });
 
 ArticleSchema.index({
