@@ -150,24 +150,23 @@ function processNewArticleData(data, debug) {
     var source = data.source;
 
     for (var i = 0; i < newArticles.length; i++) {
-        processArticle(newArticles[i], debug, source);
+        processArticle(newArticles[i], source);
     }
 }
 
 /**
  * Processes a single Article Object, and correctly adds it to the database
  * @param {Object} articleObj 
- * @param {Function} debug 
  * @param {String} source 
  */
-function processArticle(articleObj, debug, source) {
+function processArticle(articleObj, source) {
 
     Article.find({ id : sha1(articleObj.url) }, function (err, data) {
         if (data.length == 0) {
             // Put it into the DB
-            debug("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);            
-            addToTopDB(articleObj, debug, source);
-            addToArticleDB(articleObj, debug, source);
+            debug_main_worker("FOUND NEW ARTICLE FROM " + source + ": " + articleObj.title);            
+            addToTopDB(articleObj, source);
+            addToArticleDB(articleObj, source);
         } else {
             // Need to do some more processing
             // JK there is nothing to do here
@@ -179,10 +178,9 @@ function processArticle(articleObj, debug, source) {
 /**
  * Bumps down EVERYTHING currently in the TopArticle Schema for the current Source and adds this at the top
  * @param {Object} articleObj 
- * @param {Function} debug 
  * @param {String} source 
  */
-function addToTopDB(articleObj, debug, source) {
+function addToTopDB(articleObj, source) {
     TopOrderedArticle.find({ source : source }, function(err, results) {
         if (err) {
             debug_error(err);
@@ -205,11 +203,11 @@ function addToTopDB(articleObj, debug, source) {
 }
 
 function incrementTopnessNumber(id) {
-    TopOrderedArticle.update({ id : id }, { $inc: { topness_based_on_source: 1 }}, { multi: true },  function(err, numAffected) {
+    TopOrderedArticle.update({ id : id }, { $inc: { topness_based_on_source: 1 }},  function(err, numAffected) {
         if (err) {
             debug_error("ERROR when updateing TopOrderedArticles : " + err);
         } else if (numAffected != 1) {
-            debug_error("numAffected != 1 in addToTopDB");
+            debug_error("numAffected != 1 in addToTopDB. It is equal to: " + numAffected + " For id: " + id);
         }
     });
 }
@@ -217,10 +215,9 @@ function incrementTopnessNumber(id) {
 /**
  * Just adds the article to the main DB
  * @param {Object} articleObj 
- * @param {Function} debug 
  * @param {String} source 
  */
-function addToArticleDB(articleObj, debug, source) {
+function addToArticleDB(articleObj, source) {
     var article = {};
 
     // Dumb bullshit & horrible code incoming
@@ -284,8 +281,8 @@ function processSourcesResponse(response) {
     });
 
     response.on('end', function() {
-        debug("Done Receiving new info from API")
-        processNewSourceData(responseData, debug);
+        debug_source_update_worker("Done Receiving new info from API")
+        processNewSourceData(responseData);
     });
 
     response.on('error', function(err) {
@@ -296,9 +293,8 @@ function processSourcesResponse(response) {
 /**
  * Process raw data returned from the News API
  * @param {Object} data 
- * @param {Function} debug 
  */
-function processNewSourceData(data, debug) {
+function processNewSourceData(data) {
     var data = JSON.parse(data);
     if (data.status != "ok") {
         debug_error("We messed up: " + data);
@@ -320,7 +316,7 @@ function processNewSourceData(data, debug) {
         };
         var sourceSchemaObj = new Source(sourceDocument);
 
-        addSourceToDb(sourceSchemaObj, source.id, sourceDocument, debug);
+        addSourceToDb(sourceSchemaObj, source.id, sourceDocument);
     }
 }
 
@@ -329,18 +325,17 @@ function processNewSourceData(data, debug) {
  * @param {Source} sourceSchemaObj 
  * @param {String} source_name_id 
  * @param {Object} sourceDocument 
- * @param {Function} debug 
  */
-function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
+function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument) {
     // Check if the db is already populated with the given source
     Source.find({ name_id : source_name_id }).exec(function(err, docList) {
         if (docList.length == 0) {
-            debug("Nothing found to match id: " + source_name_id + ". putting it in now.");
+            debug_source_update_worker("Nothing found to match id: " + source_name_id + ". putting it in now.");
             // Put it in
             sourceSchemaObj.save();
         } else if (docList.length == 1) {
             // Update the given one with this new information
-            // debug("Updating to match id: " + source_name_id);
+            // debug_source_update_worker("Updating to match id: " + source_name_id);
             var current_source_in_db = docList[0];
             Source.update({ name_id : source_name_id }, sourceDocument, function(err, raw) {
                 if (err != undefined) {
@@ -349,7 +344,7 @@ function addSourceToDb(sourceSchemaObj, source_name_id, sourceDocument, debug) {
             })
         } else {
             // Something is wrong. Remove all instance and re-insert them. 
-            debug("Looks like there is a duplicate in the databse for id: " + source_name_id + "\n "
+            debug_source_update_worker("Looks like there is a duplicate in the databse for id: " + source_name_id + "\n "
                 + "Removing and re-inserting now.");
             for (var k = 0; k < docList.length; k++) {
                 docList[i].remove();
