@@ -46,11 +46,11 @@ if (process.env.NODE_ENV == 'development') {
     clearAllMainJobs("delayed");
 
     
-    // Clear the databases
-    debug_important("Wiping the databases of Sources and Articles");
-    
-    clearAllSources();
-    clearAllArticles();
+//  Clear the databases
+//  debug_important("Wiping the databases of Sources and Articles");
+//  clearAllSources(); Theres some good shit in the db, beware before uncommenting
+    // This clears BOTH DBS
+//  clearAllArticles(); Theres some good shit in the db, beware before uncommenting
     
 }
 
@@ -61,11 +61,11 @@ if (process.env.NODE_ENV == 'development') {
 queue.process('main-update-db-worker', function(job, ctx, done) {
     var options = global.NEWS_API_ALLOWED_SOURCES
 
-    var delay =  15000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var delay =  60000; // Delay is in milliseconds : 300000 ms = 5 minutes
     var job = createDelayedMainUpdateJob(options, delay);
     setupJobDebuggingMessages(job, debug_main_worker);
 
-    var delay =  7000; // Delay is in milliseconds : 300000 ms = 5 minutes
+    var delay =  30000; // Delay is in milliseconds : 300000 ms = 5 minutes
     var job_sources = createDelayedSourceUpdateJob(options, delay);
     setupJobDebuggingMessages(job_sources, debug_source_update_worker);
 
@@ -82,6 +82,7 @@ queue.process('update-news-source-info', function(job, ctx, done) {
     sourceUpdateDB(job);
     done();
 });
+
 
 
 var mainJob = createMainUpdateJob();
@@ -120,6 +121,9 @@ function mainUpdateDB(job) {
             request.get(url).on('response', processArticlesResponse);
         }
     });
+
+    checkCurrentTopArticles();
+
 }
 
 function processArticlesResponse(response) {
@@ -151,6 +155,43 @@ function processNewArticleData(data, debug) {
     for (var i = 0; i < newArticles.length; i++) {
         processArticle(newArticles[i], source, 0);
     }
+}
+
+function checkCurrentTopArticles() {
+    Source.find({}, function(err, docs) {
+        if (err) {
+            debug_error(err);
+        } else {
+            for (var i = 0; i < docs.length; i++) {
+                checkCurrentTopArticlesHelper(docs[i].name_id);
+            }
+        }
+    });
+}
+
+function checkCurrentTopArticlesHelper(source) {
+    CurrentTopArticle.find({source : source}).sort({savedAt : 1}).exec(function(err, docs) {
+        if (err) {
+            debug_error(err);
+            return;
+        }
+
+        if (docs.length >= 15) {
+            // We need to delete one before adding 
+            // Recursion is the only way FML            
+            docs[docs.length - 1].remove(function(err, res) {
+                if (err) {
+                    debug_error(err)
+                } else {
+                    // Try again
+                    checkCurrentTopArticlesHelper(source);
+                }
+            })
+        } else {
+            // debug_main_worker("Source: " + source + " has " + docs.length + " articles in the top db.")
+        }
+        
+    })
 }
 
 /**
@@ -206,7 +247,7 @@ function addToArticleDB(articleObj, source) {
         article.publishedAt = articleObj.publishedAt;
     }
 
-    article.source = articleObj.source
+    article.source = source
 
     // TODO: Here is where we will add all of the watson data
 
@@ -225,10 +266,10 @@ function insertIntoCurrent(article) {
             debug_error(err);
             return;
         }
-
-        if (docs.length >= 10) {
+        if (docs.length >= 15) {
             // We need to delete one before adding 
             // Recursion is the only way FML
+            
             docs[docs.length - 1].remove(function(err, res) {
                 if (err) {
                     debug_error(err)
@@ -237,6 +278,7 @@ function insertIntoCurrent(article) {
                     insertIntoCurrent(article);
                 }
             })
+            
         } else {
             // It is okay to add right now            
             article_top = new CurrentTopArticle(article);
@@ -422,7 +464,7 @@ function setupJobDebuggingMessages(job, debug) {
         debug('Job enqueued');        
     });
 
-    job.on("startt", function() {
+    job.on("start", function() {
         debug('Job started');        
     });
     
@@ -451,6 +493,12 @@ function clearAllSources() {
  */
 function clearAllArticles() {
     Article.find({}, function (err, docList) {
+        for (var i = 0; i < docList.length; i++) {
+            docList[i].remove();
+        }
+    });
+
+    CurrentTopArticle.find({}, function (err, docList) {
         for (var i = 0; i < docList.length; i++) {
             docList[i].remove();
         }
