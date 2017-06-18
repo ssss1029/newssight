@@ -2,14 +2,18 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var mongoose = require('mongoose');
 
 var app = express();
 var kue = require('kue');
 var queue = kue.createQueue();
 
 var debug = require("debug")('newssight:app.js');
+
+var User = require('./server/schemas/schema-user');
 
 if (process.env.NODE_ENV == "development") {
   app.use('/api', kue.app);
@@ -23,18 +27,49 @@ app.set('view engine', 'ejs');
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'public')));
+
+// Passport and session stuff
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+app.use(session({
+   secret: 'keyboard cat', 
+   resave: true, 
+   rolling : true,
+   saveUninitialized: false,
+   store : new MongoStore({
+     mongooseConnection : mongoose.connection
+   })
+}));
+
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.find({id : id}, function (err, done) {
+    done(err, user);
+  })
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Routes
 var index = require('./client/router');
 var api = require('./server/api/router');
 app.use('/', index);
 app.use('/api', api);
-app.get('/dist/bundle.js', function(req, res, next) {
-  res.sendFile('bundle.js', {root: __dirname + '/client/js/dist/' });
-})
+
+
+// Statics 
+app.use('/css', express.static('client/css/dist'));
+app.use('/img', express.static('client/img/dist'));
+app.use('/js',  express.static('client/js/dist'));
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
