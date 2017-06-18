@@ -24,7 +24,7 @@ $ redis-server
 $ npm install
 ```
 
-Webpack will run continuously because this project is still in development
+Webpack will run continuously because this project is still in development. This will compile code for client-side JS and create distribution packages in /client/js/dist
 ```
 $ npm run webpack
 ```
@@ -32,4 +32,6 @@ $ npm run webpack
 ```
 $ node serve
 ```
+
+The app should be live at http://127.0.0.1:3000/
 
