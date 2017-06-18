@@ -3,10 +3,12 @@ var webpack = require('webpack');
 const WebpackHTMLPlugin = require('webpack-html-plugin');
 
 module.exports = {
-    entry: './client/js/app/main.js',
+    entry: {
+        home : ['./client/js/app/home.js', 'whatwg-fetch']
+    },
     output: {
         path : __dirname + '/client/js/dist/',
-        filename : 'bundle.js'
+        filename : '[name].bundle.js'
     },
 
     module : {
@@ -22,5 +24,5 @@ module.exports = {
         ]
     },
 
-    watch : true
+    watch : false
 }

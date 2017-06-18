@@ -1,5 +1,5 @@
 /**
- * The main schema in which each article is stored
+ * The main schema in which each user is stored
  */
 
 var mongoose = require('mongoose');

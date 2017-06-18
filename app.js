@@ -70,7 +70,6 @@ app.use('/img', express.static('client/img/dist'));
 app.use('/js',  express.static('client/js/dist'));
 
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
