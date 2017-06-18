@@ -5,8 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
-
 var app = express();
 var kue = require('kue');
 var queue = kue.createQueue();
@@ -30,10 +28,13 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-var index = require('./routes/index');
+var index = require('./client/router');
 var api = require('./server/api/router');
 app.use('/', index);
 app.use('/api', api);
+app.get('/dist/bundle.js', function(req, res, next) {
+  res.sendFile('bundle.js', {root: __dirname + '/client/js/dist/' });
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,7 +55,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send("There has been an error");
 });
 
 // Set up the server

@@ -58,3 +58,4 @@ typings/
 .env
 
 addons-process-env.js
+client/js/dist/

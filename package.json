@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "node ./bin/www",
-    "babel" : "babel",
-    "webpack" : "webpack"
+    "babel": "babel",
+    "webpack": "webpack"
   },
   "dependencies": {
     "babel-core": "^6.25.0",
@@ -23,11 +23,14 @@
     "kue-ui-express": "^1.0.2",
     "mongoose": "^4.10.5",
     "morgan": "~1.8.1",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "request": "^2.81.0",
     "serve-favicon": "~2.4.2",
     "sha1": "^1.1.1",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-html-plugin": "^0.1.1"
   }
 }

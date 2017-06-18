@@ -1,10 +1,11 @@
 var path = require('path');
-var webpack = require('webpack')
+var webpack = require('webpack');
+const WebpackHTMLPlugin = require('webpack-html-plugin');
 
 module.exports = {
-    entry: './bin/www',
+    entry: './client/js/app/main.js',
     output: {
-        path : __dirname,
+        path : __dirname + '/client/js/dist/',
         filename : 'bundle.js'
     },
 
@@ -19,5 +20,7 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+
+    watch : true
 }
