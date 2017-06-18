@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         home : ['./client/js/app/home.js', 'whatwg-fetch']
     },
+    
     output: {
         path : __dirname + '/client/js/dist/',
         filename : '[name].bundle.js'
@@ -24,5 +25,5 @@ module.exports = {
         ]
     },
 
-    watch : false
+    watch : true
 }
