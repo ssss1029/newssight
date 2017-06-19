@@ -5,7 +5,6 @@ I am trying to transfer most of the Meteor.js functionality in the polisight rep
 Technologies used: 
 - Node.js
 - React.js 
-- Babel / webpack
 - MongoDB
 - Redis 
 
