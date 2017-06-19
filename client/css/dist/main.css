@@ -155,11 +155,14 @@ table {
 
 .splash {
 	height: 600px;
+	/*
 	background: #10537f;
 	background: -moz-linear-gradient(left, #10537f 0%, #2c7b79 100%);
 	background: -webkit-linear-gradient(left, #10537f 0%,#2c7b79 100%);
 	background: linear-gradient(to right, #10537f 0%,#2c7b79 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#10537f', endColorstr='#2c7b79',GradientType=1 );
+	*/
+	background-color: #336E7B;
 }
 
 .popularNews {
@@ -169,10 +172,10 @@ table {
 
 .aboutTitle {
 	height: 150px;
-	background-color: #16a085;
+	background-color: #2574A9;
 }
 
 .aboutSection {
 	height: 600px;
-	background-color: #2c3e50;
+	background-color: #22313F;
 }
