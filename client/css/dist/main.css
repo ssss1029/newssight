@@ -101,7 +101,6 @@ table {
 
 #footer {
 	width: 100%;
-	height: 150px;
 	background-color: #17252a;
 	color: #FFFFFF;
 	font-family: 'Raleway', sans-serif;
@@ -112,6 +111,10 @@ table {
 	position: relative;
 	width: 100%;
 	height: 100%;
+}
+
+.footerCol {
+	margin-bottom: 90px;
 }
 
 .copyright {
@@ -125,4 +128,20 @@ table {
 .copyright a:hover {
 	color: #bdc3c7;
 	text-decoration: none;
+}
+
+.quickLinksWrapper {
+	margin-top:20px;
+	width: auto;
+	text-align: center;
+}
+
+.quickLinks li {
+	padding-top:20px;
+}
+
+.quickLinks .title {
+	font-size: 20px;
+	margin-bottom:15px;
+	text-decoration: bold;
 }

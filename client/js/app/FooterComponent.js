@@ -10,14 +10,21 @@ class FooterComponent extends React.Component {
         return (
             <div className="footerWrapper container-fluid">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="footerCol col-md-4">
+
+                    </div>
+                    <div className="footerCol col-md-4">
                         
                     </div>
-                    <div className="col-md-4">
-                        
-                    </div>
-                    <div className="col-md-4">
-                        
+                    <div className="footerCol col-md-4">
+                        <div className="quickLinksWrapper">
+                            <ul className="quickLinks footerUL">
+                                <li className="title" >Quick Links</li>
+                                <li> Contact Us </li>
+                                <li> About Us </li>
+                                <li> About the developers </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
