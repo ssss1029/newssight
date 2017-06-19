@@ -3,11 +3,11 @@
  * @author: Saurav Kadavath
  **/
 
-/* ############       IMPORTS        ########### */
+/* ############################       IMPORTS        ############################ */
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 
-/*  ###########   RESET STYLESHEET   ########### */
+/*  ############################   RESET STYLESHEET   ############################ */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -56,9 +56,9 @@ table {
 	border-spacing: 0;
 }
 
-/*  ###########   END RESET STYLESHEET   ###########*/
+/*  ############################   END RESET STYLESHEET   ############################ */
 
-/*  ###########   Navigation Bar   ###########*/
+/*  ############################   Navigation Bar   ############################ */
 
 #nav {
 	width: 100%;
@@ -98,7 +98,7 @@ table {
 	line-height: 70px;
 }
 
-/*  ###########   Footer   ###########*/
+/*  ############################   Footer   ############################ */
 
 #footer {
 	width: 100%;
@@ -147,7 +147,7 @@ table {
 	text-decoration: bold;
 }
 
-/*  ###########   Homepage Main   ###########*/
+/*  ############################   Homepage Main   ############################ */
 
 .mainSection {
 	width: 100%;
