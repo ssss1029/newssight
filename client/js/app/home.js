@@ -5,5 +5,7 @@ import FooterComponent from './FooterComponent.js';
 
 console.log("In main.js. Looks like React is working");
 
+
 ReactDOM.render(<NavigationComponent />, document.getElementById('nav'));
+
 ReactDOM.render(<FooterComponent />, document.getElementById('footer'));

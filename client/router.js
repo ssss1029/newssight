@@ -5,8 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   
   // Will modify this to make sure that the options are dynamically set
+  
   res.render('home', {
-    loggedIn : true
+    loggedIn : false
   });
 
 });

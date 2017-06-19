@@ -10,17 +10,33 @@
     </head>
     <body>
         <!-- Injected through React  -->
-        <div id="nav"></div>
+        <% if (loggedIn) { %>
+            <div id="nav" loggedIn="true"></div>
+        <% } else { %>
+            <div id="nav" loggedIn="false"></div>        
+        <% } %>
 
         <div id="main">
-            <div class="splash">
+            <div class="mainSection splash">
                 
+            </div>
+            <div class="mainSection popularNews">
+
+            </div>
+            <div class="mainSection aboutTitle">
+
+            </div>
+            <div class="mainSection aboutSection">
+
             </div>
         </div>
 
         <!-- Injected through React  -->
-        <div id="footer"></div>
-
+        <% if (loggedIn) { %>
+            <div id="footer" loggedIn="true"></div>
+        <% } else { %>
+            <div id="footer" loggedIn="false"></div>        
+        <% } %>
         <!-- Scripts -->
         <!-- JQuery requirede for bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
