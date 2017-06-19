@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.sendFile('home.html', {root: __dirname + "/html" });
+  
+  // Will modify this to make sure that the options are dynamically set
+  res.render('home', {
+    loggedIn : true
+  });
+
 });
 
 module.exports = router;
