@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <title>NewsSight</title>
+        <!-- Sylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <!-- Injected through React  -->
+        <% if (loggedIn) { %>
+            <div id="nav" loggedIn="true"></div>
+        <% } else { %>
+            <div id="nav" loggedIn="false"></div>        
+        <% } %>
+
+        <div id="main" class="loginMain">
+            <div class="loginForm">
+                <div class="loginCol">
+                    <h2 class="loginColTitle"> I Have an account </h2>
+                    <div class="loginWrapper">
+                        <h3 class="loginLabel" for="username"> Username </h3>
+                            <input class="loginInput" type="text" id="username" placeholder="johnDoe1983">
+                        <h3 class="loginLabel" for="username"> Password </h3>
+                            <input class="loginInput" type="password" id="password" placeholder="**********">
+                    </div>
+                    <br />
+                    <br />
+                    <button class="loginButton loginSubmit"> Log In </button>
+                </div>
+                <div class="loginCol">
+                    <h2 class="loginColTitle"> Register Now </h2>
+                    <h2 class="loginColSubHeading"> (Its FREE!) </h2>
+                    <div class="loginWrapper">
+                        <h3 class="loginLabel" for="username"> EMail </h3>
+                            <input class="loginInput" type="text" id="usernameRegister" placeholder="johnDoe1983">
+                        <h3 class="loginLabel" for="username"> Username </h3>
+                            <input class="loginInput" type="email" id="emailRegister" placeholder="johnDoe1983">
+                        <h3 class="loginLabel" for="username"> Password </h3>
+                            <input class="loginInput" type="password" id="passwordRegister" placeholder="**********">
+                        <h3 class="loginLabel" for="username"> Confirm password </h3>
+                            <input class="loginInput" type="password" id="ConfirmpasswordRegister" placeholder="**********">
+                        <br />
+                    </div>
+                    <button class="loginButton registerSubmit"> Log In </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Footer on the login page  -->
+
+        <!-- Scripts -->
+        <!-- JQuery requirede for bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="js/login.bundle.js"></script>
+    </body>
+</html>

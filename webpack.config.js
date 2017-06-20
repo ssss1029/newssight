@@ -4,7 +4,8 @@ const WebpackHTMLPlugin = require('webpack-html-plugin');
 
 module.exports = {
     entry: {
-        home : ['./client/js/app/home.js', 'whatwg-fetch']
+        home : ['./client/js/app/home.js', 'whatwg-fetch'],
+        login : ['./client/js/app/login.js', 'whatwg-fetch']
     },
     
     output: {

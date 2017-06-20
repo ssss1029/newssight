@@ -1,17 +1,21 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  
-  // Will modify this to make sure that the options are dynamically set
-  
-  res.render('home', {
-    loggedIn : false
-  });
+// Need to dynamically update this
+var loggedIn = false;
 
+/* GET home page. */
+router.get('/', function(req, res, next) {  
+	res.render('home', {
+		loggedIn : loggedIn
+	});
 });
 
 
+router.get('/login', function(req, res, next) {
+    res.render('login', {
+		loggedIn : loggedIn
+    });
+});
 
 module.exports = router;
