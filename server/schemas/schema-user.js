@@ -9,13 +9,11 @@ var Schema = mongoose.Schema;
 mongoose.Promise = require('bluebird');
 
 var UserSchema = new Schema({
-    id : String, // Will be a hash of the username
-    username : String,
-    password : String, // Will be a hash
-    firstName : String,
-    lastName : String,
-    email : String  // Optional 
-
+    username : String,  // REQ
+    password : String,  // REQ, Will be a hash
+    firstName : String, //optional
+    lastName : String,  // optional
+    email : String      // REQ
 });
 
 var User = mongoose.model('User', UserSchema);

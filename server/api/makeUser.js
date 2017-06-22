@@ -2,6 +2,8 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../schemas/schema-user');
+var bcrypt = require('bcrypt');
+var saltRounds = 10 // To use with bcrypt
 
 router.post('/', processMakeUser);
 
@@ -25,23 +27,49 @@ function processMakeUser(req, res) {
     // Check if the passwords match 
     if (pass != confirmPass) {
         respondWithResult(res, 400)({
-            error : "1" //  Sent when passwords dont match
+            error : "makeUser #1" //  Sent when passwords dont match
         })
+
+        return;
+    }
+
+    // Check if the password is long enough 
+    if (pass.length < 10) {
+        respondWithResult(res, 400)({
+            error : "makeUser #2" //  Sent when the password is invalid
+        })
+        
+        return;
     }
 
     // Check if the username is not taken
     User.find({ username : username }, function(err, response) {
         if (response.length != 0) {
             respondWithResult(res, 400)({
-                error : "2" // Sent when the user already exists
+                error : "makeUser #3" // Sent when the user already exists
             })
-            
+
             return;
         }
 
         // Add the user to DB
+        var newUser = new User({
+            username : username,
+            password : bcrypt.hashSync(pass, saltRounds),
+            email : email
+        });
+
+        newUser.save();
 
         // Log in the user with the given information
+        req.logIn(user, function(err) {
+            if (err) {
+                console.log(err);
+                respondWithResult(res, 500)("Internal server error: makeUser #4");
+            } else {
+                res.redirect("/");
+            }
+        })
     });
 }
 

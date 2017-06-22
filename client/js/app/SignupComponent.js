@@ -37,11 +37,11 @@ function signUp() {
     var confirmGivenPassword = document.getElementById("confirmpasswordRegister").value;
 
     if (givenPassword != confirmGivenPassword) {
-        // Alert the user of the mistake
-        // Still need to do server-side checking
         alert("username and password dont match")
     } else if (validateEMailAdresses(givenEmail) != true) {
         alert("Invalid Email adress");
+    } else if (givenPassword.length < 10) {
+        alert("Password is not long enough. passwords must have a minimum length of 10 characters");
     } else {
         // Send data, do more server-side validation
         fetch('/api/makeUser', {
