@@ -16,6 +16,15 @@ function respondWithResult(res, statusCode) {
 
 function processMakeUser(req, res) {
     console.log("Making user!");
+
+    // Check if the emails match 
+
+    // Check if the username is not taken 
+
+    // Add the user to DB
+
+    // Log in the user with the given information
+    
 }
 
 module.exports = router;
