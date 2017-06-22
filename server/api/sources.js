@@ -22,7 +22,6 @@ function supported_sources(req, res) {
             status : "ok",
             payload : doclist
         }
-        console.log("HERE222!");
         respondWithResult(res)(response);
     })
 }
