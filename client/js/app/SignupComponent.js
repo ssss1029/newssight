@@ -63,7 +63,7 @@ function signUp() {
 
             // Handle the response
 
-            // IF the response is all good, then redirect to home page as a new logged-in user
+            // If the response is all good, then redirect to home page as a new logged-in user
         });
     }
 }

@@ -10,6 +10,7 @@ var kue = require('kue');
 var queue = kue.createQueue();
 var request = require('request');
 var sha1 = require('sha1')
+var fs = require('fs');
 
 // Schemas
 var Article = require('./schemas/schema-article');
@@ -148,7 +149,19 @@ function processArticlesResponse(response) {
  * @param {Function} debug 
  */
 function processNewArticleData(data, debug) {
-    data = JSON.parse(data);
+    try {
+        data = JSON.parse(data);
+    } catch(err) {
+        console.log(err);
+        fs.writeFile("errorlog.txt", data, function(err) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("SAVED ERROR DATA TO errorlog.txt")
+            }
+        })
+    }
+
     var newArticles = data.articles;
     var source = data.source;
 
