@@ -26,9 +26,9 @@ class LoginComponent extends React.Component {
         return (
             <div className="loginWrapper">
                 <h3 className="loginLabel"> Username </h3>
-                    <input className="loginInput" type="text" id="username" placeholder="johnDoe1983" />
+                    <input className="loginInput" name="username" type="text" id="username" placeholder="johnDoe1983" />
                 <h3 className="loginLabel"> Password </h3>
-                    <input className="loginInput" type="password" id="password" placeholder="**********" />
+                    <input className="loginInput" name="password" type="password" id="password" placeholder="**********" />
             </div>
         );
     }

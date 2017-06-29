@@ -18,7 +18,9 @@ class NavigationComponent extends React.Component {
                         <li className="navButtonsLI">Search</li>
                         <li className="navButtonsLI">Current Stories</li>
                         <li className="navButtonsLI">Top Stories</li>
-                        <li className="navButtonsLI">Log In</li>
+                        <a href="/login">
+                            <li className="navButtonsLI">Log In</li>
+                        </a>
                     </ul>
                 </div>
             </div>

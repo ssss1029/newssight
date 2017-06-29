@@ -230,7 +230,7 @@ table {
 	width: 100%;
 	height: 100%;
 	background-color: #ecf0f1;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	z-index: -1;
@@ -239,7 +239,8 @@ table {
 
 .loginForm {
 	width: 800px;
-	margin: 0 auto;
+	height: auto;
+	margin: 150px auto 0 auto;
 }
 
 .loginCol {
@@ -326,7 +327,24 @@ table {
 	width: 260px;
 }
 
-.loginForm {
-	margin-top: 12%;
-	height: auto;
+.alert {
+	text-align: left;
+	display: none;
+}
+
+.alertInnerSpan {
+	color: #000000;
+	font-family: "Raleway";
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.loginInputInvalid {
+	background-color: #ff8c8c;
+}
+
+.alertInnerText span {
+	color: #000000;
+	font-family: "Raleway";
+	font-size: 15px;
 }

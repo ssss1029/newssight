@@ -9,9 +9,10 @@ var Schema = mongoose.Schema;
 mongoose.Promise = require('bluebird');
 
 var UserSchema = new Schema({
+    id : String,        // REQ, will be defined to be sha1(username)
     username : String,  // REQ
-    password : String,  // REQ, Will be a hash
-    firstName : String, //optional
+    password : String,  // REQ, Will be a hash doen through bcrypt
+    firstName : String, // optional
     lastName : String,  // optional
     email : String      // REQ
 });

@@ -4,6 +4,7 @@ var router = express.Router();
 var User = require('../schemas/schema-user');
 var bcrypt = require('bcrypt');
 var saltRounds = 10 // To use with bcrypt
+var sha1 = require("sha1");
 
 router.post('/', processMakeUser);
 
@@ -26,8 +27,8 @@ function processMakeUser(req, res) {
 
     // Check if the passwords match 
     if (pass != confirmPass) {
-        respondWithResult(res, 400)({
-            error : "makeUser #1" //  Sent when passwords dont match
+        respondWithResult(res, 200)({
+            whatWentWrong : "1" //  Sent when passwords dont match
         })
 
         return;
@@ -35,8 +36,8 @@ function processMakeUser(req, res) {
 
     // Check if the password is long enough 
     if (pass.length < 10) {
-        respondWithResult(res, 400)({
-            error : "makeUser #2" //  Sent when the password is invalid
+        respondWithResult(res, 200)({
+            whatWentWrong : "2" //  Sent when the password is invalid
         })
         
         return;
@@ -45,40 +46,45 @@ function processMakeUser(req, res) {
     // Check if the username is not taken
     User.find({ username : username }, function(err, response) {
         if (response.length != 0) {
-            respondWithResult(res, 400)({
-                error : "makeUser #3" // Sent when the user already exists
+            respondWithResult(res, 200)({
+                whatWentWrong : "3" // Sent when the user already exists
             })
-
             return;
         }
 
-        // Add the user to DB
-        var newUser = new User({
-            username : username,
-            password : bcrypt.hashSync(pass, saltRounds),
-            email : email
-        });
-
-        newUser.save();
-
-        // Log in the user with the given information
-        req.logIn(user, function(err) {
-            if (err) {
-                console.log(err);
-                respondWithResult(res, 500)("Internal server error: makeUser #4");
-            } else {
-                res.redirect("/");
+        User.find({ email : email }, function(err, response) {
+            if (response.length != 0) {
+                respondWithResult(res, 200)({
+                    whatWentWrong : "5" // Sent when the user already exists
+                })
+                return;
             }
-        })
+
+            // Add the user to DB
+            var newUser = new User({
+                id : sha1(username),
+                username : username,
+                password : bcrypt.hashSync(pass, saltRounds),
+                email : email
+            });
+
+            newUser.save();
+
+            // Log in the user with the given information
+            req.logIn(newUser, function(err) {
+                if (err) {
+                    
+                    console.log(err);
+                    respondWithResult(res, 500)({
+                        whatWentWrong : "4" // Internal Server Error
+                    });
+
+                } else {
+                    res.redirect("/");
+                }
+            });
+        });
     });
-}
-
-/**
- * Add the user to db. user object is of the following form:
- * @param {Object} user { username, password, email }
- */
-function addUserToDB(user) {
-
 }
 
 module.exports = router;

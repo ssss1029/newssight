@@ -12,6 +12,9 @@ class SignUpComponent extends React.Component {
             <div className="loginWrapper">
                 <h2 className="loginColTitle"> Register Now </h2>
                 <h2 className="loginColSubHeading"> (Its FREE!) </h2>
+                <div className="alert alert-danger" id="alert-signup" role="alert">
+                    <h3 className="alertInnerText" id="signupInnerAlertText"><span className="alertInnerSpan"> Error: </span> <span id="flashText"> Hello there </span> </h3>
+                </div>
                 <div className="loginWrapper">
                     <h3 className="loginLabel"> Username </h3>
                         <input className="loginInput" type="text" id="usernameRegister" placeholder="johnDoe1983" />
@@ -27,6 +30,7 @@ class SignUpComponent extends React.Component {
         );
     }
 }
+
 
 function signUp() {
     console.log("Trying to Sign up for Newssight.");
@@ -57,24 +61,67 @@ function signUp() {
                 confirmGivenPassword : confirmGivenPassword
             })
         }).then(function(response) {
-            console.log(JSON.stringify(response.headers));
-            console.log(response.status);
-            console.log(response.statusText);
 
-            // Handle the response
+            // Success            
+            if (response.redirected == true) {
+                window.location = response.url;
+                return;
+            }
 
-            // If the response is all good, then redirect to home page as a new logged-in user
-        });
+            return response.json();
+        }).then(function(json) {
+
+            processSignupResponse(json);
+
+        }).catch(function(ex) {
+            // Parsing failed
+            console.log(ex);
+        }) 
     }
 }
 
+function processSignupResponse(responseData) {
+    var error = responseData.whatWentWrong; 
+
+    if (error == "1") {
+        flashError("Passwords don't match");
+    } else if (error == "2") {
+        flashError("Password is invalid. Valid passwords must contain at least 10 characters")
+    } else if (error == "3") {
+        flashError("This username is already taken")
+    } else if (error == "4") {
+        flashError("Internal Server Error")
+    } else if (error == "5") {
+        flashError("This email already has an account. Please contact us if you have forgotten your password.");  
+    } else {
+        flashError("Unknown Error.")
+    }
+}
+
+function flashError(text) {
+    if (!text) {
+        return;
+    }
+
+    document.getElementById("flashText").innerHTML = text;
+    document.getElementById("alert-signup").style.display = "block";
+}
+
 /**
- * Returns true if string is a valid emaila address 
+ * Returns true if string is a valid email address 
  * @param {String} string 
  */
 function validateEMailAdresses(string) {
     var regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-    return regex.test(email);
+    return regex.test(string);
+}
+
+/**
+ * displays the error on the top of the page. 
+ * @param {Object} error 
+ */
+function displayError(error) {
+
 }
 
 export { SignUpComponent as SignUpComponent };

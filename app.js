@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
+var sha1 = require('sha1');
 
 var app = express();
 var kue = require('kue');
@@ -44,11 +45,20 @@ app.use(session({
 }));
 
 passport.serializeUser(function(user, done) {
-  done(null, user.id);
+  var userID = user.id;
+  console.log(JSON.stringify(user));
+  console.log(userID);
+  done(null, user);
 });
 
 passport.deserializeUser(function(id, done) {
-  User.find({id : id}, function (err, done) {
+  console.log(id);
+  User.find({id : id}, function (err, user) {
+    
+    if (!user) {
+      // Handle the case where no user is found and the cookie is still there 
+    }
+
     done(err, user);
   })
 });
@@ -56,6 +66,26 @@ passport.deserializeUser(function(id, done) {
 app.use(passport.initialize());
 app.use(passport.session());
 
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function (err, user) {
+      if (err) { 
+        return done(err); 
+      }
+      
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      
+      if (!user.password !== password) {
+        // Yo its chill we're comparing hashes here lmao 
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+
+      return done(null, user);
+    });
+  }
+));
 
 // Routes
 var index = require('./client/router');
