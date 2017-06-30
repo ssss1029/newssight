@@ -13,7 +13,7 @@ class SignUpComponent extends React.Component {
                 <h2 className="loginColTitle"> Register Now </h2>
                 <h2 className="loginColSubHeading"> (Its FREE!) </h2>
                 <div className="alert alert-danger" id="alert-signup" role="alert">
-                    <h3 className="alertInnerText" id="signupInnerAlertText"><span className="alertInnerSpan"> Error: </span> <span id="flashText"> Hello there </span> </h3>
+                    <h3 className="alertInnerText" id="signupInnerAlertText"><span className="alertInnerSpan"> Error: </span> <span id="flashTextSignup"> Hello there </span> </h3>
                 </div>
                 <div className="loginWrapper">
                     <h3 className="loginLabel"> Username </h3>
@@ -103,7 +103,7 @@ function flashError(text) {
         return;
     }
 
-    document.getElementById("flashText").innerHTML = text;
+    document.getElementById("flashTextSignup").innerHTML = text;
     document.getElementById("alert-signup").style.display = "block";
 }
 

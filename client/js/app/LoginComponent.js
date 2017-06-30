@@ -39,8 +39,8 @@ class Login extends React.Component {
     render() {
         return ( 
             <div className="loginWrapper">
-                <div className="alert alert-danger" id="alert-signup" role="alert">
-                    <h3 className="alertInnerText" id="signupInnerAlertText"><span className="alertInnerSpan"> Error: </span> <span id="flashText"> Hello there </span> </h3>
+                <div className="alert alert-danger" id="alert-login" role="alert">
+                    <h3 className="alertInnerText" id="loginInnerAlertText"><span className="alertInnerSpan"> Error: </span> <span id="flashTextLogin"> Hello there </span> </h3>
                 </div>
                 <LoginComponentTitle />
                 <LoginComponent />
@@ -51,12 +51,12 @@ class Login extends React.Component {
 }
 
 function login() {
-    var username = document.getElementById('username');
-    var password = document.getElementById('password');
+    var user = document.getElementById('username').value;
+    var pass = document.getElementById('password').value;
 
-    if (username == "") {
+    if (user == "") {
         flashError("Please enter a username");
-    } else if (password == "") {
+    } else if (pass == "") {
         flashError("Please enter your password");
     } else {
         // All good
@@ -67,8 +67,8 @@ function login() {
                 'Content-type' : 'application/json'
             }, 
             body : JSON.stringify({
-                username : username,
-                password : password,
+                username : user,
+                password : pass,
             })
         }).then(function(response) {
 
@@ -76,12 +76,14 @@ function login() {
             if (response.redirected == true) {
                 window.location = response.url;
                 return;
+            } else if (response.status == 401) {
+                // Unauthorized
+                flashError("Your username or password is incorrect.")
+            } else {
+                console.log(response);
+                flashError("Something went wrong on our end.")
             }
 
-            // Not a successful login
-            return response.json();
-        }).then(function(json) {
-            processLoginResponse(json);
         }).catch(function(ex) {
             // Parsing failed
             console.log(ex);
@@ -89,17 +91,13 @@ function login() {
     }
 }
 
-function processLoginResponse(response) {
-
-}
-
 function flashError(text) {
     if (!text) {
         return;
     }
 
-    document.getElementById("flashText").innerHTML = text;
-    document.getElementById("alert-signup").style.display = "block";
+    document.getElementById("flashTextLogin").innerHTML = text;
+    document.getElementById("alert-login").style.display = "block";
 }
 
 

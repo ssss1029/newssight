@@ -7,6 +7,8 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 var sha1 = require('sha1');
+var bcrypt = require('bcrypt');
+  var saltRounds = 10; // For bcrypt
 
 var app = express();
 var kue = require('kue');
@@ -77,8 +79,9 @@ passport.use(new LocalStrategy(
         return done(null, false, { message: 'Incorrect username.' });
       }
       
-      if (!user.password !== password) {
-        // Yo its chill we're comparing hashes here lmao 
+      console.log(user.password);
+      console.log(bcrypt.hashSync(password, saltRounds));
+      if (!bcrypt.compareSync(password, user.password)) {
         return done(null, false, { message: 'Incorrect password.' });
       }
 
