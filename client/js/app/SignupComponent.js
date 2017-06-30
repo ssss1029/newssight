@@ -116,12 +116,4 @@ function validateEMailAdresses(string) {
     return regex.test(string);
 }
 
-/**
- * displays the error on the top of the page. 
- * @param {Object} error 
- */
-function displayError(error) {
-
-}
-
 export { SignUpComponent as SignUpComponent };
