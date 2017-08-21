@@ -14,8 +14,5 @@ function respondWithResult(res, statusCode) {
   };
 }
 
-function processLogin(req, res) {
-    
-}
 
 module.exports = router;
