@@ -164,9 +164,10 @@ function processNewArticleData(data, debug) {
 
     var newArticles = data.articles;
     var source = data.source;
-
-    for (var i = 0; i < newArticles.length; i++) {
-        processArticle(newArticles[i], source, 0);
+    if (newArticles != null) {
+        for (var i = 0; i < newArticles.length; i++) {
+            processArticle(newArticles[i], source, 0);
+        }
     }
 }
 
