@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavigationComponent from './NavigationComponent.js'
-import FooterComponent from './FooterComponent.js';
-import { Login } from './LoginComponent.js'; 
-import { SignUpComponent } from './SignUpComponent.js';
+import NavigationComponent from './components/NavigationComponent.js'
+import FooterComponent from './components/FooterComponent.js';
+import Login from './components/LoginComponent.js'; 
+import SignUpComponent from './components/SignUpComponent.js';
 
 ReactDOM.render(<NavigationComponent />, document.getElementById('nav'));
 ReactDOM.render(<Login />, document.getElementById('leftLoginColumn'));

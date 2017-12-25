@@ -10,9 +10,7 @@ class FooterComponent extends React.Component {
         return (
             <div className="footerWrapper container-fluid">
                 <div className="row">
-                    <div className="footerCol col-md-6">
-
-                    </div>
+                    <div className="footerCol col-md-6"></div>
                     <div className="footerCol col-md-3">
                         <div className="quickLinksWrapper">
                             <ul className="quickLinks footerUL">
@@ -44,4 +42,4 @@ class FooterComponent extends React.Component {
     }
 }
 
-module.exports = FooterComponent;
+export default FooterComponent;

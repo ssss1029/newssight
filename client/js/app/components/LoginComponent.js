@@ -100,10 +100,4 @@ function flashError(text) {
     document.getElementById("alert-login").style.display = "block";
 }
 
-
-export {
-    LoginComponent as LoginComponent, 
-    LoginComponentTitle as LoginComponentTitle, 
-    LoginComponentSubmitButton as LoginComponentSubmitButton,
-    Login as Login
-}
+export default Login;

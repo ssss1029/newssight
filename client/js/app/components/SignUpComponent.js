@@ -11,7 +11,6 @@ class SignUpComponent extends React.Component {
         return (
             <div className="loginWrapper">
                 <h2 className="loginColTitle"> Register Now </h2>
-                <h2 className="loginColSubHeading"> (Its FREE!) </h2>
                 <div className="alert alert-danger" id="alert-signup" role="alert">
                     <h3 className="alertInnerText" id="signupInnerAlertText"><span className="alertInnerSpan"> Error: </span> <span id="flashTextSignup"> Hello there </span> </h3>
                 </div>
@@ -116,4 +115,4 @@ function validateEMailAdresses(string) {
     return regex.test(string);
 }
 
-export { SignUpComponent as SignUpComponent };
+export default SignUpComponent;
