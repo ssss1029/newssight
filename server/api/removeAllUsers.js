@@ -1,9 +1,6 @@
 /**
  * DEV API
- * Be sure to remove before deploying
- * 
- * ############################# THIS IS SUPER DANGEROUS LMFAO #############################
- * 
+ * Be sure to remove before deploying 
  * This will remove all the current Users from the database
  */
 

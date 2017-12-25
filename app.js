@@ -13,7 +13,6 @@ var bcrypt = require('bcrypt');
 var app = express();
 var kue = require('kue');
 var queue = kue.createQueue();
-
 var debug = require("debug")('newssight:app.js');
 
 var User = require('./server/schemas/schema-user');
