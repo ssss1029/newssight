@@ -36,5 +36,8 @@
     "sha1": "^1.1.1",
     "webpack": "^2.6.1",
     "webpack-html-plugin": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
   }
 }

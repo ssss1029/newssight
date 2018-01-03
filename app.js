@@ -89,18 +89,16 @@ passport.use(new LocalStrategy(
   }
 ));
 
-// Routes
-var index = require('./client/router');
-var api = require('./server/api/router');
-app.use('/', index);
-app.use('/api', api);
-
-
 // Statics 
 app.use('/css', express.static('client/css/dist'));
 app.use('/img', express.static('client/img/dist'));
 app.use('/js',  express.static('client/js/dist'));
 
+// Routes
+var index = require('./server/routes/index');
+var api = require('./server/api/router');
+app.use('/', index);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
