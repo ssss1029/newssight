@@ -42,7 +42,7 @@ function sourceUpdateDB(job) {
 
 }
 
-function processSourcesResponse(response) {            
+function processSourcesResponse(response) {
     responseData = "";
 
     response.on('data', function(chunk) {
@@ -50,7 +50,7 @@ function processSourcesResponse(response) {
     });
 
     response.on('end', function() {
-        debug_source_update_worker("Done Receiving new info from API")
+        debug_source_update_worker("Done receiving new info from API")
         processNewSourceData(responseData);
     });
 
