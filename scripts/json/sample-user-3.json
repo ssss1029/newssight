@@ -1,0 +1,9 @@
+{
+    "TableName": "Users",
+    "Item": {
+        "Username": {"S": "dwight"},
+        "UserID": {"S": "3"},
+        "First Name": {"S": "Dwight"},
+        "Last Name": {"S": "Schrute"}
+    }
+}

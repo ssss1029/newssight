@@ -1,25 +1,18 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var mongoose = require('mongoose');
 var sha1 = require('sha1');
 var bcrypt = require('bcrypt');
   var saltRounds = 10; // For bcrypt
 
 var app = express();
-var kue = require('kue');
-var queue = kue.createQueue();
+
 var debug = require("debug")('newssight:app.js');
-
 var User = require('./server/schemas/schema-user');
-
-if (process.env.NODE_ENV == "development") {
-  app.use('/api', kue.app);
-} 
+var authConns = require('./database-conns/db-auth-conns');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'client/html/'));
@@ -40,28 +33,17 @@ app.use(session({
    resave: true, 
    rolling : true,
    saveUninitialized: false,
-   store : new MongoStore({
-     mongooseConnection : mongoose.connection
-   })
+   store : authConns.getSessionStore()
 }));
 
 passport.serializeUser(function(user, done) {
-  var userID = user.id;
-  console.log(JSON.stringify(user));
-  console.log(userID);
-  done(null, user);
+  var userID = authConns.serializeUser(user);
+  done(null, userID);
 });
 
 passport.deserializeUser(function(id, done) {
-  console.log(id);
-  User.find({id : id}, function (err, user) {
-    
-    if (!user) {
-      // Handle the case where no user is found and the cookie is still there 
-    }
-
-    done(err, user);
-  })
+  user = authConns.deserializeUser(id);
+  done(null, user);
 });
 
 app.use(passport.initialize());
@@ -69,7 +51,7 @@ app.use(passport.session());
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
-    User.findOne({ username: username }, function (err, user) {
+    authConns.getUser({ "Username": username }, function (err, user) {
       if (err) { 
         return done(err); 
       }
@@ -78,10 +60,8 @@ passport.use(new LocalStrategy(
         return done(null, false, { message: 'Incorrect username.' });
       }
       
-      console.log(user.password);
-      console.log(bcrypt.hashSync(password, saltRounds));
       if (!bcrypt.compareSync(password, user.password)) {
-        return done(null, false, { message: 'Incorrect password.' });
+        return done(null, false, { message: 'Incorrect password for the given username.' });
       }
 
       return done(null, user);
