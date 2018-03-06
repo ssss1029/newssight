@@ -1,16 +1,25 @@
 /**
- * Contains all connections to DynamoDB for authentication purposes.
- * Also contains all connections to the users table in DynamoDB
+ * Contains all connections to the database for authentication purposes.
  */
 
-var AWS = require('aws-sdk');
 
 /**
  * Returns the DynamoDB Storage object that is used for storing session data
  * by express-session. Uses the dynamodb-store package.
  */
-function getSessionStore() {
-    
+function getSessionStore(session) {
+    var MySQLStore = require('express-mysql-session')(session);
+ 
+    var options = {
+        host: 'localhost',
+        port: 3306,
+        user: 'developer',
+        password: 'developer',
+        database: 'session_test'
+    };
+ 
+    var sessionStore = new MySQLStore(options);
+    return sessionStore;
 }
 
 /**

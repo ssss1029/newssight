@@ -33,7 +33,7 @@ app.use(session({
    resave: true, 
    rolling : true,
    saveUninitialized: false,
-   store : authConns.getSessionStore()
+   store : authConns.getSessionStore(session)
 }));
 
 passport.serializeUser(function(user, done) {
