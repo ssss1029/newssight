@@ -15,21 +15,14 @@ try {
 }
 
 /**
- * Set up mongo
+ * Initialize database
  */
-var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect(process.env.MONGO_URL);
-var db = mongoose.connection;
-db.on('error', function(err) {
-  debug("ERROR: unable to connect to Mongo: " + err);   
+console.log("Setting up Database");
+var setupDb = require("../server/database-conns/db-setup").setupDb;
+var setupResult = setupDb({
+  SQLScriptLocation : '/scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql' 
 });
-
-db.once('open', function() {
-  debug("We are connected to mongo!!") 
-});
-
-
+console.log(setupResult);
 
 /**
  * Setup other global variables

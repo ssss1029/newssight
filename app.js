@@ -8,11 +8,10 @@ var sha1 = require('sha1');
 var bcrypt = require('bcrypt');
   var saltRounds = 10; // For bcrypt
 
-var app = express();
-
 var debug = require("debug")('newssight:app.js');
-var User = require('./server/schemas/schema-user');
-var authConns = require('./database-conns/db-auth-conns');
+var authConns = require('./database-conns/db-auth-conns');  
+
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'client/html/'));
@@ -27,7 +26,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Passport and session stuff
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
 app.use(session({
    secret: 'keyboard cat', 
    resave: true, 

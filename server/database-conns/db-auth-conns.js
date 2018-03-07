@@ -27,7 +27,7 @@ function getSessionStore(session) {
  * @param {Object} user 
  */
 function serializeUser(user) {
-
+    
 }
 
 /**
