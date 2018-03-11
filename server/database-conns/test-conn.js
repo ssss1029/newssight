@@ -1,4 +1,10 @@
-process.env["DEBUG"] = "newssight*";
+/**
+ * Development script used to test database connection
+ */
+
+if (process.env.DEBUG == undefined) {
+    process.env.DEBUG = "newssight*";
+}
 
 const mysql = require('mysql');
 const debug = require('debug')('newssight:database-conns');
