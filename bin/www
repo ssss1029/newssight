@@ -20,9 +20,8 @@ try {
 console.log("Setting up Database");
 var setupDb = require("../server/database-conns/db-setup").setupDb;
 var setupResult = setupDb({
-  SQLScriptLocation : '/scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql' 
+  SQLScriptLocation : 'scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql' 
 });
-console.log(setupResult);
 
 /**
  * Setup other global variables

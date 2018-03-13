@@ -7,10 +7,12 @@ if (process.env.DEBUG == undefined) {
     process.env.DEBUG = "newssight*";
 }
 
-const mysql = require('mysql');
-const fs    = require('fs');
-const path  = require('path');
-const debug = require('debug')('newssight:database-conns');
+const mysql    = require('mysql');
+const fs       = require('fs');
+const path     = require('path');
+const debug    = require('debug')('newssight:database-conns');
+const debugERR = require('debug')('newssight:ERROR:database-conns');
+      debugERR.color = require('debug').colors[5] /* RED */
 
 const connection = mysql.createConnection({
   host     : 'localhost',
@@ -28,18 +30,20 @@ function setupDb(options) {
     debug("Clearing and resetting up DB");
     const SQLScriptLocation = options.SQLScriptLocation;
     if (SQLScriptLocation == undefined) {
-        return "Error setting up Database. Invalid options.";
+        debugERR("Error setting up Database. Invalid options.");
     }
 
     // SQLScriptLocaation will be defined.
     const SQL = fs.readFileSync(SQLScriptLocation);
     connection.query(SQL.toString(), function(err, results, fields) {
         if (err) {
-            debug(err);
+            debugERR(err);
         } else {
             debug("Set up database sucessfully.");
         }
     });
+
+    return 1
 }
 
 if (!module.parent) {

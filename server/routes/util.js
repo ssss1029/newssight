@@ -7,13 +7,20 @@
  * @param {*} next 
  */
 function loginRedirects(req, res, next) {
+	// Home page is always accessibile
+	if (req.path == "/") {
+		next()
+	}
+
 	if (req.path === "/login") {
 		if (req.user) {
+			// No need to login again!
 			res.redirect("/")
 		} else {
 			next()
 		}
 	} else {
+		// All other pages are lockeds
 		if (req.user) {
 			next()
 		} else {

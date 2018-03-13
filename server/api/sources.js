@@ -5,6 +5,11 @@ var Source = require('../schemas/schema-source');
 
 router.get('/', supported_sources)
 
+/**
+ * Exposes a function that takes in a JSON response and sends it.
+ * @param {Object} res Express response object
+ * @param {Integer} statusCode HTTP Status code for the response
+ */
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
   return function(entity) {
@@ -15,15 +20,13 @@ function respondWithResult(res, statusCode) {
   };
 }
 
+/**
+ * Uses the res object to respond with a list of all the supported sources
+ * @param {Object} req Express Request object
+ * @param {Object} res Express Response object
+ */
 function supported_sources(req, res) {
-  console.log("HERE!");
-    Source.find({}).exec(function(err, doclist) {
-        var response = {
-            status : "ok",
-            payload : doclist
-        }
-        respondWithResult(res)(response);
-    })
+  
 }
 
 module.exports = router;

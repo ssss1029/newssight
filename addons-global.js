@@ -685,6 +685,14 @@ module.exports = {
         'youve',
         'z',
         'zero'
-    ]
+    ],
+
+    MIN_PASSWORD_LENGTH : 10,
     
+    ERROR_CODES : {
+        "passwords_confirm_mismatch" : "The password and confirm password form fields do not match." ,
+        "password_length_short" : "The given password is not long enough.",
+        "username_taken" : "The given username has already been taken",
+        "email_taken" : "The given email adress has already been taken"
+    }
 }

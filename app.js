@@ -1,4 +1,4 @@
-var express = require('express');
+var app = require('express')();
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
@@ -6,12 +6,12 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var sha1 = require('sha1');
 var bcrypt = require('bcrypt');
-  var saltRounds = 10; // For bcrypt
 
 var debug = require("debug")('newssight:app.js');
-var authConns = require('./database-conns/db-auth-conns');  
+var authConns = require('./server/database-conns/db-auth-conns');  
 
-var app = express();
+var saltRounds = 10; // For bcrypt
+global._base = _dirname;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'client/html/'));

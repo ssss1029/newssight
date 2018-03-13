@@ -20,28 +20,13 @@ function respondWithResult(res, statusCode) {
   };
 }
 
+/**
+ * Removes all users from the database
+ * @param {Object} req Express Request object
+ * @param {Object} res Express Response object
+ */
 function remove_all_users(req, res) {
-  console.log("REMOVING ALL USERS!");
-  User.find({}, function(err, doclist) {
-      if (err) {
-        respondWithResult(res, 500, {
-            error : "Error #y9583jpr. Failed to remove any users from the db."
-        })
-      }
-
-
-      for (var i = 0; i < doclist.length; i++) {
-          var user = doclist[i];
-          user.remove();
-      }
-
-        var response = {
-            status : "ok",
-            removedCount : doclist.length
-        }
-        respondWithResult(res)(response);
-
-  })
+  
 }
 
 module.exports = router;
