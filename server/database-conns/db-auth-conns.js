@@ -6,6 +6,7 @@
 /**
  * Returns the DynamoDB Storage object that is used for storing session data
  * by express-session. Uses the dynamodb-store package.
+ * @param {Object} session result of require('express-session')
  */
 function getSessionStore(session) {
     var MySQLStore = require('express-mysql-session')(session);

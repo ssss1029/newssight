@@ -693,6 +693,11 @@ module.exports = {
         "passwords_confirm_mismatch" : "The password and confirm password form fields do not match." ,
         "password_length_short" : "The given password is not long enough.",
         "username_taken" : "The given username has already been taken",
-        "email_taken" : "The given email adress has already been taken"
+        "email_taken" : "The given email adress has already been taken",
+        "imprecise_request" : "One or more of the required parameters were undefined, so the request failed"
+    },
+
+    TABLES : {
+        USERS: "users"
     }
 }

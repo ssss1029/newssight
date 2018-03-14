@@ -1,4 +1,5 @@
-var app = require('express')();
+var express = require('express')
+var app = express();
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
@@ -11,7 +12,7 @@ var debug = require("debug")('newssight:app.js');
 var authConns = require('./server/database-conns/db-auth-conns');  
 
 var saltRounds = 10; // For bcrypt
-global._base = _dirname;
+global._base = __dirname;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'client/html/'));
@@ -75,8 +76,8 @@ app.use('/js',  express.static('client/js/dist'));
 // Routes
 var index = require('./server/routes/index');
 var api = require('./server/api/router');
-app.use('/', index);
 app.use('/api', api);
+app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
