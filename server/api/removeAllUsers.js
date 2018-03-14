@@ -8,7 +8,8 @@ var express = require('express');
 var router = express.Router();
 var path = require("path");
 var Users = require(path.join(global._base, "/server/database-conns/db-users-conns"));
-router.get('/', removeAllUsers)
+
+router.post('/', removeAllUsers)
 
 function respondWithResult(res, statusCode) {
 	statusCode = statusCode || 200;

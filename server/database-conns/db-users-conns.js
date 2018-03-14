@@ -19,7 +19,7 @@ const tables     = global.TABLES;
             if (err) {
                 reject(err);
             } else {
-                fulfill(resuts);
+                fulfill(results);
             }
         });
     });
@@ -32,13 +32,13 @@ const tables     = global.TABLES;
   * @param {Object} userSettings 
   */
  function makeUser(userSettings) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function(fulfill, reject) {
         var query = "INSERT INTO users SET ?";
         connection.query(query, userSettings, function(error, results, fields) {
             if (error) {
                 reject(error);
             } else {
-                resolve(results);
+                fulfill(results);
             }
         });
     });
@@ -50,13 +50,12 @@ const tables     = global.TABLES;
   */
  function getUser(userSettings) {
     var query = appendWhereClauses(userSettings, "SELECT * FROM {0} WHERE".format(tables.USERS)); 
-    debug("Querying: " + query)
-    return new Promise(function(resolve, reject) {
+    return new Promise(function(fulfill, reject) {
         connection.query(query, function(error, results, fields) {
             if (error) {
                 reject(error)
             } else {
-                resolve(results);
+                fulfill(results);
             }
         });
     })
