@@ -3,23 +3,9 @@ var express = require('express');
 var router = express.Router()
 var path = require('path');
 var Sources = require(path.join(global._base, "/server/database-conns/db-source-conns"));
+var respondWithResult = require(path.join(global._base, "/server/util"))
 
 router.get('/', supported_sources)
-
-/**
- * Exposes a function that takes in a JSON response and sends it.
- * @param {Object} res Express response object
- * @param {Integer} statusCode HTTP Status code for the response
- */
-function respondWithResult(res, statusCode) {
-	statusCode = statusCode || 200;
-	return function(entity) {
-		if(entity) {
-			return res.status(statusCode).json(entity);
-		}
-		return null;
-	};
-}
 
 /**
  * Uses the res object to respond with a list of all the supported sources

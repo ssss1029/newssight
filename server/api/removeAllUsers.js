@@ -8,18 +8,9 @@ var express = require('express');
 var router = express.Router();
 var path = require("path");
 var Users = require(path.join(global._base, "/server/database-conns/db-users-conns"));
+var respondWithResult = require(path.join(global._base, "/server/util"))
 
 router.post('/', removeAllUsers)
-
-function respondWithResult(res, statusCode) {
-	statusCode = statusCode || 200;
-	return function(entity) {
-		if (entity) {
-			return res.status(statusCode).json(entity);
-		}
-		return null;
-	};
-}
 
 /**
  * Removes all users from the database

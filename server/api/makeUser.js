@@ -6,18 +6,8 @@ var Users = require(path.join(global._base, "/server/database-conns/db-users-con
 var bcrypt = require('bcrypt');
 var saltRounds = 10 // To use with bcrypt
 var sha1 = require("sha1");
-
+var respondWithResult = require(path.join(global._base, "/server/util"))
 router.post('/', processMakeUser);
-
-function respondWithResult(res, statusCode) {
-  statusCode = statusCode || 200;
-  return function(entity) {
-    if(entity) {
-      return res.status(statusCode).json(entity);
-    }
-    return null;
-  };
-}
 
 /**
  * Processes a /makeUser request
