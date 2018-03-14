@@ -1,7 +1,8 @@
 
 var express = require('express');
 var router = express.Router()
-var Source = require('../schemas/schema-source');
+var path = require('path');
+var Sources = require(path.join(global._base, "/server/database-conns/db-source-conns"));
 
 router.get('/', supported_sources)
 
@@ -11,13 +12,13 @@ router.get('/', supported_sources)
  * @param {Integer} statusCode HTTP Status code for the response
  */
 function respondWithResult(res, statusCode) {
-  statusCode = statusCode || 200;
-  return function(entity) {
-    if(entity) {
-      return res.status(statusCode).json(entity);
-    }
-    return null;
-  };
+	statusCode = statusCode || 200;
+	return function(entity) {
+		if(entity) {
+			return res.status(statusCode).json(entity);
+		}
+		return null;
+	};
 }
 
 /**
@@ -26,7 +27,11 @@ function respondWithResult(res, statusCode) {
  * @param {Object} res Express Response object
  */
 function supported_sources(req, res) {
-  
-}
+	Sources.getSource({}).then(function(result) {
+		respondWithResult(res, 200)(result);			
+	}).catch(function(error) {
+		respondWithResult(res, 200)(error.toString());
+	});
+} 
 
 module.exports = router;

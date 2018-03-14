@@ -698,6 +698,7 @@ module.exports = {
     },
 
     TABLES : {
-        USERS: "users"
+        USERS: "users",
+        SOURCES: "sources"
     }
 }
