@@ -1,6 +1,14 @@
 #!/usr/bin/env node
 
 /**
+ * Setup global variables
+ */
+var addons_global = require("../addons-global");
+for (var item in addons_global) {
+  global[item] = addons_global[item];
+}
+
+/**
  * Setting up process.env stuff
  */
 try {
@@ -10,26 +18,29 @@ try {
   }
 } catch (e) {
   if (e) {
-    console.log("Hey there, it looks like youre missing an essential addon file. See the readme.");
+    console.error("It looks like youre missing an essential addon file. See the readme.");
   }
 }
+
+const debug    = require('debug')('newssight:bin/www');
+const debugERR = require('debug')('newssight:ERROR:bin/www');
+      debugERR.color = require('debug').colors[5] /* RED */
+
 
 /**
  * Initialize database
  */
-console.log("Setting up Database");
+debug("Setting up Database");
 var setupDb = require("../server/database-conns/db-setup").setupDb;
 var setupResult = setupDb({
-  SQLScriptLocation : 'scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql' 
+  scripts : [
+    'scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql', 
+  ] 
+}).then(function(results) {
+  debug("Done setting up database");
+}).catch(function(error) {
+  debugERR(error);
 });
-
-/**
- * Setup other global variables
- */
-var addons_global = require("../addons-global");
-for (var item in addons_global) {
-  global[item] = addons_global[item];
-}
 
 
 /**
@@ -37,7 +48,6 @@ for (var item in addons_global) {
  */
 
 var app = require('../app');
-var debug = require('debug')('newssight:server');
 var http = require('http');
 
 /**

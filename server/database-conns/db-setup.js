@@ -24,31 +24,50 @@ const connection = mysql.createConnection({
 /**
  * Sets up the database
  * @param {Object} options 
- * @param {String} options.SQLScriptLocation The location of the SQL Script to be executed to setup the DB
+ * @param {String} options.scripts The locations for the scripts to be executed
  */
 function setupDb(options) {
     debug("Clearing and resetting up DB");
-    const SQLScriptLocation = options.SQLScriptLocation;
-    if (SQLScriptLocation == undefined) {
+    const scripts = options.scripts;
+    if (scripts == undefined) {
         debugERR("Error setting up Database. Invalid options.");
+        return;
     }
 
-    // SQLScriptLocaation will be defined.
-    const SQL = fs.readFileSync(SQLScriptLocation);
-    connection.query(SQL.toString(), function(err, results, fields) {
-        if (err) {
-            debugERR(err);
-        } else {
-            debug("Set up database sucessfully.");
-        }
-    });
+    var promises = []
+    for (index in scripts) {
+        let SQL = fs.readFileSync(scripts[index]);
+        promises.push(queryDatabase(SQL.toString(), connection));
+    }
 
-    return 1
+    return Promise.all(promises)
+}
+
+/**
+ * Returns a promise for a db query
+ * @param {*} query The SQL String to pass to the connection
+ * @param {*} connection MySQL connection
+ */
+function queryDatabase(query, connection) {
+    return new Promise(function(fulfill, reject) {
+        connection.query(query, function(error, results, fields) {
+            if (error) {
+                reject(error)
+            } else {
+                fulfill(results)
+            }
+        });
+    });
 }
 
 if (!module.parent) {
     // This is the main module
-    setupDb({SQLScriptLocation : path.join(__dirname, '../../scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql')});
+    setupDb({
+        scripts : [
+            path.join(global._base, 'scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql'),
+            path.join(global._base, 'scripts/mysql/INSERT_DUMMY_DATA.sql')
+        ]
+    });
 }
 
 module.exports = {
