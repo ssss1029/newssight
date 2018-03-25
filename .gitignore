@@ -59,3 +59,5 @@ typings/
 
 addons-process-env.js
 client/js/dist/
+
+.vscode/*

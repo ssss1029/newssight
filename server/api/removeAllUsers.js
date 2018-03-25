@@ -8,7 +8,7 @@ var express = require('express');
 var router = express.Router();
 var path = require("path");
 var Users = require(path.join(global._base, "/server/database-conns/db-users-conns"));
-var respondWithResult = require(path.join(global._base, "/server/util"))
+var respondWithResult = require(path.join(global._base, "/server/util")).respondWithResult;
 
 router.post('/', removeAllUsers)
 
