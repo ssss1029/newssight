@@ -10,6 +10,7 @@ const debug    = require('debug')('newssight:/api/sources');
 const debugERR = require('debug')('newssight:ERROR:/api/sources');
       debugERR.color = require('debug').colors[5] /* RED */
 
+/* ---------- ENDPOINTS ---------- */
 router.get('/', supported_sources)
 router.post('/batchUpdate', batchUpdateSources)
 

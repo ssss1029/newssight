@@ -3,8 +3,8 @@
  */
 
 require("string-format").extend(String.prototype)
-const debug    = require('debug')('newssight:users-conns');
-const debugERR = require('debug')('newssight:ERROR:users-conns');
+const debug    = require('debug')('newssight:source-conns');
+const debugERR = require('debug')('newssight:ERROR:source-conns');
       debugERR.color = require('debug').colors[5] /* RED */
 const connection = require('./connection')
 const tables     = global.TABLES;
