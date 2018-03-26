@@ -93,6 +93,7 @@ const tables     = global.TABLES;
 
  /**
   * Updates the sources of the database with the given data
+  * @param {List} sources A list of all the source Objects info to update 
   */
  function updateSources(sources) {
     promises = []
@@ -116,10 +117,11 @@ const tables     = global.TABLES;
     }
 
     return size;
- }
+}
 
 /**
  * Returns a promise corresponding to the singular update of a source
+ * @param {Object} source The sourcce object. Should contain category, desciption, id, name, etc...
  */
 function _doUpdateQuery(source) {
 	let category    = source.category;
