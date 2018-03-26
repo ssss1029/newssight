@@ -42,10 +42,13 @@ function batchUpdateSources(req, res) {
 
 	const sources = req.body.sources;
 
-	debug("Sources received");
-
-	respondWithResult(res, 200)("ok");	
+	Sources.updateSources(sources).then(function(result) {
+		respondWithResult(res, 200)(result);			
+		debug("Sources received");
+	}).catch(function(error) {
+		respondWithResult(res, 500)("There has been an internal server error.");
+		debugERR("ERROR: " + error.toString());
+	});
 	
 }
-
 module.exports = router;
