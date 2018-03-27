@@ -69,14 +69,22 @@ const tables     = global.TABLES;
   * @param {String} query 
   */
  function _appendWhereClauses(userSettings, query) {
-    whereClauses = []
+    var whereClauses = []
+    var acceptableClauses = ["id", "username", "password", "first_name", "last_name", "email"]
 
-    _pushIfNotNull(whereClauses, "id = "         + connection.escape(userSettings.id),         userSettings.id);
-    _pushIfNotNull(whereClauses, "username = "   + connection.escape(userSettings.username),   userSettings.username);
-    _pushIfNotNull(whereClauses, "password = "   + connection.escape(userSettings.password),   userSettings.password);
-    _pushIfNotNull(whereClauses, "first_name = " + connection.escape(userSettings.first_name), userSettings.first_name);
-    _pushIfNotNull(whereClauses, "last_name = "  + connection.escape(userSettings.last_name),  userSettings.last_name);
-    _pushIfNotNull(whereClauses, "email = "      + connection.escape(userSettings.email),      userSettings.email);
+    // Create all clauses
+    for (var key in userSettings) {
+        if (acceptableClauses.indexOf(key) > -1) {
+            // Acceptable to add into the query
+            whereClauses.push("{0} = {1}".format(key, userSettings[key]))
+        }
+    }
+
+    // Handles the funny case of no where clauses. 
+    if (whereClauses.length == 0) {
+        query = query + " 1"
+        return query
+    }
 
     for (index in whereClauses) {
         if (index > 0) {
@@ -89,25 +97,7 @@ const tables     = global.TABLES;
         query = query + " " + clause
     }
 
-    // Handles the funny case of no where clauses. 
-    // Essentially set the clause to "WHERE 1"
-    if (whereClauses.length == 0) {
-        query = query + " 1"
-    }
-
-    return query
- }
-
- /**
-  * Pushes value onto list if test != null or undefined
-  * @param {Array} list 
-  * @param {Object} value 
-  * @param {Object} test 
-  */
- function _pushIfNotNull(list, value, test) {
-    if (test != null && test != undefined) {
-        list.push(value)
-    }
+    return query;
  }
 
  module.exports = {

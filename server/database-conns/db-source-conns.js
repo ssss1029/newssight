@@ -13,17 +13,15 @@ const tables     = global.TABLES;
   * Gets the source(s) that correspond with sourceSettings
   * @param {Object} sourceSettings A mapping of key to value for the properties that we are looking for in the query
   */
- function getSource(sourceSettings) {
+ function getSource(sourceSettings, selectClauses) {
     var ORING;
-    if (sourceSettings.ORING == undefined) {
+    if (sourceSettings.ORING == undefined || sourceSettings.ORING == false) {
         ORING = false
     } else {
         ORING = true
     }
 
-    var query = _appendWhereClauses(sourceSettings, 
-        "SELECT * FROM {0} WHERE".format(tables.SOURCES),
-        ORING);
+    var query = "SELECT {0} FROM {1} {2}".format(_getSelectClauses(sourceSettings) , tables.SOURCES, _getWhereClauses(sourceSettings, ORING))
     
     debug("Querying for sources: {0}".format(query));
     
@@ -39,24 +37,23 @@ const tables     = global.TABLES;
     });
  }
 
+
+
   /**
-  * Appends where clausses to the given query and returns it
+  * Returns the whereClauses corresponding to the 
   * @param {Object} sourceSettings 
   * @param {String} query 
   */
- function _appendWhereClauses(sourceSettings, query, ORING) {
+ function _getWhereClauses(sourceSettings, ORING) {
+    var clauses = "WHERE"
     whereClauses = []
+    acceptableClauses = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
 
-    _pushIfNotNull(whereClauses, "id = " + connection.escape(sourceSettings.id), sourceSettings.id);
-    _pushIfNotNull(whereClauses, "name = " + connection.escape(sourceSettings.name), sourceSettings.username);
-    _pushIfNotNull(whereClauses, "description = " + connection.escape(sourceSettings.description), sourceSettings.password);
-    _pushIfNotNull(whereClauses, "url = " + connection.escape(sourceSettings.url), sourceSettings.first_name);
-    _pushIfNotNull(whereClauses, "category = " + connection.escape(sourceSettings.category), sourceSettings.last_name);
-    _pushIfNotNull(whereClauses, "country = " + connection.escape(sourceSettings.country), sourceSettings.email);
-    _pushIfNotNull(whereClauses, "language = " + connection.escape(sourceSettings.language), sourceSettings.email);
-    _pushIfNotNull(whereClauses, "topSortByAvailable = " + connection.escape(sourceSettings.topSortByAvailable), sourceSettings.email);
-    _pushIfNotNull(whereClauses, "latestSortByAvailable = " + connection.escape(sourceSettings.latestSortByAvailable), sourceSettings.email);
-    _pushIfNotNull(whereClauses, "popularSortByAvailable = " + connection.escape(sourceSettings.popularSortByAvailable), sourceSettings.email);
+    for (var key in sourceSettings) {
+        if (acceptableClauses.has(key)) {
+            whereClauses.push("{0} = {1}".format(key, connection.escape(sourceSettings[key])));
+        }
+    }
 
     for (index in whereClauses) {
         if (index > 0) {
@@ -66,16 +63,16 @@ const tables     = global.TABLES;
 
     for(index in whereClauses) {
         clause = whereClauses[index]
-        query = query + " " + clause
+        clauses = clauses + " " + clause
     }
 
     // Handles the funny case of no where clauses. 
     // Essentially set the clause to "WHERE 1"
     if (whereClauses.length == 0) {
-        query = query + " 1"
+        clauses = clauses + " 1"
     }
 
-    return query
+    return clauses
  }
 
  /**

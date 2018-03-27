@@ -11,7 +11,7 @@ const debugERR = require('debug')('newssight:ERROR:/api/sources');
       debugERR.color = require('debug').colors[5] /* RED */
 
 /* ---------- ENDPOINTS ---------- */
-router.get('/', supported_sources)
+router.post('/', supported_sources)
 router.post('/batchUpdate', batchUpdateSources)
 
 /**
@@ -20,11 +20,15 @@ router.post('/batchUpdate', batchUpdateSources)
  * @param {Object} req Express Request object
  * @param {Object} res Express Response object
  */
-function supported_sources(req, res) {
-	Sources.getSource({}).then(function(result) {
+function supported_sources(req, res) {	
+	var query   = req.body.query == undefined ? {} : req.body.query;
+	var selects = req.body.selects == undefined ? {} :req.body.selects;
+
+	Sources.getSource(query, selects).then(function(result) {
 		respondWithResult(res, 200)(result);			
 	}).catch(function(error) {
-		respondWithResult(res, 200)(error.toString());
+		respondWithResult(res, 500)("There has been an internal server error.");
+		debugERR("ERROR: " + error.toString());
 	});
 } 
 
