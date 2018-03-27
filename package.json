@@ -7,7 +7,7 @@
     "testingFalse" : "set TESTING=false",
     "startServer" : "node ./bin/www",
     "startTests" : "mocha --exit",
-    "serve": "set TESTING=false&& node ./bin/www",
+    "start": "set TESTING=false&& node ./bin/www",
     "babel": "babel",
     "webpack": "webpack",
     "test" : "set TESTING=true&& mocha --exit"
