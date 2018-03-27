@@ -21,7 +21,7 @@ const tables     = global.TABLES;
         ORING = true
     }
 
-    var query = "SELECT {0} FROM {1} {2}".format(_getSelectClauses(selectClauses) , tables.SOURCES, _getWhereClauses(sourceSettings, ORING))
+    var query = "SELECT {0} FROM {1} WHERE {2}".format(_getSelectClauses(selectClauses) , tables.SOURCES, _getWhereClauses(sourceSettings, ORING))
     
     debug("Querying for sources: {0}".format(query));
     
@@ -64,7 +64,7 @@ const tables     = global.TABLES;
   * @param {String} query 
   */
  function _getWhereClauses(sourceSettings, ORING) {
-    var clauses = "WHERE"
+    var clauses = ""
     whereClauses = []
     acceptableClauses = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
 
@@ -92,18 +92,6 @@ const tables     = global.TABLES;
     }
 
     return clauses
- }
-
- /**
-  * Pushes value onto list if test != null or undefined
-  * @param {Array} list 
-  * @param {Object} value 
-  * @param {Object} test 
-  */
- function _pushIfNotNull(list, value, test) {
-    if (test != null && test != undefined) {
-        list.push(value)
-    }
  }
 
 
