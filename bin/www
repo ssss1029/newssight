@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var initializedServer;
+
 /**
  * Setup global variables
  */
@@ -22,6 +24,11 @@ try {
   }
 }
 
+const SUPPRESS_DEBUGS = process.env["SUPPRESS_DEBUGS"];
+if (SUPPRESS_DEBUGS == "true") {
+  process.env["DEBUG"] = "newssight:ERROR*";
+}
+
 const debug    = require('debug')('newssight:bin/www');
 const debugERR = require('debug')('newssight:ERROR:bin/www');
       debugERR.color = require('debug').colors[5] /* RED */
@@ -32,7 +39,7 @@ const debugERR = require('debug')('newssight:ERROR:bin/www');
  */
 debug("Setting up Database");
 var setupDb = require("../server/database-conns/db-setup").setupDb;
-var setupResult = setupDb({
+var dbSetupResult = setupDb({
   scripts : [
     'scripts/mysql/CLEAR_AND_CREATE_DATABASE.sql', 
   ] 
@@ -126,7 +133,27 @@ function onError(error) {
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
+    ? 'pipe ' + addr  
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+}
+
+serverSetupResult = new Promise(function(resolve, reject) {
+  server.on('listening', function() {
+    resolve()
+  })
+})
+
+Promise.all([dbSetupResult, server]).then(function() {
+  initializedServer()
+})
+
+module.exports = {
+  startupComplete : function(cb) {
+    initializedServer = cb;
+  },
+
+  closeServer : function() {
+    server.close();
+  }
 }

@@ -2,6 +2,7 @@ var assert = require('assert');
 var request = require('request')
 
 const BASE_URL = "http://127.0.0.1:3000";
+var server;
 
 /**
  * Test Internet connection 
@@ -21,6 +22,13 @@ describe("Internet Connection", function() {
  * Test /api endpoint
  */
 describe('API', function() {
+
+    // Server should be running on startup
+    before((done) => {
+        server = require('../bin/www')
+        server.startupComplete(done)
+    });
+      
     describe("/sources", function() {
         describe("/", function() {
             // Tests SELECT * FROM sources WHERE 1
@@ -111,4 +119,9 @@ describe('API', function() {
 
         });
     });
+
+    after((done) => {
+        server.closeServer();
+        done();
+    })
 });

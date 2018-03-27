@@ -9,6 +9,10 @@ var sha1 = require("sha1");
 var respondWithResult = require(path.join(global._base, "/server/util")).respondWithResult
 router.post('/', processMakeUser);
 
+const debug    = require('debug')('newssight:/api/makeUser');
+const debugERR = require('debug')('newssight:ERROR:/api/makeUser');
+      debugERR.color = require('debug').colors[5] /* RED */
+
 /**
  * Processes a /makeUser request
  *  - Checks if passwords match
@@ -71,7 +75,8 @@ function processMakeUser(req, res) {
     }).then(function(results) {
         respondWithResult(res, 200)("ok");
     }).catch(function(err) {
-        respondWithResult(res, 500)(err.toString());
+        respondWithResult(res, 500)("There was an internal server error");
+        debugERR(err.toString());
     });
     
 

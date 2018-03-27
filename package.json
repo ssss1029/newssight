@@ -6,7 +6,7 @@
     "serve": "node ./bin/www",
     "babel": "babel",
     "webpack": "webpack",
-    "test" : "mocha"
+    "test" : "mocha --exit"
   },
   "dependencies": {
     "aws-sdk": "^2.205.0",
