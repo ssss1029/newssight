@@ -91,8 +91,15 @@ describe('API', function() {
                         assert(data.length == 1, "Only one object should be returned with the given id");
                         assert(data[0].id == requestBody.query.id, "Wrong ID returned");
                         selectedSet = new Set(requestBody.selects);
+
+                        // Check if we have anything extra returned
                         for (var key in data[0]) {
                             assert(selectedSet.has(key), "Extra param returned: " + key.toString()); 
+                        }
+
+                        // Check if we are missing anything
+                        for (var index in requestBody.selects) {
+                            assert(requestBody.selects[index] in data[0] , "Missing param: " + requestBody.selects[index]);
                         }
                         done();
                     })
