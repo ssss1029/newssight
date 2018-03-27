@@ -1,3 +1,0 @@
-// Starts the app
-
-require("./bin/www");

@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "node ./bin/www",
+    "testingTrue" : "set TESTING=true",
+    "testingFalse" : "set TESTING=false",
+    "startServer" : "node ./bin/www",
+    "startTests" : "mocha --exit",
+    "serve": "set TESTING=false&& node ./bin/www",
     "babel": "babel",
     "webpack": "webpack",
-    "test" : "mocha --exit"
+    "test" : "set TESTING=true&& mocha --exit"
   },
   "dependencies": {
     "aws-sdk": "^2.205.0",

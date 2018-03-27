@@ -9,6 +9,8 @@ const debugERR = require('debug')('newssight:ERROR:source-conns');
 const connection = require('./connection')
 const tables     = global.TABLES;
 
+acceptedColumns = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
+
  /**
   * Gets the source(s) that correspond with sourceSettings
   * @param {Object} sourceSettings A mapping of key to value for the properties that we are looking for in the query
@@ -46,10 +48,9 @@ const tables     = global.TABLES;
         return "*"
     }
 
-    const acceptableColumns = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
     var clauses = ""
     for (var i in selectClauses) {
-        if (acceptableColumns.has(selectClauses[i])) {
+        if (acceptedColumns.has(selectClauses[i])) {
             clauses = clauses + "{0},".format(selectClauses[i])
         }
     }
@@ -66,10 +67,9 @@ const tables     = global.TABLES;
  function _getWhereClauses(sourceSettings, ORING) {
     var clauses = ""
     whereClauses = []
-    acceptableClauses = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
 
     for (var key in sourceSettings) {
-        if (acceptableClauses.has(key)) {
+        if (acceptedColumns.has(key)) {
             whereClauses.push("{0} = {1}".format(key, connection.escape(sourceSettings[key])));
         }
     }
@@ -127,15 +127,9 @@ const tables     = global.TABLES;
  * Returns a promise corresponding to the singular update of a source
  * @param {Object} source The sourcce object. Should contain category, desciption, id, name, etc...
  */
-function _doUpdateQuery(source) {
-	let category    = source.category;
-	let description = source.description;
-	let language    = source.language;
-	let url         = source.url;
-	let country     = source.country;
-	let id          = source.id;
-	let name        = source.name;
-
+function _doUpdateQuery(source) { 
+    const id = source.id;
+       
 	if (id == null || id == undefined) {
 		// Problem. We cannot do this.
 		return new Promise(function(resolve, reject) {
@@ -146,7 +140,38 @@ function _doUpdateQuery(source) {
             resolve("Nothing queried. No parameters other than Id detected.")
         })
     } 
+
+    columns = ""
+    values = ""
+    for (var key in source) {
+        if (acceptedColumns.has(key)) {
+            columns = columns + "{0},".format(key)
+            values = values + "{0},".format(connection.escape(source[key]))
+        }
+    }
+    columns = columns.slice(0, -1);
+    values = values.slice(0, -1);
+
+    updateClauses = ""
+    for (var key in source) {
+        if (acceptedColumns.has(key)) {
+            updateClauses = updateClauses + "{0} = {1},".format(key, connection.escape(source[key]))
+        }
+    }
+    updateClauses = updateClauses.slice(0, -1);
+
+    var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE {3};".format(tables.SOURCES, columns, values, updateClauses);
     
+    return new Promise(function(resolve, reject) {
+        connection.query(query, function(err, result, fields) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        })
+    })
+
     // Build the query
     var query = "INSERT INTO " + tables.SOURCES;
 

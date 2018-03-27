@@ -24,8 +24,8 @@ try {
   }
 }
 
-const SUPPRESS_DEBUGS = process.env["SUPPRESS_DEBUGS"];
-if (SUPPRESS_DEBUGS == "true") {
+const TESTING = process.env["TESTING"]
+if (TESTING == "true") {
   process.env["DEBUG"] = "newssight:ERROR*";
   console.log("Starting server. Debug statements are suppressed.")
 }
@@ -148,10 +148,6 @@ serverSetupResult = new Promise(function(resolve, reject) {
 Promise.all([dbSetupResult, server]).then(function() {
   if (typeof initializedServer == "function") {
     initializedServer();
-  }
-
-  if (SUPPRESS_DEBUGS == "true") {
-    console.log("Server started")
   }
 }).catch(function (error) {
   debugERR(error.toString())
