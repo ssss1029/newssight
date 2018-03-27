@@ -8,6 +8,7 @@ var server;
  * Test Internet connection 
  */
 describe("Internet Connection", function() {
+    // Internet connection should be alive.
     it("should be alive", function(done) {
         request
         .get('http://google.com/')
