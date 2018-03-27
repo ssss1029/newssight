@@ -21,7 +21,7 @@ const tables     = global.TABLES;
         ORING = true
     }
 
-    var query = "SELECT {0} FROM {1} {2}".format(_getSelectClauses(sourceSettings) , tables.SOURCES, _getWhereClauses(sourceSettings, ORING))
+    var query = "SELECT {0} FROM {1} {2}".format(_getSelectClauses(selectClauses) , tables.SOURCES, _getWhereClauses(sourceSettings, ORING))
     
     debug("Querying for sources: {0}".format(query));
     
@@ -37,7 +37,26 @@ const tables     = global.TABLES;
     });
  }
 
+ /**
+  * 
+  * @param {Array} selectClauses List of all columnds to select
+  */
+ function _getSelectClauses(selectClauses) {
+    if (selectClauses.length == 0 || selectClauses == undefined) {
+        return "*"
+    }
 
+    const acceptableColumns = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
+    var clauses = ""
+    for (var i in selectClauses) {
+        if (acceptableColumns.has(selectClauses[i])) {
+            clauses = clauses + "{0},".format(selectClauses[i])
+        }
+    }
+    clauses = clauses.slice(0, clauses.length - 1); // Remove the last comma 
+
+    return clauses
+ }
 
   /**
   * Returns the whereClauses corresponding to the 

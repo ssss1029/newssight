@@ -22,7 +22,7 @@ router.post('/batchUpdate', batchUpdateSources)
  */
 function supported_sources(req, res) {	
 	var query   = req.body.query == undefined ? {} : req.body.query;
-	var selects = req.body.selects == undefined ? {} :req.body.selects;
+	var selects = req.body.selects == undefined ? [] :req.body.selects;
 
 	Sources.getSource(query, selects).then(function(result) {
 		respondWithResult(res, 200)(result);			

@@ -17,9 +17,13 @@ describe("Internet Connection", function() {
     });
 })
 
+/**
+ * Test /api endpoint
+ */
 describe('API', function() {
     describe("/sources", function() {
         describe("/", function() {
+            // Tests SELECT * FROM sources WHERE 1
             it("should return all sources with no additional  parameters", function(done) {
                 request
                 .post(BASE_URL + "/api/sources/")
@@ -41,12 +45,13 @@ describe('API', function() {
                 })
             });
 
+            // Tests where clause
             it("should return only one source with a specific id", function(done) {
                 requestBody = {
                     query: {
                         id : "abc-news"
                     }, 
-                    selects: {}
+                    selects: []
                 };
                 request
                 .post({ url: BASE_URL + "/api/sources/", body: requestBody, json: true})
@@ -60,6 +65,35 @@ describe('API', function() {
                         data = JSON.parse(data);
                         assert(data.length == 1, "Only one object should be returned with the given id");
                         assert(data[0].id == requestBody.query.id, "Wrong ID returned");
+                        done();
+                    })
+                })
+            })
+
+            // Tests select clause
+            it("should return only the specified select columns", function(done) {
+                requestBody = {
+                    query: {
+                        id : "abc-news"
+                    }, 
+                    selects: ["id", "name", "url"]
+                };
+                request
+                .post({url : BASE_URL + "/api/sources/", body:requestBody, json:true})
+                .on("response", function(response) {
+                    data = ""
+                    assert(response.statusCode == 200, "Status code was not 200: " + response.statusCode.toString());
+                    response.on('data', function(chunk) {
+                        data += chunk
+                    })
+                    response.on('end', function() {
+                        data = JSON.parse(data);
+                        assert(data.length == 1, "Only one object should be returned with the given id");
+                        assert(data[0].id == requestBody.query.id, "Wrong ID returned");
+                        selectedSet = new Set(requestBody.selects);
+                        for (var key in data[0]) {
+                            assert(selectedSet.has(key), "Extra param returned: " + key.toString()); 
+                        }
                         done();
                     })
                 })
