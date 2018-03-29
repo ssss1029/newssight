@@ -21,11 +21,13 @@ describe("Internet Connection", function() {
 
 /**
  * Test /api endpoint
+ * Start server before tests, kill server after tests
  */
 describe('API', function() {
 
     // Server should be running on startup
     before((done) => {
+        this.timeout(5000); // Starting up the server can take a while...
         server = require('../bin/www')
         server.startupComplete(done)
     });
@@ -117,6 +119,7 @@ describe('API', function() {
         });
 
         describe("/batchUpdate", function() {
+            // Test request structure
             it("should return a 200 response on a valid request", function(done) {
                 requestBody = {
                     sources : [

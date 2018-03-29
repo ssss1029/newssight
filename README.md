@@ -23,5 +23,14 @@ $ npm test
 
 # API 
 
-`/api/sources`
+`/api/sources/`
  - Lists all the sources according to how they are stored in the db
+
+`/api/sources/batchUpdate`
+ - TBD
+
+`/api/user/make/`
+ - TBD
+
+`/api/user/removeAll`
+ - TBD

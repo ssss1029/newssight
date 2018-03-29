@@ -3,16 +3,20 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var Users = require(path.join(global._base, "/server/database-conns/db-users-conns"));
-var bcrypt = require('bcrypt');
-var saltRounds = 10 // To use with bcrypt
-var sha1 = require("sha1");
 var respondWithResult = require(path.join(global._base, "/server/util")).respondWithResult
-router.post('/', processMakeUser);
+
+router.post('/make', processMakeUser);
+router.post('/removeAll', removeAllUsers);
 
 const debug    = require('debug')('newssight:/api/makeUser');
 const debugERR = require('debug')('newssight:ERROR:/api/makeUser');
       debugERR.color = require('debug').colors[5] /* RED */
 
+
+var bcrypt = require('bcrypt');
+var saltRounds = 10 // To use with bcrypt
+var sha1 = require("sha1");
+      
 /**
  * Processes a /makeUser request
  *  - Checks if passwords match
@@ -80,6 +84,19 @@ function processMakeUser(req, res) {
     });
     
 
+}
+
+/**
+ * Removes all users from the database
+ * @param {Object} req Express Request object
+ * @param {Object} res Express Response object
+ */
+function removeAllUsers(req, res) {
+	Users.removeAllUsers().then(function(result) {
+		respondWithResult(res, 200)("ok");
+	}).catch(function(err) {
+		respondWithResult(res, 500)("ERROR: " + err.toString());
+	});
 }
 
 module.exports = router;
