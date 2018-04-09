@@ -34,3 +34,5 @@ $ npm test
 
 `/api/user/removeAll`
  - TBD
+
+..And more endpoints are in the works
