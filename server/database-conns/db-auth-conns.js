@@ -16,44 +16,31 @@ function getSessionStore(session) {
         port: 3306,
         user: 'developer',
         password: 'developer',
-        database: 'session_test'
+        database: 'newssight',
+        createDatabaseTable: true,
+        // How frequently expired sessions will be cleared; milliseconds:
+        checkExpirationInterval: 900000,
+        // The maximum age of a valid session; milliseconds:
+        expiration: 86400000,
+        // Number of connections when creating a connection pool:
+        connectionLimit: 1,
+        charset: 'utf8mb4_bin',
+        schema: {
+            tableName: 'sessions',
+            columnNames: {
+                session_id: 'session_id',
+                expires: 'expires',
+                data: 'data'
+            }
+        }
     };
+    
  
     var sessionStore = new MySQLStore(options);
     return sessionStore;
 }
 
-/**
- * Returns a serialized representation of the given user object.
- * @param {Object} user 
- */
-function serializeUser(user) {
-    
-}
-
-/**
- * Returns the deserialized (Object) representation of the user
- * with the given id.
- * @param {String} user 
- */
-function deserializeUser(id) {
-
-}
-
-/**
- * Calls callback on a user with the given options
- * @param {Object} options (e.g. {username : JohnSmith})
- * @param {Function} callback 
- */
-function getUser(options, next) {
-    user = null;
-    err  = null;
-
-    return next(err, user);
-}
 
 module.exports = {
-    getSessionStore,
-    serializeUser,
-    deserializeUser
+    getSessionStore
 }

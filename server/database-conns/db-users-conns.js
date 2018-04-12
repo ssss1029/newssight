@@ -52,6 +52,7 @@ const tables     = global.TABLES;
   */
  function getUser(userSettings) {
     var query = _appendWhereClauses(userSettings, "SELECT * FROM {0} WHERE".format(tables.USERS)); 
+    debug("Query = {0}".format(query))
     return new Promise(function(fulfill, reject) {
         connection.query(query, function(error, results, fields) {
             if (error) {
@@ -76,7 +77,7 @@ const tables     = global.TABLES;
     for (var key in userSettings) {
         if (acceptableClauses.indexOf(key) > -1) {
             // Acceptable to add into the query
-            whereClauses.push("{0} = {1}".format(key, userSettings[key]))
+            whereClauses.push("{0} = {1}".format(key, connection.escape(userSettings[key])))
         }
     }
 

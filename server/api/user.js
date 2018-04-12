@@ -1,12 +1,10 @@
 
 var express = require('express');
+var passport = require('passport')
 var router = express.Router();
 var path = require('path');
 var Users = require(path.join(global._base, "/server/database-conns/db-users-conns"));
 var respondWithResult = require(path.join(global._base, "/server/util")).respondWithResult
-
-router.post('/make', processMakeUser);
-router.post('/removeAll', removeAllUsers);
 
 const debug    = require('debug')('newssight:/api/makeUser');
 const debugERR = require('debug')('newssight:ERROR:/api/makeUser');
@@ -16,7 +14,17 @@ const debugERR = require('debug')('newssight:ERROR:/api/makeUser');
 var bcrypt = require('bcrypt');
 var saltRounds = 10 // To use with bcrypt
 var sha1 = require("sha1");
-      
+
+router.post('/make', processMakeUser);
+router.post('/removeAll', removeAllUsers);
+router.post('/login',
+  passport.authenticate('local'),
+  function(req, res) {
+    res.redirect('/');
+  }
+);
+
+
 /**
  * Processes a /makeUser request
  *  - Checks if passwords match

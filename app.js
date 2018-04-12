@@ -10,6 +10,7 @@ var bcrypt = require('bcrypt');
 
 var debug = require("debug")('newssight:app.js');
 var authConns = require('./server/database-conns/db-auth-conns');  
+var Users = require("./server/database-conns/db-users-conns");
 
 var saltRounds = 10; // For bcrypt
 global._base = __dirname;
@@ -40,36 +41,49 @@ app.use(session({
 }));
 
 passport.serializeUser(function(user, done) {
-  var userID = authConns.serializeUser(user);
-  done(null, userID);
+	if (user.id == undefined) {
+		debug("Serialize user failed with id = {0}".format(user.id))
+		done("The given user object doesn't have an id!")
+	} else {
+		debug("Serialize user success with id = {0}".format(user.id))
+		done(null, user.id)
+	}
 });
 
 passport.deserializeUser(function(id, done) {
-  user = authConns.deserializeUser(id);
-  done(null, user);
+  Users.getUser({"id" : id}).then(function(results) {
+	if (results.length == 0) {
+		debug("Deserialize user failed with results: {0}".format(results[0].toString()))
+		done("No users with id = {0}".format(id.toString()));
+	} else {
+		debug("Deserialize user success with results: {0}".format(results[0].toString()))
+		done(null, results[0]);
+	}
+  });
 });
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new LocalStrategy(
-  function(username, password, done) {
-    authConns.getUser({ "Username": username }, function (err, user) {
-      if (err) { 
-        return done(err); 
-      }
-      
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      
-      if (!bcrypt.compareSync(password, user.password)) {
-        return done(null, false, { message: 'Incorrect password for the given username.' });
-      }
-
-      return done(null, user);
-    });
-  }
+	function(username, password, done) {
+		Users.getUser({"username" : username}).then(function(results) {
+			if (results.length == 0 || results == null || results == undefined) {
+				done(null, false, {message : "Incorrect username"});
+				return;
+			}
+			debug("LocalStrategy query results = {0}".format(results.toString()))
+			user = results[0];
+			if (bcrypt.compareSync(password, user.password) == true) {
+				done(null, user);
+			} else {
+				done(null, false, {message : "Incorrect password"});
+			}
+			console.log(results);
+		}).catch(function(error) { 
+			done(error);
+		});
+	}
 ));
 
 // Statics 
@@ -85,13 +99,15 @@ app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('404 - Not Found');
+  var err = new Error('404 - Not Found');	
   err.status = 404;
+  console.log("Made 404 Error object")
   next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
+  console.log("In error handler")
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

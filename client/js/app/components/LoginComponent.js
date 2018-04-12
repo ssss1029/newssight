@@ -60,7 +60,7 @@ function login() {
         flashError("Please enter your password");
     } else {
         // All good
-        fetch('/api/login', {
+        fetch('/api/user/login', {
             credentials : 'same-origin', 
             method : 'POST', 
             headers : {
