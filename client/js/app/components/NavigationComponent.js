@@ -1,11 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const loginLink = "/login"
+const logoutLink = "/logout"
 
 /**
  * The header nav bar, which will appear on top of all pages
  */
 class NavigationComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {}
+        if (props.loggedIn == true) {
+            this.state.logInOutLink = logoutLink
+            this.state.logInOutMessage = "Log Out"
+        } else {
+            this.state.logInOutLink = loginLink
+            this.state.logInOutMessage = "Log In"
+        }
+    }
+
     render() {
         return (
             <div className="navWrapper">
@@ -18,8 +33,8 @@ class NavigationComponent extends React.Component {
                         <li className="navButtonsLI">Search</li>
                         <li className="navButtonsLI">Current Stories</li>
                         <li className="navButtonsLI">Top Stories</li>
-                        <a href="/login">
-                            <li className="navButtonsLI">Log In</li>
+                        <a href={this.state.logInOutLink}>
+                            <li className="navButtonsLI">{this.state.logInOutMessage}</li>
                         </a>
                     </ul>
                 </div>

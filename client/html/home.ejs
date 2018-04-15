@@ -10,7 +10,7 @@
     </head>
     <body>
         <!-- Injected through React  -->
-        <div id="nav" loggedIn="true"></div>
+        <div id="nav"></div>
 
         <div id="main">
             <div class="mainSection splash">
@@ -42,10 +42,17 @@
 
         <!-- Injected through React  -->
         <div id="footer" loggedIn="true"></div>
+
+
         <!-- Scripts -->
+        <script>
+            <%- user %>
+        </script>   
+
         <!-- JQuery requirede for bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
         <script src="js/home.bundle.js"></script>
     </body>
 </html>

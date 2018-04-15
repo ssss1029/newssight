@@ -7,6 +7,8 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var sha1 = require('sha1');
 var bcrypt = require('bcrypt');
+var expose = require('express-expose');
+	app = expose(app);
 
 var debug = require("debug")('newssight:app.js');
 var authConns = require('./server/database-conns/db-auth-conns');  
@@ -86,10 +88,28 @@ passport.use(new LocalStrategy(
 	}
 ));
 
+
 // Statics 
 app.use('/css', express.static('client/css/dist'));
 app.use('/img', express.static('client/img/dist'));
 app.use('/js',  express.static('client/js/dist'));
+
+// Expose logged-in user to the frontend
+app.use(function(req, res, next) {
+	if (req.user == undefined) {
+		next();
+		return;
+	}
+
+    let user = {
+        username : req.user.username,
+        first_name : req.user.first_name,
+        last_name : req.user.last_name
+	}
+
+	res.expose(user, 'app.user', 'user');	
+	next();
+});
 
 // Routes
 var index = require('./server/routes/index');
