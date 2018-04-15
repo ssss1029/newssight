@@ -5,6 +5,15 @@ import FooterComponent from './components/FooterComponent.js';
 import Login from './components/LoginComponent.js'; 
 import SignUpComponent from './components/SignUpComponent.js';
 
-ReactDOM.render(<NavigationComponent />, document.getElementById('nav'));
-ReactDOM.render(<Login />, document.getElementById('leftLoginColumn'));
-ReactDOM.render(<SignUpComponent />, document.getElementById("rightLoginColumn"));
+window.app = window.app || {}
+
+if (typeof app.user != "undefined") {
+    // A user is logged in
+    app.userLoggedIn = true
+} else {
+    app.userLoggedIn = false
+}
+
+ReactDOM.render(<NavigationComponent loggedIn={app.userLoggedIn} />, document.getElementById('nav'));
+ReactDOM.render(<Login loggedIn={app.userLoggedIn} />, document.getElementById('leftLoginColumn'));
+ReactDOM.render(<SignUpComponent loggedIn={app.userLoggedIn} />, document.getElementById("rightLoginColumn"));

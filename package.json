@@ -7,7 +7,7 @@
     "testingfalse": "set TESTING=false",
     "startserver": "node ./bin/www",
     "debugserver": "node --inspect ./bin/www",
-    "nodemonstart" : "nodemon ./bin/www",
+    "nodemon" : "nodemon ./bin/www",
     "starttests": "mocha --exit",
     "start": "set TESTING=false&& node ./bin/www",
     "babel": "babel",

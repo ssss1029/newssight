@@ -199,14 +199,19 @@ table {
 	-moz-border-radius: 20;
 	border-radius: 20px;
 	color: #ffffff;
-	background: #2ecc71;
+	background: #004e72;
 	padding: 20px 30px 20px 30px;
 	text-decoration: none;
 }
 
 .splashButton:hover {
-	background: #27ae60;
+	background: #003e5a;
 	text-decoration: none;
+}
+
+.splashButton a:hover {
+	text-decoration: none;
+	color: #FFFFFF;
 }
 
 .popularNews {

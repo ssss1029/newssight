@@ -13,43 +13,22 @@
         <div id="nav"></div>
 
         <div id="main">
-            <div class="mainSection splash">
-                <div class="splashContainer">
-                    <h1 class="splashLogo"> NewsSight </h1>
-                    <h1 class="splashText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien nibh, tincidunt vel mi sed, ullamcorper iaculis leo. Etiam quis turpis pretium, pretium odio vel, venenatis velit. Proin accumsan dignissim auctor. </h1>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <button class="splashButton"> About Us </button>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="splashButton"> Start Browsing </button>                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mainSection popularNews">
-
-            </div>
-            <div class="mainSection aboutTitle">
-
-            </div>
-            <div class="mainSection aboutSection">
-
-            </div>
+            
         </div>
 
         <!-- Injected through React  -->
-        <div id="footer" loggedIn="true"></div>
+        <div id="footer"></div>
 
 
         <!-- Scripts -->
         <script>
-            <%- user %>
+            <% if(locals.user) { %>
+                <%- user %>
+            <% } %>
+            
         </script>   
 
-        <!-- JQuery requirede for bootstrap -->
+        <!-- JQuery required for bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         

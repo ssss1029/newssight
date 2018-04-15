@@ -10,28 +10,52 @@
     </head>
     <body>
         <!-- Injected through React  -->
-        <div id="nav" loggedIn="false"></div>
+        <div id="nav"></div>
 
-        <div id="main" class="loginMain">
-            <div class="loginForm">
-                <div class="loginCol" id="leftLoginColumn">
+        <div id="main">
+            <div class="mainSection splash">
+                <div class="splashContainer">
+                    <h1 class="splashLogo"> NewsSight </h1>
+                    <h1 class="splashText"> Some tagline. </h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="splashButton"> About </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="splashButton"> <a href="/home"> Browse </a> </button>                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="loginCol" id="rightLoginColumn">
-                </div>
+            </div>
+            <div class="mainSection popularNews">
+
+            </div>
+            <div class="mainSection aboutTitle">
+
+            </div>
+            <div class="mainSection aboutSection">
+
             </div>
         </div>
 
-        <!-- No Footer on the login page  -->
+        <!-- Injected through React  -->
+        <div id="footer" loggedIn="true"></div>
+
 
         <!-- Scripts -->
         <script>
             <% if(locals.user) { %>
                 <%- user %>
-            <% } %>                
-        </script>       
+            <% } %>
+            
+        </script>   
+
         <!-- JQuery requirede for bootstrap -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="js/login.bundle.js"></script>
+        
+        <script src="js/home.bundle.js"></script>
     </body>
 </html>
