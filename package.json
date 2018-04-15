@@ -7,7 +7,7 @@
     "testingfalse": "set TESTING=false",
     "startserver": "node ./bin/www",
     "debugserver": "node --inspect ./bin/www",
-    "nodemon" : "nodemon ./bin/www",
+    "nodemon": "nodemon ./bin/www",
     "starttests": "mocha --exit",
     "start": "set TESTING=false&& node ./bin/www",
     "babel": "babel",
@@ -48,6 +48,9 @@
     "webpack-html-plugin": "^0.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.14.7"
+    "css-loader": "^0.28.11",
+    "nodemon": "^1.14.7",
+    "react-css-modules": "^4.7.2",
+    "style-loader": "^0.20.3"
   }
 }
