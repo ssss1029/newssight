@@ -171,54 +171,6 @@ function _doUpdateQuery(source) {
             }
         })
     })
-
-    // Build the query
-    var query = "INSERT INTO " + tables.SOURCES;
-
-    query += " ("
-    query += category == undefined ? "" : "category," 
-    query += description == undefined ? "" : "description,"
-    query += language == undefined ? "" : "language,"
-    query += url == undefined ? "" : "url,"
-    query += country == undefined ? "" : "country,"
-    query += id == undefined ? "" : "id,"
-    query += name == undefined ? "" : "name,"
-    query  = query.slice(0, -1); // Remove the last comma
-    query += ")"
-    
-    query += " VALUES"
-
-    query += " ("
-    query += category == undefined ? "" : connection.escape(category) + ","
-    query += description == undefined ? "" : connection.escape(description) + ","
-    query += language == undefined ? "" : connection.escape(language) + ","
-    query += url == undefined ? "" : connection.escape(url) + ","
-    query += country == undefined ? "" : connection.escape(country) + ","
-    query += id == undefined ? "" : connection.escape(id) + ","
-    query += name == undefined ? "" : connection.escape(name) + ","
-    query  = query.slice(0, -1); // Remove the last comma
-    query += ")"
-
-    query += " ON DUPLICATE KEY UPDATE"
-    query += name == undefined ? "" : " name = " + connection.escape(name) + ","
-    query += country == undefined ? "" : " country = " + connection.escape(country) + ","
-    query += url == undefined ? "" : " url = " + connection.escape(url) + ","
-    query += language == undefined ? "" : " language = " + connection.escape(language) + ","
-    query += description == undefined ? "" : " description = " + connection.escape(description) + ","
-    query += category == undefined ? "" : " category = " + connection.escape(category) + ","
-    query  = query.slice(0, -1); // Remove the last comma
-
-    query += ";";
-
-    return new Promise(function(resolve, reject) {
-        connection.query(query, function(err, result, fields) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(result);
-            }
-        })
-    })
 }
 
  module.exports = {
