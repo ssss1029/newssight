@@ -139,7 +139,7 @@ function _doUpdateQuery(source) {
         return new Promise(function(resolve, reject) {
             resolve("Nothing queried. No parameters other than Id detected.")
         })
-    } 
+    }
 
     columns = ""
     values = ""
