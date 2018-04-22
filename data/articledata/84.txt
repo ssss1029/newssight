@@ -1,0 +1,5 @@
+['fox-news', '84', 'Fox News', "Coming up on 'Fox News Sunday': April 22", 'An exclusive interview with French President Emmanuel Macron.', 'http://video.foxnews.com/v/5774442700001/', 'http://a57.foxnews.com/media2.foxnews.com/BrightCove/694940094001/2018/04/21/640/360/694940094001_5774433783001_5774442700001-vs.jpg', '2018-04-21T18:22:54.8146484Z']
+Coming up on 'Fox News Sunday': April 22
+powered by
+For video troubleshooting and help click here .
+Fox Business Channel Finder

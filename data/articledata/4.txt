@@ -1,0 +1,10 @@
+['abc-news', '4', 'ABC News', 'Pilot killed in crash of single-engine plane in Tennessee', 'Authorities say one person has been killed in a single-engine plane crash in Tennessee. The Chattanooga Times Free Press reports that a two-seat plane crashed near an airstrip while taking off at the municipal airport in Collegedale on Friday. Airport officia\xe2\x80\xa6', 'http://abcnews.go.com/US/wireStory/pilot-killed-crash-single-engine-plane-tennessee-54635115', 'NOVALUE', '2018-04-21T00:00:00Z']
+Email
+Authorities say one person has been killed in a single-engine plane crash in Tennessee.
+The Chattanooga Times Free Press reports that a two-seat plane crashed near an airstrip while taking off at the municipal airport in Collegedale on Friday.
+Airport officials said the pilot was killed. He has been identified as 62-year-old Robert Gillisse, of Ooltewah.
+Chris Swain, director of operations at Collegedale Municipal Airport in Hamilton County, said both the Federal Aviation Administration and the National Transportation Safety Board have been notified and will investigate.
+The newspaper reports that five other planes have crashed at the airport since 2004, resulting in 11 fatalities.
+
+Information from: Chattanooga Times Free Press, http://www.timesfreepress.com
+0 Shares

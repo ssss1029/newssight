@@ -1,0 +1,90 @@
+|price| |OTHER| |0.07489822804927826| |-| |-|
+|Magnums| |OTHER| |0.05064256861805916| |-| |-|
+|Each| |PERSON| |0.04625166580080986| |-| |-|
+|Bordeaux| |LOCATION| |0.04588939622044563| |https://en.wikipedia.org/wiki/Bordeaux_wine| |/m/06rsz6|
+|bottles| |CONSUMER_GOOD| |0.03452298045158386| |-| |-|
+|wines| |CONSUMER_GOOD| |0.034402213990688324| |-| |-|
+|wine| |CONSUMER_GOOD| |0.03430882841348648| |-| |-|
+|Sotheby's| |UNKNOWN| |0.032324351370334625| |https://en.wikipedia.org/wiki/Sotheby's| |/m/02n5_c|
+|magnums| |OTHER| |0.024211859330534935| |-| |-|
+|top lots| |OTHER| |0.019475121051073074| |-| |-|
+|region| |LOCATION| |0.019421998411417007| |-| |-|
+|Lafleur 82| |PERSON| |0.016724033281207085| |-| |-|
+|bottles| |CONSUMER_GOOD| |0.015494078397750854| |-| |-|
+|Petrus| |ORGANIZATION| |0.014387346804141998| |https://en.wikipedia.org/wiki/Chteau_Ptrus| |/m/01yb6f|
+|bottles| |CONSUMER_GOOD| |0.014368881471455097| |-| |-|
+|Chateau Lafleur 1982| |LOCATION| |0.014348037540912628| |-| |-|
+|Stephen Mould| |PERSON| |0.014330743812024593| |-| |-|
+|Lafite| |UNKNOWN| |0.013126357458531857| |https://en.wikipedia.org/wiki/Chteau_Lafite_Rothschild| |/m/047pdq|
+|Cheval Blanc| |UNKNOWN| |0.013126357458531857| |https://en.wikipedia.org/wiki/Chteau_Cheval_Blanc| |/m/05hh6j|
+|half-bottles| |CONSUMER_GOOD| |0.013026109896600246| |-| |-|
+|Chateau Montrose| |ORGANIZATION| |0.012881050817668438| |https://en.wikipedia.org/wiki/Chteau_Montrose| |/m/09vt_g|
+|Pomerol| |LOCATION| |0.011502239853143692| |https://en.wikipedia.org/wiki/Pomerol_AOC| |/m/0jky3_d|
+|London| |LOCATION| |0.010611753910779953| |https://en.wikipedia.org/wiki/London| |/m/04jpl|
+|selection| |OTHER| |0.00989474356174469| |-| |-|
+|vintages| |WORK_OF_ART| |0.00987333059310913| |-| |-|
+|auction| |EVENT| |0.00919436663389206| |-| |-|
+|wines| |CONSUMER_GOOD| |0.008847696706652641| |-| |-|
+|bottles| |CONSUMER_GOOD| |0.008794695138931274| |-| |-|
+|bottles| |CONSUMER_GOOD| |0.008794695138931274| |-| |-|
+|wine| |CONSUMER_GOOD| |0.008778057992458344| |-| |-|
+|Bottles| |CONSUMER_GOOD| |0.008778057992458344| |-| |-|
+|auctions| |OTHER| |0.008712131530046463| |-| |-|
+|auction season| |EVENT| |0.008382787927985191| |-| |-|
+|lot| |OTHER| |0.008368516340851784| |-| |-|
+|bottles| |CONSUMER_GOOD| |0.008154474198818207| |-| |-|
+|wine| |CONSUMER_GOOD| |0.008109171874821186| |-| |-|
+|wines| |CONSUMER_GOOD| |0.00809254590421915| |-| |-|
+|sale| |EVENT| |0.0074810548685491085| |-| |-|
+|hammer| |CONSUMER_GOOD| |0.0073683070950210094| |-| |-|
+|sizes| |OTHER| |0.0073518166318535805| |-| |-|
+|attention| |OTHER| |0.007274226285517216| |-| |-|
+|Fine Wine 50 Index| |OTHER| |0.0067697386257350445| |-| |-|
+|vintage| |OTHER| |0.006697703152894974| |-| |-|
+|sale| |OTHER| |0.006697703152894974| |-| |-|
+|vintage| |OTHER| |0.00668903486803174| |-| |-|
+|vintage| |OTHER| |0.0066489363089203835| |-| |-|
+|wine| |CONSUMER_GOOD| |0.00607981625944376| |-| |-|
+|bottles| |CONSUMER_GOOD| |0.006075545214116573| |-| |-|
+|bottles| |CONSUMER_GOOD| |0.0060715083964169025| |-| |-|
+|dessert wine| |CONSUMER_GOOD| |0.0060715083964169025| |-| |-|
+|Chateau Montrose 2010| |LOCATION| |0.005826789420098066| |-| |-|
+|attention| |OTHER| |0.005681375972926617| |-| |-|
+|statement| |WORK_OF_ART| |0.005647307261824608| |-| |-|
+|place| |OTHER| |0.005446294788271189| |-| |-|
+|statement| |WORK_OF_ART| |0.0052067008800804615| |-| |-|
+|lot| |OTHER| |0.0052011325024068356| |-| |-|
+|Prices| |OTHER| |0.005196015350520611| |-| |-|
+|futures| |OTHER| |0.004997082520276308| |-| |-|
+|delivery| |EVENT| |0.004997082520276308| |-| |-|
+|merchants| |PERSON| |0.004997082520276308| |-| |-|
+|trade| |OTHER| |0.004997082520276308| |-| |-|
+|market| |OTHER| |0.004990612156689167| |-| |-|
+|arrival| |EVENT| |0.004990612156689167| |-| |-|
+|producers| |PERSON| |0.004960678517818451| |-| |-|
+|Source| |ORGANIZATION| |0.0049431584775447845| |-| |-|
+|collectors| |OTHER| |0.004936003126204014| |-| |-|
+|cycle| |OTHER| |0.004929611459374428| |-| |-|
+|results| |OTHER| |0.0045735640451312065| |-| |-|
+|provenance| |OTHER| |0.004568671807646751| |-| |-|
+|peak| |OTHER| |0.0045641763135790825| |-| |-|
+|Saint Estephe| |LOCATION| |0.00434699235484004| |https://en.wikipedia.org/wiki/Saint-Estphe_AOC| |/m/0bhbs57|
+|Melchior| |PERSON| |0.00434699235484004| |https://fr.wikipedia.org/wiki/Melchior_(bouteille)| |/g/121s4f31|
+|estates| |LOCATION| |0.003428027266636491| |-| |-|
+|bid| |OTHER| |0.0034256172366440296| |-| |-|
+|sale| |OTHER| |0.0032100602984428406| |-| |-|
+|estimate| |OTHER| |0.0030441407579928637| |-| |-|
+|magnums| |OTHER| |0.0029907559510320425| |-| |-|
+|Europe| |LOCATION| |0.0027032694779336452| |https://en.wikipedia.org/wiki/Europe| |/m/02j9z|
+|bottles| |CONSUMER_GOOD| |0.002666499698534608| |-| |-|
+|Petrus 1982| |CONSUMER_GOOD| |0.0025272478815168142| |-| |-|
+|sale| |OTHER| |0.0023356822784990072| |-| |-|
+|Chateau Mouton Rothschild| |ORGANIZATION| |0.0023034343030303717| |https://en.wikipedia.org/wiki/Chteau_Mouton_Rothschild| |/m/0310bf|
+|Chateau dYquem| |OTHER| |0.0020231048110872507| |https://en.wikipedia.org/wiki/Chteau_d'Yquem| |/m/03fkdn|
+|floor| |OTHER| |0.0015063445316627622| |-| |-|
+|slump| |OTHER| |0.0015050654765218496| |-| |-|
+|Saint Emilion| |LOCATION| |0.0014156731776893139| |https://en.wikipedia.org/wiki/Saint-milion_AOC| |/m/0bhclsn|
+|New York| |LOCATION| |0.0014147793408483267| |-| |-|
+|Bloomberg Terminal| |LOCATION| |0.0014139297418296337| |https://en.wikipedia.org/wiki/Bloomberg_Terminal| |/m/02j8bt|
+|Liv-ex| |PERSON| |0.0012550652027130127| |-| |-|
+|Bloomberg| |ORGANIZATION| |0.0010116914054378867| |https://en.wikipedia.org/wiki/Bloomberg_L.P.| |/m/027sm6|

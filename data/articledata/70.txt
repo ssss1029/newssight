@@ -1,0 +1,4 @@
+['cnn', '70', 'NOVALUE', 'Author: Trump has been lying since childhood - CNN Video', 'In an interview with CNN\'s Anderson Cooper, Trump biographer Michael D\'Antonio claims President Trump has been lying since he was a child, saying "he was named the ladies man at a school that had no women at it ... he has been doing this forever."', 'http://us.cnn.com/videos/politics/2018/04/21/michael-dantonio-intv-trump-lies-childhood-sot-cooper-ac.cnn', 'https://cdn.cnn.com/cnnnext/dam/assets/180421092414-01-donald-trump-0417-super-tease.jpg', '2018-04-21T19:45:07.4826714Z']
+MUST WATCH
+Author: Trump has been lying since childhood
+In an interview with CNN's Anderson Cooper, Trump biographer Michael D'Antonio claims President Trump has been lying since he was a child, saying "he was named the ladies man at a school that had no women at it ... he has been doing this forever."

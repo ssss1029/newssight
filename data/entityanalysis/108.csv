@@ -1,0 +1,109 @@
+|nuke test halt| |EVENT| |0.23233254253864288| |-| |-|
+|Kim Jong Un| |PERSON| |0.08924750238656998| |https://en.wikipedia.org/wiki/Kim_Jong-un| |/m/0fgw19|
+|North Korea| |UNKNOWN| |0.06567849963903427| |https://en.wikipedia.org/wiki/North_Korea| |/m/05b7q|
+|negotiators| |PERSON| |0.043882083147764206| |-| |-|
+|news| |OTHER| |0.03734414651989937| |-| |-|
+|administrations| |ORGANIZATION| |0.026328198611736298| |-| |-|
+|South Korea| |LOCATION| |0.02553769014775753| |https://en.wikipedia.org/wiki/South_Korea| |/m/06qd3|
+|news| |OTHER| |0.023296982049942017| |-| |-|
+|halt| |EVENT| |0.022351626306772232| |-| |-|
+|announcement| |OTHER| |0.01883493736386299| |-| |-|
+|announcement| |OTHER| |0.018303867429494858| |-| |-|
+|talks| |EVENT| |0.016085034236311913| |-| |-|
+|talks| |EVENT| |0.0159054696559906| |-| |-|
+|Donald Trump| |UNKNOWN| |0.015382232144474983| |https://en.wikipedia.org/wiki/Donald_Trump| |/m/0cqt90|
+|promises| |OTHER| |0.0144799230620265| |-| |-|
+|news| |OTHER| |0.012258091941475868| |-| |-|
+|U.S.| |UNKNOWN| |0.011098915711045265| |https://en.wikipedia.org/wiki/United_States| |/m/09c7w0|
+|Pyongyang| |LOCATION| |0.010098627768456936| |https://en.wikipedia.org/wiki/Pyongyang| |/m/0cw5k|
+|Hwasong| |OTHER| |0.009639603085815907| |https://en.wikipedia.org/wiki/Hwasong-15| |/g/11f2wptz73|
+|Andrea Mitchell| |PERSON| |0.00751515245065093| |https://en.wikipedia.org/wiki/Andrea_Mitchell| |/m/03w950|
+|picture| |WORK_OF_ART| |0.007109613157808781| |-| |-|
+|Breaking News Emails| |WORK_OF_ART| |0.005979557055979967| |-| |-|
+|news alerts| |OTHER| |0.005972555372864008| |-| |-|
+|reports| |OTHER| |0.005972555372864008| |-| |-|
+|weekday mornings| |OTHER| |0.005966170225292444| |-| |-|
+|matter| |OTHER| |0.005966170225292444| |-| |-|
+|stories| |WORK_OF_ART| |0.005966170225292444| |-| |-|
+|SUBSCRIBE| |OTHER| |0.005747780669480562| |-| |-|
+|peninsula| |LOCATION| |0.005690933205187321| |-| |-|
+|sign| |OTHER| |0.005133665632456541| |-| |-|
+|halt| |LOCATION| |0.004921351093798876| |-| |-|
+|file| |OTHER| |0.004797276109457016| |-| |-|
+|Clinton| |LOCATION| |0.004744683858007193| |https://en.wikipedia.org/wiki/Bill_Clinton| |/m/0157m|
+|George W. Bush| |PERSON| |0.004744683858007193| |https://en.wikipedia.org/wiki/George_W._Bush| |/m/09b6zr|
+|tests| |OTHER| |0.004610182251781225| |-| |-|
+|tests| |OTHER| |0.004569969139993191| |-| |-|
+|statement| |WORK_OF_ART| |0.004351819399744272| |-| |-|
+|indication| |OTHER| |0.004109804052859545| |-| |-|
+|test site| |LOCATION| |0.004047087859362364| |-| |-|
+|talks| |EVENT| |0.004014188423752785| |-| |-|
+|sites| |LOCATION| |0.0037131605204194784| |-| |-|
+|Breaking News Emails| |WORK_OF_ART| |0.003711035940796137| |-| |-|
+|news alerts| |OTHER| |0.003709007054567337| |-| |-|
+|reports| |OTHER| |0.003709007054567337| |-| |-|
+|weekday mornings| |OTHER| |0.0037070654798299074| |-| |-|
+|stories| |WORK_OF_ART| |0.0037070654798299074| |-| |-|
+|matter| |OTHER| |0.0037070654798299074| |-| |-|
+|intentions| |OTHER| |0.0036935261450707912| |-| |-|
+|News analysis| |OTHER| |0.0036644083447754383| |-| |-|
+|missile| |OTHER| |0.0036612991243600845| |-| |-|
+|summit| |EVENT| |0.0036612991243600845| |-| |-|
+|locations| |LOCATION| |0.0036273279692977667| |-| |-|
+|North Koreas| |ORGANIZATION| |0.0034037039149552584| |-| |-|
+|promises| |OTHER| |0.003386704484000802| |-| |-|
+|missile| |OTHER| |0.003386704484000802| |-| |-|
+|messages| |WORK_OF_ART| |0.0032484270632267| |-| |-|
+|deterrence| |OTHER| |0.0032462666276842356| |-| |-|
+|nation| |LOCATION| |0.0032462666276842356| |-| |-|
+|media| |OTHER| |0.0032462666276842356| |-| |-|
+|order| |OTHER| |0.0032442184165120125| |-| |-|
+|advance| |OTHER| |0.003215907607227564| |-| |-|
+|meeting| |EVENT| |0.003215907607227564| |-| |-|
+|smuggling| |EVENT| |0.003213354619219899| |-| |-|
+|sanctions| |OTHER| |0.003213354619219899| |-| |-|
+|chance| |OTHER| |0.0030521845910698175| |-| |-|
+|programs| |OTHER| |0.0029746831860393286| |-| |-|
+|facilities| |LOCATION| |0.0029746831860393286| |-| |-|
+|Getty Images| |ORGANIZATION| |0.0028356555849313736| |https://en.wikipedia.org/wiki/Getty_Images| |/m/01wxvs|
+|AFP| |ORGANIZATION| |0.0028356555849313736| |https://en.wikipedia.org/wiki/Agence_France-Presse| |/m/02dlk9|
+|Korean Central News Agency| |ORGANIZATION| |0.0028356555849313736| |https://en.wikipedia.org/wiki/Korean_Central_News_Agency| |/m/02ys4j|
+|R| |PERSON| |0.0028356555849313736| |-| |-|
+|summit sites| |LOCATION| |0.0027834519278258085| |-| |-|
+|administration| |ORGANIZATION| |0.0027823979035019875| |-| |-|
+|hermit kingdom| |LOCATION| |0.002557211322709918| |-| |-|
+|weather| |OTHER| |0.002540681976824999| |-| |-|
+|change| |OTHER| |0.002537703374400735| |-| |-|
+|analysts| |PERSON| |0.002537703374400735| |-| |-|
+|expertise| |OTHER| |0.0022288928739726543| |-| |-|
+|hotline| |OTHER| |0.001999192638322711| |-| |-|
+|Breaking News Emails| |WORK_OF_ART| |0.001945745781995356| |-| |-|
+|reports| |OTHER| |0.001945071155205369| |-| |-|
+|news alerts| |OTHER| |0.001945071155205369| |-| |-|
+|stories| |WORK_OF_ART| |0.001944415271282196| |-| |-|
+|matter| |OTHER| |0.001944415271282196| |-| |-|
+|weekday mornings| |OTHER| |0.001944415271282196| |-| |-|
+|Pompeo| |PERSON| |0.0019197259098291397| |https://en.wikipedia.org/wiki/Mike_Pompeo| |/m/0cnxjk7|
+|Switzerland| |LOCATION| |0.0018828551983460784| |https://en.wikipedia.org/wiki/Switzerland| |/m/06mzp|
+|denuclearization| |OTHER| |0.0017758714966475964| |-| |-|
+|weather| |OTHER| |0.0017752189887687564| |-| |-|
+|world| |LOCATION| |0.0017634113319218159| |-| |-|
+|size| |OTHER| |0.0017205232288688421| |-| |-|
+|precipice| |LOCATION| |0.001559718861244619| |-| |-|
+|containment| |OTHER| |0.001559718861244619| |-| |-|
+|buttons| |OTHER| |0.001559145748615265| |-| |-|
+|CIA| |ORGANIZATION| |0.0013170259771868587| |https://en.wikipedia.org/wiki/Central_Intelligence_Agency| |/m/0d6qjf|
+|NSC| |ORGANIZATION| |0.0013170259771868587| |-| |-|
+|State Department| |ORGANIZATION| |0.0013170259771868587| |-| |-|
+|form| |OTHER| |0.0011750597041100264| |-| |-|
+|denuclearization| |OTHER| |0.0011155670508742332| |-| |-|
+|leaders| |PERSON| |0.0011145495809614658| |-| |-|
+|time| |OTHER| |0.0011140680871903896| |-| |-|
+|troops| |PERSON| |0.0009797577513381839| |-| |-|
+|condition| |OTHER| |0.0009797577513381839| |-| |-|
+|removal| |EVENT| |0.0009797577513381839| |-| |-|
+|hardest| |PERSON| |0.0009788641473278403| |-| |-|
+|intelligence targets| |OTHER| |0.0009788641473278403| |-| |-|
+|state affairs| |OTHER| |0.000978441210463643| |-| |-|
+|Aides| |OTHER| |0.0009780328255146742| |-| |-|
+|chief officer| |PERSON| |0.0009087550570257008| |-| |-|

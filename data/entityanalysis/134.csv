@@ -1,0 +1,326 @@
+|Travis VanderZanden| |PERSON| |0.3217013478279114| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.17469482123851776| |-| |-|
+|Bird| |PERSON| |0.04943370074033737| |-| |-|
+|David Streitfeld| |PERSON| |0.023436129093170166| |https://en.wikipedia.org/wiki/David_Streitfeld| |/m/043qf10|
+|Nellie Bowles| |PERSON| |0.023355955258011818| |https://en.wikipedia.org/wiki/Nellie_Bowles| |/g/11fylyg8rs|
+|The New York Times| |ORGANIZATION| |0.00896797701716423| |https://en.wikipedia.org/wiki/The_New_York_Times| |/m/07k2d|
+|people| |PERSON| |0.007386119570583105| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.007344998884946108| |-| |-|
+|Dennis Herrera| |PERSON| |0.007104827556759119| |https://en.wikipedia.org/wiki/Dennis_Herrera| |/m/05f4fxz|
+|San Francisco| |UNKNOWN| |0.0069495923817157745| |https://en.wikipedia.org/wiki/San_Francisco| |/m/0d6lp|
+|people| |PERSON| |0.006743020843714476| |-| |-|
+|scooter| |CONSUMER_GOOD| |0.006437042262405157| |-| |-|
+|Bird| |OTHER| |0.0050638592801988125| |-| |-|
+|scooter company| |ORGANIZATION| |0.0046257697977125645| |-| |-|
+|companies| |ORGANIZATION| |0.0045512341894209385| |-| |-|
+|Santa Monica| |UNKNOWN| |0.004475400783121586| |https://en.wikipedia.org/wiki/Santa_Monica,_California| |/m/06_kh|
+|Mr.| |PERSON| |0.004454798065125942| |-| |-|
+|cities| |LOCATION| |0.004299124237149954| |-| |-|
+|cities| |LOCATION| |0.004259037785232067| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.004153002984821796| |-| |-|
+|Image| |WORK_OF_ART| |0.003829647321254015| |-| |-|
+|VanderZandens Bird| |OTHER| |0.0038071898743510246| |-| |-|
+|riders| |PERSON| |0.003637142013758421| |-| |-|
+|Uber| |ORGANIZATION| |0.003624195698648691| |https://en.wikipedia.org/wiki/Uber| |/m/0gx0wlr|
+|cities| |LOCATION| |0.003564945887774229| |-| |-|
+|office| |LOCATION| |0.003551666857674718| |-| |-|
+|everyone| |PERSON| |0.003541063517332077| |-| |-|
+|start-ups| |OTHER| |0.003527310909703374| |-| |-|
+|office| |LOCATION| |0.0035164272412657738| |-| |-|
+|pledge| |OTHER| |0.00314909010194242| |-| |-|
+|controversy| |OTHER| |0.003143508220091462| |-| |-|
+|streets| |LOCATION| |0.0030189231038093567| |-| |-|
+|park| |LOCATION| |0.0029697518330067396| |-| |-|
+|park scene| |OTHER| |0.0029616120737046003| |-| |-|
+|confines| |OTHER| |0.0029402775689959526| |-| |-|
+|people| |PERSON| |0.0028994313906878233| |-| |-|
+|space| |LOCATION| |0.002853551646694541| |-| |-|
+|country| |LOCATION| |0.0026901261880993843| |-| |-|
+|scooter-rental service| |OTHER| |0.0025689450558274984| |-| |-|
+|people| |PERSON| |0.0025613524485379457| |-| |-|
+|David Valladares| |PERSON| |0.0024765506386756897| |-| |-|
+|something| |OTHER| |0.002435090718790889| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0024046769831329584| |-| |-|
+|scooter| |CONSUMER_GOOD| |0.0024046769831329584| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0024046769831329584| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0024007295724004507| |-| |-|
+|trees| |OTHER| |0.002372708870097995| |-| |-|
+|benches| |OTHER| |0.002372708870097995| |-| |-|
+|construction| |OTHER| |0.002372708870097995| |-| |-|
+|thousands| |PERSON| |0.002364258747547865| |-| |-|
+|trips| |EVENT| |0.002355611650273204| |-| |-|
+|middle| |OTHER| |0.002344978041946888| |-| |-|
+|man| |PERSON| |0.002344978041946888| |-| |-|
+|path| |OTHER| |0.0023436949122697115| |-| |-|
+|means| |OTHER| |0.002342840889468789| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.002342375461012125| |-| |-|
+|dockless| |OTHER| |0.0023408529814332724| |-| |-|
+|Los Angeles| |LOCATION| |0.0023321767803281546| |https://en.wikipedia.org/wiki/Los_Angeles| |/m/030qb3t|
+|wings| |OTHER| |0.0023185848258435726| |-| |-|
+|vehicles| |CONSUMER_GOOD| |0.0022839524317532778| |-| |-|
+|Bird Rides| |ORGANIZATION| |0.0022752846125513315| |-| |-|
+|Calif| |UNKNOWN| |0.0022651865147054195| |https://en.wikipedia.org/wiki/California| |/m/01n7q|
+|Bird| |OTHER| |0.0022505412343889475| |-| |-|
+|Aaron Peskin| |PERSON| |0.002067803405225277| |https://en.wikipedia.org/wiki/Aaron_Peskin| |/m/04728g|
+|San Francisco Public Works| |ORGANIZATION| |0.0020548407919704914| |https://en.wikipedia.org/wiki/San_Francisco_Department_of_Public_Works| |/m/09g7bmq|
+|transportation committee meeting| |EVENT| |0.002042423700913787| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.001920978887937963| |-| |-|
+|Advocates| |PERSON| |0.0019167474238201976| |-| |-|
+|Bird| |OTHER| |0.001901546842418611| |-| |-|
+|Fran Taylor| |PERSON| |0.0018467279151082039| |-| |-|
+|freedom| |OTHER| |0.0017924989806488156| |-| |-|
+|cities| |LOCATION| |0.0017919189995154738| |-| |-|
+|pack| |OTHER| |0.0017624273896217346| |-| |-|
+|VENICE| |UNKNOWN| |0.0017615383258089423| |https://en.wikipedia.org/wiki/Venice,_Los_Angeles| |/m/07_fl|
+|companies| |ORGANIZATION| |0.0017132918583229184| |-| |-|
+|People| |PERSON| |0.0016811606474220753| |-| |-|
+|Caen Contee| |PERSON| |0.0016699034022167325| |-| |-|
+|company| |ORGANIZATION| |0.0016648489981889725| |-| |-|
+|companies| |ORGANIZATION| |0.0016530348220840096| |-| |-|
+|thats| |OTHER| |0.0016530182911083102| |-| |-|
+|people| |PERSON| |0.0016314586391672492| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.001624996424652636| |-| |-|
+|cities| |LOCATION| |0.0016015059081837535| |-| |-|
+|Electric Avenue| |LOCATION| |0.0015850348863750696| |-| |/g/1s05rd8gn|
+|scooters| |CONSUMER_GOOD| |0.0015755736967548728| |-| |-|
+|ideas| |OTHER| |0.0015135619323700666| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0014904781710356474| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.001489409594796598| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.001488076290115714| |-| |-|
+|Bird scooters| |CONSUMER_GOOD| |0.001488076290115714| |-| |-|
+|scooter| |CONSUMER_GOOD| |0.0014877577777951956| |-| |-|
+|people| |PERSON| |0.0014803207013756037| |-| |-|
+|each other| |PERSON| |0.0014739081962034106| |-| |-|
+|CreditColey Brown| |OTHER| |0.0014450912130996585| |-| |-|
+|Image| |WORK_OF_ART| |0.0014294720022007823| |-| |-|
+|Advocates| |PERSON| |0.0014225569320842624| |-| |-|
+|Pacific Ocean| |LOCATION| |0.001392142497934401| |-| |-|
+|Washington| |LOCATION| |0.0013834161218255758| |-| |-|
+|people| |PERSON| |0.0013585099950432777| |-| |-|
+|company| |ORGANIZATION| |0.0013223490677773952| |-| |-|
+|start-ups| |OTHER| |0.0013199253007769585| |-| |-|
+|start-ups| |OTHER| |0.0013172872131690383| |-| |-|
+|officials| |PERSON| |0.001313673797994852| |-| |-|
+|complaint| |OTHER| |0.001301731914281845| |-| |-|
+|charges| |OTHER| |0.0013010003603994846| |-| |-|
+|rampaging scooters| |PERSON| |0.0012854874366894364| |-| |-|
+|transportation| |OTHER| |0.0012563829077407718| |-| |-|
+|transportation| |OTHER| |0.0012538718292489648| |-| |-|
+|Mohammed Nuru| |PERSON| |0.0012373036006465554| |-| |-|
+|sidewalks| |OTHER| |0.0011814069002866745| |-| |-|
+|sidewalks| |OTHER| |0.0011801420478150249| |-| |-|
+|citys| |OTHER| |0.0011745564406737685| |-| |-|
+|chargers| |OTHER| |0.0011676204157993197| |-| |-|
+|scooter companies| |ORGANIZATION| |0.001162211992777884| |-| |-|
+|scooter companies| |ORGANIZATION| |0.0011537364916875958| |-| |-|
+|work| |OTHER| |0.0011524030705913901| |-| |-|
+|cease-and-desist letters| |WORK_OF_ART| |0.0011371717555448413| |-| |-|
+|people| |PERSON| |0.0011364455567672849| |-| |-|
+|People| |PERSON| |0.0011252487311139703| |-| |-|
+|emergency meetings| |EVENT| |0.0011228702496737242| |-| |-|
+|emergency meetings| |EVENT| |0.001116739702410996| |-| |-|
+|commotion| |OTHER| |0.0010987893911078572| |-| |-|
+|scenes| |OTHER| |0.0010987893911078572| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.001089489902369678| |-| |-|
+|cities| |LOCATION| |0.0010868089739233255| |-| |-|
+|Cities| |LOCATION| |0.0010861718328669667| |-| |-|
+|city| |LOCATION| |0.001084983116015792| |-| |-|
+|premise| |OTHER| |0.0010610410245135427| |-| |-|
+|tech companies| |ORGANIZATION| |0.001060608308762312| |-| |-|
+|company| |ORGANIZATION| |0.0010603924747556448| |-| |-|
+|problem| |OTHER| |0.0010597966611385345| |-| |-|
+|helmets| |CONSUMER_GOOD| |0.0010538785718381405| |-| |-|
+|legislators| |PERSON| |0.0010441775666549802| |-| |-|
+|people| |PERSON| |0.0010410028044134378| |-| |-|
+|people| |PERSON| |0.0010391370160505176| |-| |-|
+|blocks| |OTHER| |0.0010063870577141643| |-| |-|
+|avenues| |LOCATION| |0.001002648496069014| |-| |-|
+|wheelchair ramps| |LOCATION| |0.0010021233465522528| |-| |-|
+|blocks| |OTHER| |0.0010021233465522528| |-| |-|
+|Bird| |OTHER| |0.0009876227704808116| |-| |-|
+|technology| |OTHER| |0.0009783018613234162| |-| |-|
+|Image| |WORK_OF_ART| |0.0009642484947107732| |-| |-|
+|Image| |WORK_OF_ART| |0.0009565016953274608| |-| |-|
+|Image| |WORK_OF_ART| |0.0009558288147673011| |-| |-|
+|Image| |WORK_OF_ART| |0.0009551927214488387| |-| |-|
+|service| |OTHER| |0.0009275795891880989| |-| |-|
+|all| |OTHER| |0.0009229141869582236| |-| |-|
+|start-ups| |OTHER| |0.0008914401987567544| |-| |-|
+|rivals| |ORGANIZATION| |0.0008845427655614913| |-| |-|
+|belief| |OTHER| |0.0008838827488943934| |-| |-|
+|venture capital| |OTHER| |0.0008838827488943934| |-| |-|
+|City officials| |PERSON| |0.0008810738218016922| |-| |-|
+|city approval| |OTHER| |0.0008805991383269429| |-| |-|
+|shop| |LOCATION| |0.0008805991383269429| |-| |-|
+|doorways| |OTHER| |0.0008801378426142037| |-| |-|
+|team| |ORGANIZATION| |0.000872548611368984| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0008470910252071917| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0008406946435570717| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0008403761894442141| |-| |-|
+|chief operating officer| |PERSON| |0.0008138339035212994| |-| |-|
+|charges| |OTHER| |0.0008009009761735797| |-| |-|
+|charger| |CONSUMER_GOOD| |0.0007992747123353183| |-| |-|
+|transportation committee meeting| |EVENT| |0.0007986531709320843| |-| |-|
+|city sidewalks| |LOCATION| |0.0007921546348370612| |-| |-|
+|cities| |LOCATION| |0.0007452397840097547| |-| |-|
+|cities| |LOCATION| |0.0007444515358656645| |-| |-|
+|scenes| |WORK_OF_ART| |0.0007443687063641846| |-| |-|
+|everyone| |PERSON| |0.0007443687063641846| |-| |-|
+|cities| |LOCATION| |0.000744030112400651| |-| |-|
+|somebody| |PERSON| |0.000743970216717571| |-| |-|
+|streets| |LOCATION| |0.0007325152400881052| |-| |-|
+|sidewalks| |OTHER| |0.0007325152400881052| |-| |-|
+|carwash service| |OTHER| |0.0007308725616894662| |-| |-|
+|helmets| |CONSUMER_GOOD| |0.0007089778664521873| |-| |-|
+|chaos| |OTHER| |0.0007035293383523822| |-| |-|
+|efforts| |OTHER| |0.0007023724028840661| |-| |-|
+|Somebody| |PERSON| |0.0006816798122599721| |-| |-|
+|CreditJason Henry| |OTHER| |0.0006815512897446752| |-| |-|
+|towns| |LOCATION| |0.0006794492364861071| |-| |-|
+|each| |OTHER| |0.0006788722821511328| |-| |-|
+|cost of living| |OTHER| |0.0006786885787732899| |-| |-|
+|notices| |OTHER| |0.0006754350615665317| |-| |-|
+|others| |PERSON| |0.0006742017576470971| |-| |-|
+|LimeBike| |ORGANIZATION| |0.0006721361423842609| |https://en.wikipedia.org/wiki/LimeBike| |/g/11g9l_v73_|
+|notices| |OTHER| |0.000671746616717428| |-| |-|
+|riders| |PERSON| |0.0006623664521612227| |-| |-|
+|rides| |OTHER| |0.0006622638902626932| |-| |-|
+|Image| |WORK_OF_ART| |0.0006618660991080105| |-| |-|
+|Bird.CreditColey Brown| |PERSON| |0.0006510776001960039| |-| |-|
+|plot| |OTHER| |0.0006406520260497928| |-| |-|
+|playbook| |OTHER| |0.0006348149618133903| |-| |-|
+|accident| |EVENT| |0.0006183306104503572| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0006111806142143905| |-| |-|
+|city attorneys office| |ORGANIZATION| |0.0006105196080170572| |-| |-|
+|Birds| |OTHER| |0.0006004767492413521| |-| |-|
+|scooter companies strategy| |OTHER| |0.0005969073972664773| |-| |-|
+|permission| |OTHER| |0.0005969073972664773| |-| |-|
+|forgiveness| |OTHER| |0.0005967302713543177| |-| |-|
+|arrival| |EVENT| |0.0005965573946014047| |-| |-|
+|marketing| |OTHER| |0.0005965573946014047| |-| |-|
+|income| |OTHER| |0.0005960621638223529| |-| |-|
+|discrimination| |OTHER| |0.0005944904405623674| |-| |-|
+|feathers| |OTHER| |0.0005918742972426116| |-| |-|
+|shift| |OTHER| |0.0005918742972426116| |-| |-|
+|horses| |OTHER| |0.0005914040957577527| |-| |-|
+|train| |OTHER| |0.0005907518207095563| |-| |-|
+|filing| |OTHER| |0.0005899650859646499| |-| |-|
+|reaction| |OTHER| |0.0005841659149155021| |-| |-|
+|shut-ins| |OTHER| |0.0005808225832879543| |-| |-|
+|everyone| |PERSON| |0.0005729598924517632| |-| |-|
+|areas| |LOCATION| |0.0005724984803237021| |-| |-|
+|scooter companies| |ORGANIZATION| |0.0005562274600379169| |-| |-|
+|helmets| |CONSUMER_GOOD| |0.0005487400339916348| |-| |-|
+|contest| |OTHER| |0.0005480886320583522| |-| |-|
+|disabled| |OTHER| |0.0005462714470922947| |-| |-|
+|safety| |OTHER| |0.0005461382679641247| |-| |-|
+|homes| |LOCATION| |0.0005461382679641247| |-| |-|
+|arrogance| |OTHER| |0.0005460076499730349| |-| |-|
+|entitlement| |OTHER| |0.0005460076499730349| |-| |-|
+|symbol| |OTHER| |0.0005460076499730349| |-| |-|
+|farts| |OTHER| |0.0005458795931190252| |-| |-|
+|view| |OTHER| |0.0005457539227791131| |-| |-|
+|conference room| |LOCATION| |0.0005457539227791131| |-| |-|
+|parking lot| |LOCATION| |0.0005457539227791131| |-| |-|
+|computer screen| |OTHER| |0.0005456306389532983| |-| |-|
+|eyes| |OTHER| |0.0005456306389532983| |-| |-|
+|blond hair| |OTHER| |0.0005455095670185983| |-| |-|
+|poor| |PERSON| |0.000545390706975013| |-| |-|
+|trouble| |OTHER| |0.0005395854823291302| |-| |-|
+|apartments| |LOCATION| |0.0005391984595917165| |-| |-|
+|cities| |LOCATION| |0.0005203802138566971| |-| |-|
+|San Francisco.CreditJason Henry| |PERSON| |0.0005196506972424686| |-| |-|
+|area| |LOCATION| |0.0005107445176690817| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0004898308543488383| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.0004897487815469503| |-| |-|
+|Cherry| |PERSON| |0.0004860539629589766| |-| |-|
+|part| |OTHER| |0.0004659431870095432| |-| |-|
+|compliance effort| |OTHER| |0.0004659431870095432| |-| |-|
+|operation| |OTHER| |0.0004659431870095432| |-| |-|
+|towns| |LOCATION| |0.00046532449778169394| |-| |-|
+|scooter riders| |PERSON| |0.0004623365239240229| |-| |-|
+|San Francisco City Hall| |LOCATION| |0.000453035841928795| |https://en.wikipedia.org/wiki/San_Francisco_City_Hall| |/m/03p_pq|
+|birds| |OTHER| |0.0004426123923622072| |-| |-|
+|Bay Area| |LOCATION| |0.000439651106717065| |https://en.wikipedia.org/wiki/San_Francisco_Bay_Area| |/m/06pvr|
+|citys| |PERSON| |0.00043779565021395683| |-| |-|
+|transportation tech hub| |ORGANIZATION| |0.0004350683302618563| |-| |-|
+|scooter start-ups| |ORGANIZATION| |0.0004269287164788693| |-| |-|
+|scooter start-ups| |OTHER| |0.0004268131742719561| |-| |-|
+|scooters| |CONSUMER_GOOD| |0.00042283014045096934| |-| |-|
+|misdemeanor| |OTHER| |0.000408784399041906| |-| |-|
+|vending business license| |OTHER| |0.000408784399041906| |-| |-|
+|citations| |OTHER| |0.000408784399041906| |-| |-|
+|settlement| |OTHER| |0.00040872619138099253| |-| |-|
+|city government| |ORGANIZATION| |0.00040866868221201| |-| |-|
+|brother| |PERSON| |0.00040861181332729757| |-| |-|
+|sister| |PERSON| |0.00040861181332729757| |-| |-|
+|phenomenon| |OTHER| |0.00040861181332729757| |-| |-|
+|board of supervisors| |ORGANIZATION| |0.00040861181332729757| |-| |-|
+|branch| |LOCATION| |0.00040861181332729757| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0004059926141053438| |-| |-|
+|Pulitzer Prize for Explanatory Reporting| |OTHER| |0.00040559633634984493| |https://en.wikipedia.org/wiki/Pulitzer_Prize_for_Explanatory_Reporting| |/m/02p33z|
+|cars| |CONSUMER_GOOD| |0.0003961652109865099| |-| |-|
+|controversy| |OTHER| |0.00038311726530082524| |-| |-|
+|tech| |OTHER| |0.00038292069802992046| |-| |-|
+|much| |OTHER| |0.0003655912005342543| |-| |-|
+|danger| |OTHER| |0.00036092702066525817| |-| |-|
+|growth| |OTHER| |0.00035679194843396544| |-| |-|
+|helmets| |CONSUMER_GOOD| |0.0003557352756615728| |-| |-|
+|Lyft| |UNKNOWN| |0.00035489440779201686| |https://en.wikipedia.org/wiki/Lyft| |/m/0wdpqnj|
+|part| |OTHER| |0.0003542826452758163| |-| |-|
+|Ive| |PERSON| |0.0003520473255775869| |-| |-|
+|Spin| |CONSUMER_GOOD| |0.0003480704326648265| |-| |-|
+|requirement| |OTHER| |0.00034357726690359414| |-| |-|
+|people| |PERSON| |0.00034226442221552134| |-| |-|
+|people| |PERSON| |0.00034209000295959413| |-| |-|
+|cities| |LOCATION| |0.00032704969635233283| |-| |-|
+|others| |PERSON| |0.0003253492759540677| |-| |-|
+|headline| |OTHER| |0.00032497933716513216| |-| |-|
+|riders| |PERSON| |0.0003242574748583138| |-| |-|
+|Image| |WORK_OF_ART| |0.0002911027695517987| |-| |-|
+|minds| |OTHER| |0.0002858491789083928| |-| |-|
+|much| |OTHER| |0.0002858102961909026| |-| |-|
+|revenue sharing| |OTHER| |0.0002857718209270388| |-| |-|
+|response| |OTHER| |0.0002857718209270388| |-| |-|
+|ignorance| |OTHER| |0.0002856961509678513| |-| |-|
+|Anything| |OTHER| |0.00028565889806486666| |-| |-|
+|effects| |OTHER| |0.0002854785125236958| |-| |-|
+|print| |OTHER| |0.00028540886705741286| |-| |-|
+|version| |WORK_OF_ART| |0.00028540886705741286| |-| |-|
+|article| |WORK_OF_ART| |0.00028540886705741286| |-| |-|
+|Page B1| |OTHER| |0.00028540886705741286| |-| |-|
+|edition| |WORK_OF_ART| |0.00028540886705741286| |-| |-|
+|Order Reprints| |OTHER| |0.00028537458274513483| |-| |-|
+|Todays Paper| |ORGANIZATION| |0.0002853406185749918| |-| |-|
+|Subscribe| |OTHER| |0.0002853070036508143| |-| |-|
+|Advertisement| |WORK_OF_ART| |0.0002852737088687718| |-| |-|
+|New York| |LOCATION| |0.0002822925162035972| |https://en.wikipedia.org/wiki/New_York_City| |/m/02_286|
+|pedestrians| |PERSON| |0.0002752611762844026| |-| |-|
+|Birds| |PERSON| |0.000268174713710323| |-| |-|
+|growth| |EVENT| |0.00022443845227826387| |-| |-|
+|moms name| |OTHER| |0.0002157814014935866| |-| |-|
+|influx| |EVENT| |0.00021363301493693143| |-| |-|
+|nests| |OTHER| |0.0002105652092723176| |-| |-|
+|things| |OTHER| |0.00020457018399611115| |-| |-|
+|things| |OTHER| |0.00020457018399611115| |-| |-|
+|team| |ORGANIZATION| |0.00020442412642296404| |-| |-|
+|wordplay| |OTHER| |0.0001980885281227529| |-| |-|
+|vice president| |PERSON| |0.00017976119124796242| |-| |-|
+|confidentiality agreement| |OTHER| |0.0001797268632799387| |-| |-|
+|duty| |OTHER| |0.0001797268632799387| |-| |-|
+|litigation| |OTHER| |0.00017969307373277843| |-| |-|
+|environment| |OTHER| |0.00017965979350265115| |-| |-|
+|investors| |PERSON| |0.00017956289229914546| |-| |-|
+|flock| |OTHER| |0.00017944003047887236| |-| |-|
+|group| |ORGANIZATION| |0.00017944003047887236| |-| |-|
+|internet culture| |OTHER| |0.00017663124890532345| |-| |-|
+|@nelliebowles| |PERSON| |0.00016866471560206264| |-| |-|
+|Twitter| |OTHER| |0.00016866471560206264| |-| |-|
+|Charged Up Over Scooters Despite Uproar| |OTHER| |0.00016860270989127457| |-| |-|
+|scooter rental business| |OTHER| |0.00015362969134002924| |-| |-|
+|Southern California| |LOCATION| |0.0001508542336523533| |https://en.wikipedia.org/wiki/Southern_California| |/m/0gx1l|
+|Robin| |PERSON| |0.00013556623889598995| |-| |-|
+|Index Ventures| |ORGANIZATION| |0.00013243708235677332| |https://en.wikipedia.org/wiki/Index_Ventures| |/m/03cwfng|
+|America| |LOCATION| |0.00010609166929498315| |https://en.wikipedia.org/wiki/United_States| |/m/09c7w0|
+|China| |LOCATION| |0.00010609166929498315| |-| |-|
+|Craft Ventures| |ORGANIZATION| |8.820227230899036e-05| |-| |-|

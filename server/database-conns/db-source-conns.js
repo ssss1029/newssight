@@ -161,6 +161,7 @@ function _doUpdateQuery(source) {
     updateClauses = updateClauses.slice(0, -1);
 
     var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE {3};".format(tables.SOURCES, columns, values, updateClauses);
+    debug(query)
     
     return new Promise(function(resolve, reject) {
         connection.query(query, function(err, result, fields) {

@@ -1,0 +1,642 @@
+|Tesla| |UNKNOWN| |0.7571021318435669| |https://en.wikipedia.org/wiki/Tesla,_Inc.| |/m/0dr90d|
+|Autopilot| |UNKNOWN| |0.015521237626671791| |https://en.wikipedia.org/wiki/Autopilot| |/m/01ycwl|
+|LIDAR| |OTHER| |0.009851368144154549| |https://en.wikipedia.org/wiki/Lidar| |/m/0bjnh|
+|Waymo| |UNKNOWN| |0.005408017430454493| |https://en.wikipedia.org/wiki/Waymo| |/g/11bc5cglk9|
+|data| |OTHER| |0.005081060342490673| |-| |-|
+|car| |CONSUMER_GOOD| |0.003273834241554141| |-| |-|
+|company| |ORGANIZATION| |0.002923896536231041| |-| |-|
+|race| |EVENT| |0.002844322007149458| |-| |-|
+|SpaceX| |ORGANIZATION| |0.002780029084533453| |https://en.wikipedia.org/wiki/SpaceX| |/m/03fkyw|
+|technology| |OTHER| |0.0027071863878518343| |-| |-|
+|company| |ORGANIZATION| |0.0023474444169551134| |-| |-|
+|billions| |OTHER| |0.002332685748115182| |-| |-|
+|world| |LOCATION| |0.0019113143207505345| |-| |-|
+|car| |CONSUMER_GOOD| |0.0017900931416079402| |-| |-|
+|simulations| |OTHER| |0.001678530010394752| |-| |-|
+|data| |OTHER| |0.001557180075906217| |-| |-|
+|Tasha Keeney| |PERSON| |0.001459126127883792| |-| |-|
+|company| |ORGANIZATION| |0.0014542059507220984| |-| |-|
+|Adam Jonas| |PERSON| |0.0014500897377729416| |-| |-|
+|deaths| |EVENT| |0.001380838337354362| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0013567976420745254| |-| |-|
+|vehicles| |CONSUMER_GOOD| |0.0013427332742139697| |-| |-|
+|vehicles| |CONSUMER_GOOD| |0.001322824857197702| |-| |-|
+|data Teslas| |OTHER| |0.0013009386602789164| |-| |-|
+|quality| |OTHER| |0.0012870520586147904| |-| |-|
+|data| |OTHER| |0.0012818496907129884| |-| |-|
+|data| |OTHER| |0.0012754728086292744| |-| |-|
+|data| |OTHER| |0.0012709674192592502| |-| |-|
+|data| |OTHER| |0.0012622489593923092| |-| |-|
+|data| |OTHER| |0.0012592381099238992| |-| |-|
+|technology| |OTHER| |0.0012563454220071435| |-| |-|
+|data| |OTHER| |0.0012552508851513267| |-| |-|
+|company| |ORGANIZATION| |0.0012369833420962095| |-| |-|
+|companies| |ORGANIZATION| |0.0012284175027161837| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0011933175846934319| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0011891020694747567| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0011825826950371265| |-| |-|
+|human drivers| |PERSON| |0.0011803797679021955| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0011790061835199594| |-| |-|
+|fleet| |OTHER| |0.001092796679586172| |-| |-|
+|California| |UNKNOWN| |0.0010813986882567406| |https://en.wikipedia.org/wiki/California| |/m/01n7q|
+|world| |LOCATION| |0.0010442356579005718| |-| |-|
+|computer simulations| |OTHER| |0.0010389379458501935| |-| |-|
+|Email| |OTHER| |0.0010099026840180159| |-| |-|
+|autonomy| |OTHER| |0.0010012732818722725| |-| |-|
+|Autopilot| |OTHER| |0.0010005694348365068| |-| |-|
+|Raj Rajkumar| |PERSON| |0.0009885693434625864| |-| |-|
+|tech| |OTHER| |0.0009582125931046903| |-| |-|
+|companies| |ORGANIZATION| |0.00095815968234092| |-| |-|
+|stuff| |OTHER| |0.0009444012539461255| |-| |-|
+|road| |LOCATION| |0.0009184870286844671| |-| |-|
+|road| |LOCATION| |0.000907468143850565| |-| |-|
+|Uber| |ORGANIZATION| |0.000904068467207253| |https://en.wikipedia.org/wiki/Uber| |/m/0gx0wlr|
+|road| |LOCATION| |0.0009039190481416881| |-| |-|
+|Nidhi Kalra| |PERSON| |0.0008704346255399287| |-| |/g/11b5ltfqmj|
+|fleet| |OTHER| |0.0008656015270389616| |-| |-|
+|human driver| |PERSON| |0.0008594768005423248| |-| |-|
+|dataset| |OTHER| |0.0008112472714856267| |-| |-|
+|computer| |CONSUMER_GOOD| |0.0008027147850953043| |-| |-|
+|customers| |PERSON| |0.0007629808969795704| |-| |-|
+|self-driving cars| |OTHER| |0.0007495962781831622| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0007489913841709495| |-| |-|
+|advantage| |OTHER| |0.0007401218172162771| |-| |-|
+|General Motors| |ORGANIZATION| |0.000719563802704215| |https://en.wikipedia.org/wiki/General_Motors| |/m/035nm|
+|thousands| |PERSON| |0.0007110857986845076| |-| |-|
+|Model| |CONSUMER_GOOD| |0.0007068492122925818| |-| |-|
+|people| |PERSON| |0.0007061216747388244| |-| |-|
+|loop| |OTHER| |0.0007054185844026506| |-| |-|
+|thousands| |OTHER| |0.0007040237542241812| |-| |-|
+|lot| |OTHER| |0.000685079547110945| |-| |-|
+|hundreds| |PERSON| |0.0006768586463294923| |-| |-|
+|something| |OTHER| |0.0006728259031660855| |-| |-|
+|video| |WORK_OF_ART| |0.0006716418429277837| |-| |-|
+|hundreds| |PERSON| |0.0006701363017782569| |-| |-|
+|information| |OTHER| |0.0006701363017782569| |-| |-|
+|another| |OTHER| |0.0006614979938603938| |-| |-|
+|milestones| |OTHER| |0.0006576524465344846| |-| |-|
+|content| |OTHER| |0.000634112220723182| |-| |-|
+|streets| |LOCATION| |0.0006321536493487656| |-| |-|
+|many| |PERSON| |0.0006129957037046552| |-| |-|
+|problems| |OTHER| |0.0006103066261857748| |-| |-|
+|simulation| |OTHER| |0.0006095183780416846| |-| |-|
+|Waymos| |OTHER| |0.0006059076404199004| |-| |-|
+|kind| |OTHER| |0.0005995809333398938| |-| |-|
+|number| |OTHER| |0.0005928561440669| |-| |-|
+|car crashes| |EVENT| |0.0005928561440669| |-| |-|
+|people| |PERSON| |0.0005928561440669| |-| |-|
+|feature| |OTHER| |0.0005925805307924747| |-| |-|
+|image| |WORK_OF_ART| |0.000589904491789639| |-| |-|
+|Image| |WORK_OF_ART| |0.0005894359783269465| |-| |-|
+|privacy policy| |OTHER| |0.000588582013733685| |-| |-|
+|strategy| |OTHER| |0.0005881903925910592| |-| |-|
+|partnership| |OTHER| |0.0005724829970858991| |-| |-|
+|amount| |OTHER| |0.000549261923879385| |-| |-|
+|wheel| |OTHER| |0.000548779615201056| |-| |-|
+|task| |OTHER| |0.000548779615201056| |-| |-|
+|metric| |OTHER| |0.0005468723829835653| |-| |-|
+|understanding| |OTHER| |0.000546839612070471| |-| |-|
+|The Verge| |ORGANIZATION| |0.0005449828458949924| |https://en.wikipedia.org/wiki/The_Verge| |/m/0h3ql_f|
+|ways| |OTHER| |0.0005430853343568742| |-| |-|
+|car project| |OTHER| |0.0005414077313616872| |-| |-|
+|market| |OTHER| |0.0005384709220379591| |-| |-|
+|action| |OTHER| |0.0005380137590691447| |-| |-|
+|anyone| |PERSON| |0.0005364503595046699| |-| |-|
+|rocket launches| |OTHER| |0.0005361117655411363| |-| |-|
+|some| |OTHER| |0.0005361117655411363| |-| |-|
+|test launches| |OTHER| |0.0005361117655411363| |-| |-|
+|Elon Musks| |UNKNOWN| |0.000528354721609503| |https://en.wikipedia.org/wiki/Elon_Musk| |/m/03nzf1|
+|youve| |PERSON| |0.0005192779935896397| |-| |-|
+|Arizona| |LOCATION| |0.0005138947162777185| |https://en.wikipedia.org/wiki/Arizona| |/m/0vmt|
+|statements| |OTHER| |0.0004993675393052399| |-| |-|
+|companies| |ORGANIZATION| |0.0004992494359612465| |-| |-|
+|rub| |OTHER| |0.0004986933781765401| |-| |-|
+|Thats| |OTHER| |0.000498493667691946| |-| |-|
+|theyre| |OTHER| |0.00048198606236837804| |-| |-|
+|sensors| |OTHER| |0.0004787040234077722| |-| |-|
+|proponents| |PERSON| |0.0004748945066239685| |-| |-|
+|data| |OTHER| |0.0004745231999550015| |-| |-|
+|incentive| |OTHER| |0.0004743376048281789| |-| |-|
+|data| |OTHER| |0.00047403635107912123| |-| |-|
+|revenue| |OTHER| |0.0004738297429867089| |-| |-|
+|data| |OTHER| |0.0004733754030894488| |-| |-|
+|note| |OTHER| |0.0004733630339615047| |-| |-|
+|data| |OTHER| |0.00047317094868049026| |-| |-|
+|Autopilot data| |OTHER| |0.0004729735082946718| |-| |-|
+|aspirations| |OTHER| |0.0004729313659481704| |-| |-|
+|levels| |OTHER| |0.0004729313659481704| |-| |-|
+|stocks| |OTHER| |0.0004729313659481704| |-| |-|
+|data| |OTHER| |0.00047278261627070606| |-| |-|
+|data| |OTHER| |0.0004722452431451529| |-| |-|
+|equipment| |CONSUMER_GOOD| |0.000470859173219651| |-| |-|
+|stage scenarios| |OTHER| |0.0004671204078476876| |-| |-|
+|company| |ORGANIZATION| |0.0004652711213566363| |-| |-|
+|computers| |CONSUMER_GOOD| |0.0004640293773263693| |-| |-|
+|Carnegie Mellon University| |ORGANIZATION| |0.0004403629573062062| |https://en.wikipedia.org/wiki/Carnegie_Mellon_University| |/m/0cwx_|
+|cars| |CONSUMER_GOOD| |0.0004397081502247602| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0004389053792692721| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0004378903831820935| |-| |-|
+|company| |ORGANIZATION| |0.0004323038156144321| |-| |-|
+|cars| |CONSUMER_GOOD| |0.00042653761920519173| |-| |-|
+|lots| |OTHER| |0.0004092473827768117| |-| |-|
+|world| |LOCATION| |0.00039168944931589067| |-| |-|
+|investments| |OTHER| |0.00038089536246843636| |-| |-|
+|question| |OTHER| |0.00037399790016934276| |-| |-|
+|test cars| |CONSUMER_GOOD| |0.00036269149859435856| |-| |-|
+|testing| |EVENT| |0.000357486424036324| |-| |-|
+|company| |ORGANIZATION| |0.0003542656486388296| |-| |-|
+|plans| |OTHER| |0.00035422996734268963| |-| |-|
+|kinds| |OTHER| |0.00035094498889520764| |-| |-|
+|Morgan Stanley| |ORGANIZATION| |0.0003491717216093093| |https://en.wikipedia.org/wiki/Morgan_Stanley| |/m/0jvs0|
+|millions| |PERSON| |0.00034533051075413823| |-| |-|
+|data| |OTHER| |0.000340026686899364| |-| |-|
+|data| |OTHER| |0.00033990354859270155| |-| |-|
+|roads| |LOCATION| |0.00033734540920704603| |-| |-|
+|conference crowd| |PERSON| |0.0003372922947164625| |-| |-|
+|road| |LOCATION| |0.0003369733749423176| |-| |-|
+|road| |LOCATION| |0.0003364197618793696| |-| |-|
+|software| |CONSUMER_GOOD| |0.00032805794035084546| |-| |-|
+|all| |OTHER| |0.0003226230328436941| |-| |-|
+|fleet| |OTHER| |0.0003219985810574144| |-| |-|
+|data| |OTHER| |0.000319607846904546| |-| |-|
+|data| |OTHER| |0.0003195512108504772| |-| |-|
+|data| |OTHER| |0.00031927984673529863| |-| |-|
+|data| |OTHER| |0.00031922777998261154| |-| |-|
+|data| |OTHER| |0.0003191764117218554| |-| |-|
+|data| |OTHER| |0.0003191764117218554| |-| |-|
+|data| |OTHER| |0.0003191764117218554| |-| |-|
+|data| |OTHER| |0.00031902623595669866| |-| |-|
+|data| |OTHER| |0.0003189774288330227| |-| |-|
+|version| |WORK_OF_ART| |0.0003174625162500888| |-| |-|
+|DATA| |OTHER| |0.00031736245728097856| |-| |-|
+|data| |OTHER| |0.00031727657187730074| |-| |-|
+|data| |OTHER| |0.00031727657187730074| |-| |-|
+|data| |OTHER| |0.00031617586500942707| |-| |-|
+|data| |OTHER| |0.00031592868617735803| |-| |-|
+|data| |OTHER| |0.00031586928525939584| |-| |-|
+|driving| |OTHER| |0.0003142091154586524| |-| |-|
+|parent company| |ORGANIZATION| |0.0003140097833238542| |-| |-|
+|companies| |ORGANIZATION| |0.0003124753129668534| |-| |-|
+|Nvidia| |UNKNOWN| |0.00031056400621309876| |https://en.wikipedia.org/wiki/Nvidia| |/m/09rh_|
+|vehicle| |CONSUMER_GOOD| |0.0003093706036452204| |-| |-|
+|many| |LOCATION| |0.00030570029048249125| |-| |-|
+|metric| |OTHER| |0.00030567418434657156| |-| |-|
+|plenty| |OTHER| |0.00030509315547533333| |-| |-|
+|companies| |ORGANIZATION| |0.00030048080952838063| |-| |-|
+|street features| |OTHER| |0.0002991568762809038| |-| |-|
+|self-driving cars| |OTHER| |0.0002959654084406793| |-| |-|
+|test cars| |CONSUMER_GOOD| |0.0002958742843475193| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0002955724485218525| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0002941424027085304| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0002929912006948143| |-| |-|
+|data| |OTHER| |0.0002915995428338647| |-| |-|
+|Simulations| |OTHER| |0.0002895850921049714| |-| |-|
+|company| |ORGANIZATION| |0.00028925325023010373| |-| |-|
+|company| |ORGANIZATION| |0.00028783222660422325| |-| |-|
+|COMPETITORS| |ORGANIZATION| |0.0002877160150092095| |-| |-|
+|companies| |ORGANIZATION| |0.00028767812182195485| |-| |-|
+|competitors| |ORGANIZATION| |0.0002876406360883266| |-| |-|
+|company| |ORGANIZATION| |0.0002876035578083247| |-| |-|
+|company| |ORGANIZATION| |0.00028753053629770875| |-| |-|
+|company| |ORGANIZATION| |0.0002874945930670947| |-| |-|
+|competitors| |ORGANIZATION| |0.0002874945930670947| |-| |-|
+|company| |ORGANIZATION| |0.00028728635516017675| |-| |-|
+|customers| |PERSON| |0.00028718318208120763| |-| |-|
+|company| |ORGANIZATION| |0.00028699039830826223| |-| |-|
+|Detroit| |LOCATION| |0.0002862022374756634| |https://en.wikipedia.org/wiki/Detroit| |/m/02dtg|
+|Googles| |OTHER| |0.0002809501893352717| |https://en.wikipedia.org/wiki/Google| |/m/045c7b|
+|US| |LOCATION| |0.0002805858966894448| |https://en.wikipedia.org/wiki/United_States| |/m/09c7w0|
+|MIT| |ORGANIZATION| |0.0002778748166747391| |-| |-|
+|vehicles| |CONSUMER_GOOD| |0.00027574438718147576| |-| |-|
+|vehicles| |CONSUMER_GOOD| |0.0002755446475930512| |-| |-|
+|test cars| |CONSUMER_GOOD| |0.00027108669746667147| |-| |-|
+|test cars| |CONSUMER_GOOD| |0.00027066917391493917| |-| |-|
+|self-driving cars| |OTHER| |0.00027060447609983385| |-| |-|
+|cars| |CONSUMER_GOOD| |0.00027047874755226076| |-| |-|
+|One| |OTHER| |0.0002688461681827903| |-| |-|
+|something| |OTHER| |0.0002661390753928572| |-| |-|
+|version| |WORK_OF_ART| |0.00026366100064478815| |-| |-|
+|scenario| |OTHER| |0.0002634986594785005| |-| |-|
+|kind| |OTHER| |0.000261719775153324| |-| |-|
+|production scale| |OTHER| |0.0002528698823880404| |-| |-|
+|driving scenarios| |OTHER| |0.00024588347878307104| |-| |-|
+|testing| |EVENT| |0.00024143898917827755| |-| |-|
+|technology| |OTHER| |0.0002411523601040244| |-| |-|
+|technology| |OTHER| |0.00023954981588758528| |-| |-|
+|tech| |OTHER| |0.00023944447457324713| |-| |-|
+|control| |OTHER| |0.00023840798530727625| |-| |-|
+|state| |LOCATION| |0.00023722053447272629| |-| |-|
+|minivans| |CONSUMER_GOOD| |0.0002371333393966779| |-| |-|
+|Thats| |PERSON| |0.0002365170803386718| |-| |-|
+|roads| |LOCATION| |0.0002332542062504217| |-| |-|
+|minivans| |CONSUMER_GOOD| |0.00023104751016944647| |-| |-|
+|action| |OTHER| |0.0002310157142346725| |-| |-|
+|Dara Khosrowshahi| |PERSON| |0.00022811511007603258| |https://en.wikipedia.org/wiki/Dara_Khosrowshahi| |/m/0h1c8tt|
+|customer cars| |OTHER| |0.00022795847326051444| |-| |-|
+|shadow mode| |OTHER| |0.0002253838028991595| |-| |-|
+|indication| |OTHER| |0.00022353966778609902| |-| |-|
+|rubber| |OTHER| |0.00022212881594896317| |-| |-|
+|number| |OTHER| |0.0002217309083789587| |-| |-|
+|tech| |OTHER| |0.00022102418006397784| |-| |-|
+|testing| |EVENT| |0.00022096688917372376| |-| |-|
+|testing| |EVENT| |0.00022093868756201118| |-| |-|
+|testing| |OTHER| |0.00022091077698860317| |-| |-|
+|technology| |OTHER| |0.00022080197231844068| |-| |-|
+|technology| |OTHER| |0.00022069740225560963| |-| |-|
+|one| |OTHER| |0.00021751914755441248| |-| |-|
+|test fleets| |CONSUMER_GOOD| |0.00021741603268310428| |-| |-|
+|company| |ORGANIZATION| |0.0002157761191483587| |-| |-|
+|companies| |ORGANIZATION| |0.00021575635764747858| |-| |-|
+|companies| |ORGANIZATION| |0.00021571728575509042| |-| |-|
+|simulating| |OTHER| |0.00021559906599577516| |-| |-|
+|company| |ORGANIZATION| |0.00021294628095347434| |-| |-|
+|company| |ORGANIZATION| |0.00021289222058840096| |-| |-|
+|loop| |OTHER| |0.00020990391203667969| |-| |-|
+|Susan M. Paddock| |PERSON| |0.00020984454022254795| |-| |-|
+|video| |WORK_OF_ART| |0.00020970414334442466| |-| |-|
+|business model| |OTHER| |0.00020801619393751025| |-| |-|
+|many| |PERSON| |0.0002042620035354048| |-| |-|
+|quality| |OTHER| |0.00020365572709124535| |-| |-|
+|self-driving cars| |OTHER| |0.00020307661907281727| |-| |-|
+|amounts| |OTHER| |0.00020158254483249038| |-| |-|
+|fact| |OTHER| |0.00020135336671955884| |-| |-|
+|ground| |OTHER| |0.00020101343397982419| |-| |-|
+|test facility| |LOCATION| |0.00020030852465424687| |-| |-|
+|test fleets| |CONSUMER_GOOD| |0.00019900142797268927| |-| |-|
+|test fleets| |CONSUMER_GOOD| |0.00019881290791090578| |-| |-|
+|everyone| |PERSON| |0.00019871394033543766| |-| |-|
+|reporting figures| |OTHER| |0.0001965267292689532| |-| |-|
+|advantage| |OTHER| |0.0001958862121682614| |-| |-|
+|sensors| |OTHER| |0.00019370652444195002| |-| |-|
+|sensors| |OTHER| |0.0001936721964739263| |-| |-|
+|Intel| |ORGANIZATION| |0.00019239528046455234| |https://en.wikipedia.org/wiki/Intel| |/m/03s7h|
+|LIDAR sensors| |OTHER| |0.00019224247080273926| |-| |-|
+|radar sensors| |OTHER| |0.00019224247080273926| |-| |-|
+|sensors| |OTHER| |0.0001921926304930821| |-| |-|
+|thousands| |PERSON| |0.0001914825406856835| |-| |-|
+|thing| |OTHER| |0.0001909411366796121| |-| |-|
+|vehicles| |CONSUMER_GOOD| |0.00018844753503799438| |-| |-|
+|car| |CONSUMER_GOOD| |0.0001865040248958394| |-| |-|
+|car| |CONSUMER_GOOD| |0.00018494107644073665| |-| |-|
+|RAND Corporation| |UNKNOWN| |0.00018437638937029988| |https://en.wikipedia.org/wiki/RAND_Corporation| |/m/01fgv0|
+|balance| |OTHER| |0.00018105861090589315| |-| |-|
+|something| |OTHER| |0.00018031088984571397| |-| |-|
+|Silicon Valley| |LOCATION| |0.00018020431161858141| |https://en.wikipedia.org/wiki/Silicon_Valley| |/m/06pw6|
+|simulation| |OTHER| |0.00017934785864781588| |-| |-|
+|simulations| |OTHER| |0.00017926575674209744| |-| |-|
+|simulator| |OTHER| |0.00017924969142768532| |-| |-|
+|simulation| |OTHER| |0.00017915577336680144| |-| |-|
+|simulation| |OTHER| |0.00017911028407979757| |-| |-|
+|feature| |OTHER| |0.0001787615183275193| |-| |-|
+|cameras| |CONSUMER_GOOD| |0.0001786977081792429| |-| |-|
+|cameras| |CONSUMER_GOOD| |0.00017860537627711892| |-| |-|
+|computer models| |CONSUMER_GOOD| |0.00017843172827269882| |-| |-|
+|thousands| |PERSON| |0.00017840407963376492| |-| |-|
+|scenario| |OTHER| |0.00017840407963376492| |-| |-|
+|increases| |OTHER| |0.00017750839469954371| |-| |-|
+|cameras| |CONSUMER_GOOD| |0.0001773785043042153| |-| |-|
+|cameras| |CONSUMER_GOOD| |0.00017733252025209367| |-| |-|
+|instances| |OTHER| |0.00017718423623591661| |-| |-|
+|collection| |OTHER| |0.00017711026885081083| |-| |-|
+|hotbed| |OTHER| |0.0001769024966051802| |-| |-|
+|settings| |OTHER| |0.0001767743524396792| |-| |-|
+|one| |PERSON| |0.000176717818249017| |-| |-|
+|trips| |EVENT| |0.00017648388165980577| |-| |-|
+|task| |OTHER| |0.00017410966393072158| |-| |-|
+|evidence| |OTHER| |0.00017380180361215025| |-| |-|
+|cameras| |CONSUMER_GOOD| |0.00017280694737564772| |-| |-|
+|information| |OTHER| |0.00017015208140946925| |-| |-|
+|video| |WORK_OF_ART| |0.00017009134171530604| |-| |-|
+|video| |WORK_OF_ART| |0.00017006164125632495| |-| |-|
+|something| |OTHER| |0.00017006164125632495| |-| |-|
+|information| |OTHER| |0.00017000346269924194| |-| |-|
+|lot| |OTHER| |0.00016966067778412253| |-| |-|
+|use| |OTHER| |0.0001690198841970414| |-| |-|
+|hardware| |OTHER| |0.000166091529536061| |-| |-|
+|technology| |OTHER| |0.00016574817709624767| |-| |-|
+|technology| |OTHER| |0.00016573323227930814| |-| |-|
+|Jaguar Land Rover| |ORGANIZATION| |0.0001642795978114009| |https://en.wikipedia.org/wiki/Jaguar_Land_Rover| |/m/04glzpf|
+|volume| |OTHER| |0.00016391293320339173| |-| |-|
+|data set| |OTHER| |0.00016379289445467293| |-| |-|
+|version| |WORK_OF_ART| |0.00016345347103197128| |-| |-|
+|versions| |CONSUMER_GOOD| |0.00016328028868883848| |-| |-|
+|self-driving| |OTHER| |0.0001626309094717726| |-| |-|
+|Cruise Automation| |UNKNOWN| |0.00016078166663646698| |https://en.wikipedia.org/wiki/Cruise_Automation| |/g/11fylzgvmb|
+|feedback loop| |OTHER| |0.00016018188034649938| |-| |-|
+|radar| |OTHER| |0.00015921975136734545| |-| |-|
+|radar| |OTHER| |0.00015913973038550466| |-| |-|
+|one| |OTHER| |0.00015911262016743422| |-| |-|
+|radar| |OTHER| |0.00015902557061053813| |-| |-|
+|program| |OTHER| |0.00015835657541174442| |-| |-|
+|road| |LOCATION| |0.00015639158664271235| |-| |-|
+|road| |LOCATION| |0.00015616006567142904| |-| |-|
+|data| |OTHER| |0.00015299288497772068| |-| |-|
+|data| |OTHER| |0.00015287658607121557| |-| |-|
+|company| |ORGANIZATION| |0.0001507010601926595| |-| |-|
+|company| |ORGANIZATION| |0.00015067726781126112| |-| |-|
+|approach| |OTHER| |0.00015064512263052166| |-| |-|
+|companies| |ORGANIZATION| |0.0001506190892541781| |-| |-|
+|companies| |ORGANIZATION| |0.00015059633005876094| |-| |-|
+|source| |OTHER| |0.00014988871407695115| |-| |-|
+|privacy policy| |OTHER| |0.000149489424075| |-| |-|
+|battery use| |OTHER| |0.000149489424075| |-| |-|
+|privacy policy| |OTHER| |0.00014943446149118245| |-| |-|
+|crashes| |EVENT| |0.00014938112872187048| |-| |-|
+|anyones| |PERSON| |0.00014906340220477432| |-| |-|
+|effort| |OTHER| |0.00014904607087373734| |-| |-|
+|approval| |OTHER| |0.00014898166409693658| |-| |-|
+|sensors| |OTHER| |0.00014894413470756263| |-| |-|
+|people| |PERSON| |0.00014844084216747433| |-| |-|
+|everyone| |PERSON| |0.00014844084216747433| |-| |-|
+|Photo| |WORK_OF_ART| |0.0001483988162362948| |-| |-|
+|systems| |OTHER| |0.00014799153723288327| |-| |-|
+|things| |OTHER| |0.00014799153723288327| |-| |-|
+|industry| |OTHER| |0.00014795869356021285| |-| |-|
+|approach| |OTHER| |0.00014774422743357718| |-| |-|
+|industry| |OTHER| |0.00014774422743357718| |-| |-|
+|acceleration| |OTHER| |0.000147659593494609| |-| |-|
+|access| |OTHER| |0.000147659593494609| |-| |-|
+|minivans| |CONSUMER_GOOD| |0.00014671790995635092| |-| |-|
+|data feedback loop| |OTHER| |0.00014671790995635092| |-| |-|
+|space| |LOCATION| |0.00014664020272903144| |-| |-|
+|streets| |LOCATION| |0.00014660258602816612| |-| |-|
+|states| |LOCATION| |0.00014654759434051812| |-| |-|
+|regulators| |ORGANIZATION| |0.00014631921658292413| |-| |-|
+|mark| |OTHER| |0.0001462705695303157| |-| |-|
+|driver| |PERSON| |0.00014543955330736935| |-| |-|
+|ways| |OTHER| |0.00014539854601025581| |-| |-|
+|place| |OTHER| |0.00014269177336245775| |-| |-|
+|skepticism| |OTHER| |0.0001423467037966475| |-| |-|
+|cars| |CONSUMER_GOOD| |0.00014189875219017267| |-| |-|
+|cars| |CONSUMER_GOOD| |0.00014185506734065711| |-| |-|
+|crutch| |OTHER| |0.0001391156984027475| |-| |-|
+|cars| |CONSUMER_GOOD| |0.00013842471526004374| |-| |-|
+|self-driving cars| |OTHER| |0.00013832139666192234| |-| |-|
+|more| |OTHER| |0.000137311450089328| |-| |-|
+|Photo| |WORK_OF_ART| |0.00013658164243679494| |-| |-|
+|things| |OTHER| |0.0001365100615657866| |-| |-|
+|testing efforts| |OTHER| |0.00013639178359881043| |-| |-|
+|program| |OTHER| |0.00013639178359881043| |-| |-|
+|Image| |WORK_OF_ART| |0.0001363277988275513| |-| |-|
+|operation| |OTHER| |0.00013628345914185047| |-| |-|
+|some| |OTHER| |0.00013623481208924204| |-| |-|
+|fact| |OTHER| |0.00013616442447528243| |-| |-|
+|PROCESSING CHALLENGES| |OTHER| |0.00013614160707220435| |-| |-|
+|challenge| |OTHER| |0.0001360749884042889| |-| |-|
+|report| |WORK_OF_ART| |0.00013603201659861952| |-| |-|
+|resources| |OTHER| |0.0001359292509732768| |-| |-|
+|process| |OTHER| |0.0001358898589387536| |-| |-|
+|master plan| |OTHER| |0.00013587050489149988| |-| |-|
+|context| |OTHER| |0.00013548723654821515| |-| |-|
+|TYPES| |OTHER| |0.00013530148135032505| |-| |-|
+|scales| |OTHER| |0.00013526486873161048| |-| |-|
+|types| |OTHER| |0.00013522904191631824| |-| |-|
+|laser light signals| |OTHER| |0.00013512602890841663| |-| |-|
+|directions| |OTHER| |0.00013509306882042438| |-| |-|
+|dark| |OTHER| |0.0001350607635686174| |-| |-|
+|dark| |OTHER| |0.00013502908404916525| |-| |-|
+|parts| |OTHER| |0.00013499800115823746| |-| |-|
+|term| |OTHER| |0.0001349675003439188| |-| |-|
+|end| |OTHER| |0.00013487924297805876| |-| |-|
+|operation| |OTHER| |0.00013471581041812897| |-| |-|
+|cars| |CONSUMER_GOOD| |0.0001323800242971629| |-| |-|
+|Ark Invest| |OTHER| |0.00013009182293899357| |-| |-|
+|scraps| |OTHER| |0.0001282741141039878| |-| |-|
+|trial| |EVENT| |0.00012659736967179924| |-| |-|
+|standards| |OTHER| |0.00012623192742466927| |-| |-|
+|simulation| |OTHER| |0.00012526441423688084| |-| |-|
+|simulation| |OTHER| |0.00012511930253822356| |-| |-|
+|figure| |OTHER| |0.00012459531717468053| |-| |-|
+|question| |OTHER| |0.0001244033919647336| |-| |-|
+|service| |OTHER| |0.00012435899407137185| |-| |-|
+|steering wheel| |OTHER| |0.00012434447125997394| |-| |-|
+|billions| |OTHER| |0.00012335152132436633| |-| |-|
+|problem| |OTHER| |0.00012314945342950523| |-| |-|
+|strategy| |OTHER| |0.00012294760381337255| |-| |-|
+|safety| |OTHER| |0.00012242572847753763| |-| |-|
+|safety| |OTHER| |0.0001224151492351666| |-| |-|
+|Super Cruise| |CONSUMER_GOOD| |0.00012160388723714277| |-| |-|
+|minivans| |CONSUMER_GOOD| |0.00011997383262496442| |-| |-|
+|accidents| |EVENT| |0.00011973312211921439| |-| |-|
+|video clips| |WORK_OF_ART| |0.00011973312211921439| |-| |-|
+|service appointments| |OTHER| |0.00011971094500040635| |-| |-|
+|regard| |OTHER| |0.00011968910257564858| |-| |-|
+|moments| |OTHER| |0.0001196463854284957| |-| |-|
+|fidelity| |OTHER| |0.00011962548160227016| |-| |-|
+|earnings call| |OTHER| |0.00011950601765420288| |-| |-|
+|cities| |LOCATION| |0.00011946827726205811| |-| |-|
+|variations| |OTHER| |0.00011944976722588763| |-| |-|
+|expense| |OTHER| |0.00011937801173189655| |-| |-|
+|course| |OTHER| |0.00011937801173189655| |-| |-|
+|power| |OTHER| |0.00011889323650393635| |-| |-|
+|second| |OTHER| |0.00011867258581332862| |-| |-|
+|radio waves| |OTHER| |0.00011867258581332862| |-| |-|
+|picture| |WORK_OF_ART| |0.0001186436420539394| |-| |-|
+|top| |OTHER| |0.0001186436420539394| |-| |-|
+|spot| |OTHER| |0.0001186436420539394| |-| |-|
+|cars surroundings| |OTHER| |0.0001186436420539394| |-| |-|
+|precision| |OTHER| |0.0001186152730952017| |-| |-|
+|ultrasound| |OTHER| |0.00011858744983328506| |-| |-|
+|arent| |OTHER| |0.00011858744983328506| |-| |-|
+|chunk| |OTHER| |0.00011850705777760595| |-| |-|
+|driving research lab| |OTHER| |0.00011838229693239555| |-| |-|
+|disadvantage| |OTHER| |0.00011838229693239555| |-| |-|
+|robotics chops| |OTHER| |0.00011835858458653092| |-| |-|
+|dozens| |PERSON| |0.00011835858458653092| |-| |-|
+|staffers| |PERSON| |0.00011835858458653092| |-| |-|
+|tool| |OTHER| |0.00011833526514237747| |-| |-|
+|speed| |OTHER| |0.00011826748232124373| |-| |-|
+|braking| |OTHER| |0.00011826748232124373| |-| |-|
+|lot| |OTHER| |0.00011680881289066747| |-| |-|
+|quality| |OTHER| |0.0001165806024800986| |-| |-|
+|information| |OTHER| |0.00011654950503725559| |-| |-|
+|hundreds| |OTHER| |0.0001165291469078511| |-| |-|
+|hundreds| |PERSON| |0.0001165291469078511| |-| |-|
+|tech tech| |OTHER| |0.00011576168617466465| |-| |-|
+|testing| |EVENT| |0.00011574364179978147| |-| |-|
+|technology| |OTHER| |0.00011566517787287012| |-| |-|
+|Im| |PERSON| |0.00011302190978312865| |-| |-|
+|simulator| |OTHER| |0.00011219574662391096| |-| |-|
+|simulator| |OTHER| |0.00011216725397389382| |-| |-|
+|version| |OTHER| |0.00011114578228443861| |-| |-|
+|quantity| |OTHER| |0.00011099308903794736| |-| |-|
+|space| |OTHER| |0.00010998889774782583| |-| |-|
+|thats| |OTHER| |0.00010993964679073542| |-| |-|
+|rollout| |EVENT| |0.00010943903180304915| |-| |-|
+|demonstration run| |EVENT| |0.00010943903180304915| |-| |-|
+|wings| |OTHER| |0.00010942397057078779| |-| |-|
+|simulation side| |OTHER| |0.00010942397057078779| |-| |-|
+|move| |OTHER| |0.0001093370228772983| |-| |-|
+|motto| |OTHER| |0.0001093370228772983| |-| |-|
+|state permits| |OTHER| |0.00010932306759059429| |-| |-|
+|requirements| |OTHER| |0.00010929559357464314| |-| |-|
+|lawmakers| |PERSON| |0.00010929559357464314| |-| |-|
+|pedestrian| |OTHER| |0.00010925541573669761| |-| |-|
+|work| |OTHER| |0.00010922928777290508| |-| |-|
+|help| |OTHER| |0.00010921641660388559| |-| |-|
+|pedals| |OTHER| |0.00010920366185018793| |-| |-|
+|road| |LOCATION| |0.00010919650230789557| |-| |-|
+|footsteps| |OTHER| |0.00010917852341663092| |-| |-|
+|costs| |OTHER| |0.00010741098230937496| |-| |-|
+|progress| |OTHER| |0.00010604423732729629| |-| |-|
+|IEEE Spectrum| |OTHER| |0.00010502936493139714| |https://en.wikipedia.org/wiki/IEEE_Spectrum| |/m/068f0b|
+|value| |OTHER| |0.00010489152191439644| |-| |-|
+|Pacifica| |CONSUMER_GOOD| |0.00010446774103911594| |https://en.wikipedia.org/wiki/Chrysler_Pacifica_(RU)| |/g/11clgbdm9t|
+|Georgia| |LOCATION| |0.00010443045175634325| |-| |-|
+|Michigan| |LOCATION| |0.00010443045175634325| |https://en.wikipedia.org/wiki/Michigan| |/m/04rrx|
+|Texas| |LOCATION| |0.00010443045175634325| |https://en.wikipedia.org/wiki/Texas| |/m/07b_l|
+|Chrysler| |ORGANIZATION| |0.00010432473209220916| |https://en.wikipedia.org/wiki/Chrysler| |/m/01_bp|
+|customer fleet| |OTHER| |0.00010430545080453157| |-| |-|
+|fleet| |OTHER| |0.00010429729445604607| |-| |-|
+|I-Pace SUV| |CONSUMER_GOOD| |0.0001042913572746329| |https://en.wikipedia.org/wiki/Jaguar_I-Pace| |/g/11c2l0_4m4|
+|fleet| |OTHER| |0.00010303674935130402| |-| |-|
+|Grand Theft Auto| |WORK_OF_ART| |0.00010278115951223299| |https://en.wikipedia.org/wiki/Grand_Theft_Auto| |/m/04w8jw|
+|industry standard| |OTHER| |0.00010239428956992924| |-| |-|
+|number| |OTHER| |0.00010234877117909491| |-| |-|
+|Photo| |WORK_OF_ART| |0.0001022624273900874| |-| |-|
+|driver| |PERSON| |0.00010166584252147004| |-| |-|
+|human driving| |OTHER| |0.0001016112364595756| |-| |-|
+|step| |OTHER| |0.0001011045605991967| |-| |-|
+|SIMULATION| |OTHER| |0.0001006700549623929| |-| |-|
+|simulator| |PERSON| |0.00010063892841571942| |-| |-|
+|Danny Shapiro| |PERSON| |9.926581697072834e-05| |-| |-|
+|safety drivers| |PERSON| |9.794001380214468e-05| |-| |-|
+|data| |OTHER| |9.61578989517875e-05| |-| |-|
+|companies| |ORGANIZATION| |9.467288327869028e-05| |-| |-|
+|technology| |OTHER| |9.420388232683763e-05| |-| |-|
+|place| |OTHER| |9.339966345578432e-05| |-| |-|
+|studies| |OTHER| |9.334110654890537e-05| |-| |-|
+|millions| |PERSON| |9.333297930425033e-05| |-| |-|
+|mileage claims| |OTHER| |9.33089540922083e-05| |-| |-|
+|customers| |PERSON| |9.27403089008294e-05| |-| |-|
+|customers| |PERSON| |9.266847337130457e-05| |-| |-|
+|corner cases| |OTHER| |9.19107988011092e-05| |-| |-|
+|The New York Times| |ORGANIZATION| |9.176647290587425e-05| |https://en.wikipedia.org/wiki/The_New_York_Times_Company| |/m/07l1c|
+|trouble| |OTHER| |9.106981451623142e-05| |-| |-|
+|tech| |OTHER| |9.043791214935482e-05| |-| |-|
+|target| |OTHER| |8.986428292701021e-05| |-| |-|
+|trillions| |OTHER| |8.96917626960203e-05| |-| |-|
+|car| |CONSUMER_GOOD| |8.923825953388587e-05| |-| |-|
+|customer cars| |OTHER| |8.922987763071433e-05| |-| |-|
+|cars| |CONSUMER_GOOD| |8.908445306587964e-05| |-| |-|
+|test cars| |CONSUMER_GOOD| |8.907598385121673e-05| |-| |-|
+|feature| |OTHER| |8.660885941935703e-05| |-| |-|
+|problem| |OTHER| |8.599746797699481e-05| |-| |-|
+|version| |WORK_OF_ART| |8.554865053156391e-05| |-| |-|
+|thousands| |OTHER| |8.554196392651647e-05| |-| |-|
+|safety| |OTHER| |8.552215149393305e-05| |-| |-|
+|hazards| |OTHER| |8.203406468965113e-05| |-| |-|
+|barrier| |OTHER| |8.201898890547454e-05| |-| |-|
+|backing| |OTHER| |8.201898890547454e-05| |-| |-|
+|entry| |OTHER| |8.201898890547454e-05| |-| |-|
+|fleet size| |OTHER| |8.201898890547454e-05| |-| |-|
+|supplier| |ORGANIZATION| |8.201153104892e-05| |-| |-|
+|traffic| |OTHER| |8.198949944926426e-05| |-| |-|
+|cul-de-sac| |LOCATION| |8.198949944926426e-05| |-| |-|
+|humans| |PERSON| |8.197507122531533e-05| |-| |-|
+|conclusion| |OTHER| |8.196793351089582e-05| |-| |-|
+|reliability| |OTHER| |8.196085400413722e-05| |-| |-|
+|purpose| |OTHER| |8.194683323381469e-05| |-| |-|
+|whats| |OTHER| |8.192616223823279e-05| |-| |-|
+|substitute| |OTHER| |8.19126216811128e-05| |-| |-|
+|most| |PERSON| |8.142807200783864e-05| |-| |-|
+|simplification| |OTHER| |8.0993035226129e-05| |-| |-|
+|Bolts| |ORGANIZATION| |8.054421050474048e-05| |https://en.wikipedia.org/wiki/Bolt_(fastener)| |/g/12397460|
+|detail| |OTHER| |7.993265899131075e-05| |-| |-|
+|simulations| |OTHER| |7.865735824452713e-05| |-| |-|
+|simulation| |OTHER| |7.864160579629242e-05| |-| |-|
+|advantage| |OTHER| |7.683429430471733e-05| |-| |-|
+|metric| |OTHER| |7.679197005927563e-05| |-| |-|
+|control| |OTHER| |7.678021938772872e-05| |-| |-|
+|metric| |OTHER| |7.677440589759499e-05| |-| |-|
+|automaker| |ORGANIZATION| |7.644636934855953e-05| |-| |-|
+|claims| |OTHER| |7.385858043562621e-05| |-| |-|
+|New York| |LOCATION| |7.361371535807848e-05| |https://en.wikipedia.org/wiki/New_York_City| |/m/02_286|
+|investigation| |OTHER| |7.151255704229698e-05| |-| |-|
+|efforts| |OTHER| |7.150141027523205e-05| |-| |-|
+|systems| |OTHER| |7.148494478315115e-05| |-| |-|
+|crashes| |EVENT| |7.146879215724766e-05| |-| |-|
+|rate| |OTHER| |7.14581910870038e-05| |-| |-|
+|sun| |OTHER| |7.077580085024238e-05| |-| |-|
+|The Atlantic| |LOCATION| |7.057466427795589e-05| |-| |-|
+|Amelia Holowaty Krales| |PERSON| |7.021505734883249e-05| |-| |-|
+|road| |LOCATION| |6.865946488687769e-05| |-| |-|
+|road| |LOCATION| |6.853458035038784e-05| |-| |-|
+|disengagements| |OTHER| |6.719725934090093e-05| |-| |-|
+|safety| |OTHER| |6.52373637421988e-05| |-| |-|
+|handful| |OTHER| |6.521346949739382e-05| |-| |-|
+|definition| |OTHER| |6.520336319226772e-05| |-| |-|
+|definition| |OTHER| |6.518844747915864e-05| |-| |-|
+|deaths| |EVENT| |6.517865404020995e-05| |-| |-|
+|terms| |OTHER| |6.51738082524389e-05| |-| |-|
+|study| |OTHER| |6.51738082524389e-05| |-| |-|
+|understanding| |OTHER| |6.51689842925407e-05| |-| |-|
+|LA| |LOCATION| |6.46496846457012e-05| |https://en.wikipedia.org/wiki/Los_Angeles| |/m/030qb3t|
+|Vjeran Pavic| |PERSON| |6.462328747147694e-05| |-| |-|
+|Volvos| |CONSUMER_GOOD| |6.458118150476366e-05| |https://en.wikipedia.org/wiki/Volvo_Cars| |/m/022hnr|
+|San Francisco| |LOCATION| |6.458118150476366e-05| |https://en.wikipedia.org/wiki/San_Francisco| |/m/0d6lp|
+|Pittsburgh| |LOCATION| |6.458118150476366e-05| |https://en.wikipedia.org/wiki/Pittsburgh| |/m/068p2|
+|Bolt EVs| |UNKNOWN| |6.451817171182483e-05| |https://en.wikipedia.org/wiki/Chevrolet_Bolt| |/m/012n8qhh|
+|driving| |OTHER| |6.38200290268287e-05| |-| |-|
+|Mountain View| |LOCATION| |6.229605787666515e-05| |https://en.wikipedia.org/wiki/Mountain_View,_California| |/m/0r6c4|
+|knowledge| |OTHER| |6.168965774122626e-05| |-| |-|
+|discussion| |EVENT| |5.7299595937365666e-05| |-| |-|
+|table| |OTHER| |5.7299595937365666e-05| |-| |-|
+|switch| |OTHER| |5.729037002311088e-05| |-| |-|
+|application| |OTHER| |5.7276756706414744e-05| |-| |-|
+|position| |OTHER| |5.7272278354503214e-05| |-| |-|
+|locations| |LOCATION| |5.7272278354503214e-05| |-| |-|
+|environment| |OTHER| |5.7267825468443334e-05| |-| |-|
+|fudge| |OTHER| |5.725030496250838e-05| |-| |-|
+|injuries| |OTHER| |5.7241704780608416e-05| |-| |-|
+|Access| |OTHER| |5.402698661782779e-05| |-| |-|
+|models| |CONSUMER_GOOD| |5.378403511713259e-05| |-| |-|
+|model| |CONSUMER_GOOD| |5.378403511713259e-05| |-| |-|
+|scenarios| |OTHER| |5.370735379983671e-05| |-| |-|
+|scenarios| |OTHER| |5.369709833757952e-05| |-| |-|
+|software update| |OTHER| |5.1278759201522917e-05| |-| |-|
+|something| |OTHER| |5.121588401379995e-05| |-| |-|
+|hundreds| |PERSON| |5.116102329338901e-05| |-| |-|
+|lot| |OTHER| |4.988609362044372e-05| |-| |-|
+|Sean OKane| |PERSON| |4.838423046749085e-05| |-| |-|
+|advantage| |OTHER| |4.8305693781003356e-05| |-| |-|
+|product| |CONSUMER_GOOD| |4.829506724490784e-05| |-| |-|
+|space| |LOCATION| |4.825932774110697e-05| |-| |-|
+|Thats| |OTHER| |4.822097980650142e-05| |-| |-|
+|no one| |PERSON| |4.8107303882716224e-05| |-| |-|
+|production| |OTHER| |4.7125020500971004e-05| |-| |-|
+|Ive| |PERSON| |4.6648299758089706e-05| |-| |-|
+|strategy| |OTHER| |4.4974109187023714e-05| |-| |-|
+|everything| |OTHER| |4.496913970797323e-05| |-| |-|
+|software| |CONSUMER_GOOD| |4.4921795051777735e-05| |-| |-|
+|California DMV| |ORGANIZATION| |4.352231553639285e-05| |https://en.wikipedia.org/wiki/California_Department_of_Motor_Vehicles| |/m/02r4dr3|
+|ground| |OTHER| |4.1011193388840184e-05| |-| |-|
+|sensor set| |OTHER| |4.1011193388840184e-05| |-| |-|
+|race| |EVENT| |4.098057979717851e-05| |-| |-|
+|projects| |OTHER| |4.0972165152197704e-05| |-| |-|
+|hardware| |OTHER| |4.096801421837881e-05| |-| |-|
+|way| |OTHER| |4.096389238839038e-05| |-| |-|
+|interview| |EVENT| |4.095980693819001e-05| |-| |-|
+|way| |OTHER| |4.095575422979891e-05| |-| |-|
+|handle| |OTHER| |4.050913412356749e-05| |-| |-|
+|signs| |OTHER| |4.000449916929938e-05| |-| |-|
+|Paddock| |LOCATION| |3.849978020298295e-05| |-| |-|
+|deal| |OTHER| |3.6025037843501195e-05| |-| |-|
+|opportunity| |OTHER| |3.600531999836676e-05| |-| |-|
+|eyes| |OTHER| |3.600531999836676e-05| |-| |-|
+|dark horse| |OTHER| |3.599016054067761e-05| |-| |-|
+|words| |OTHER| |3.597912291297689e-05| |-| |-|
+|point| |OTHER| |3.59613259206526e-05| |-| |-|
+|road rage| |OTHER| |3.595440648496151e-05| |-| |-|
+|weather| |OTHER| |3.595440648496151e-05| |-| |-|
+|sunlight| |OTHER| |3.595440648496151e-05| |-| |-|
+|sunrise| |OTHER| |3.595440648496151e-05| |-| |-|
+|events| |EVENT| |3.5950986784882843e-05| |-| |-|
+|example| |OTHER| |3.594759255065583e-05| |-| |-|
+|majority| |OTHER| |3.5089651646558195e-05| |-| |-|
+|engineers| |PERSON| |3.465335976216011e-05| |-| |-|
+|red lights| |OTHER| |3.403334994800389e-05| |-| |-|
+|National Transportation Safety Board| |ORGANIZATION| |3.3834672649390996e-05| |https://en.wikipedia.org/wiki/National_Transportation_Safety_Board| |/m/05h31|
+|Drive Constellation| |LOCATION| |2.4946968551375903e-05| |-| |-|
+|Cadillac| |ORGANIZATION| |2.1271229343255982e-05| |https://en.wikipedia.org/wiki/Cadillac| |/m/0h61x|
+|Keeneys| |LOCATION| |2.126894105458632e-05| |-| |/g/1tgcl_dx|

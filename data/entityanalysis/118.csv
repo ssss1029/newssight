@@ -1,0 +1,641 @@
+|Datadog| |ORGANIZATION| |0.020187512040138245| |https://en.wikipedia.org/wiki/Datadog| |/m/0wfvvyq|
+|customers| |PERSON| |0.011729610152542591| |-| |-|
+|Timescale| |OTHER| |0.011156325228512287| |-| |-|
+|security startups| |ORGANIZATION| |0.010274604894220829| |-| |-|
+|customers| |PERSON| |0.009933092631399632| |-| |-|
+|VCs| |UNKNOWN| |0.009432421065866947| |https://en.wikipedia.org/wiki/Venture_capital| |/m/01m2bt|
+|startups| |ORGANIZATION| |0.007208972238004208| |-| |-|
+|data infrastructure startups| |ORGANIZATION| |0.007147390861064196| |-| |-|
+|Brooklyn Bridge| |LOCATION| |0.006858490407466888| |https://en.wikipedia.org/wiki/Brooklyn| |/m/0cr3d|
+|people| |PERSON| |0.0064074196852743626| |-| |-|
+|mafias| |OTHER| |0.006186381913721561| |-| |-|
+|enterprise infrastructure ecosystem| |OTHER| |0.006109344307333231| |-| |-|
+|market| |OTHER| |0.005498093087226152| |-| |-|
+|company| |ORGANIZATION| |0.004685168620198965| |-| |-|
+|infrastructure| |OTHER| |0.004576892592012882| |-| |-|
+|Bay Area| |LOCATION| |0.004541754722595215| |https://en.wikipedia.org/wiki/San_Francisco_Bay_Area| |/m/06pvr|
+|investors| |PERSON| |0.00452159671112895| |-| |-|
+|New Yorks| |UNKNOWN| |0.00435939896851778| |https://en.wikipedia.org/wiki/New_York_City| |/m/02_286|
+|NS1| |OTHER| |0.00431955698877573| |-| |/g/11bw46sfr1|
+|hundreds| |OTHER| |0.004261949565261602| |-| |-|
+|rest| |OTHER| |0.004122946877032518| |-| |-|
+|startups| |LOCATION| |0.0040511200204491615| |-| |-|
+|startups| |ORGANIZATION| |0.004039122723042965| |-| |-|
+|enterprise startups| |ORGANIZATION| |0.004035696852952242| |-| |-|
+|startups| |OTHER| |0.004026657901704311| |-| |-|
+|startups| |LOCATION| |0.0038640336133539677| |-| |-|
+|lack| |OTHER| |0.0038266913034021854| |-| |-|
+|West Coast| |LOCATION| |0.0037211263552308083| |https://en.wikipedia.org/wiki/West_Coast_of_the_United_States| |/m/017l04|
+|Kris Beevers| |PERSON| |0.0036597789730876684| |-| |-|
+|Report| |WORK_OF_ART| |0.003652262268587947| |-| |-|
+|companies| |ORGANIZATION| |0.0035841413773596287| |-| |-|
+|HYPR| |OTHER| |0.0035083589609712362| |https://en.wikipedia.org/wiki/HYPR| |/g/11g01rq6y5|
+|Ron Miller| |PERSON| |0.003370320424437523| |-| |-|
+|overview| |OTHER| |0.003322258358821273| |-| |-|
+|example| |OTHER| |0.0031982422806322575| |-| |-|
+|enterprise| |OTHER| |0.003197729354724288| |-| |-|
+|enterprise| |OTHER| |0.00319116422906518| |-| |-|
+|enterprise| |OTHER| |0.003188256174325943| |-| |-|
+|Infrastructure| |OTHER| |0.003149644937366247| |-| |-|
+|exits| |OTHER| |0.0029920905362814665| |-| |-|
+|exits| |OTHER| |0.0027609635144472122| |-| |-|
+|startup ecosystem| |OTHER| |0.002750342944636941| |-| |-|
+|People| |PERSON| |0.0027202540077269077| |-| |-|
+|Work-Bench| |ORGANIZATION| |0.002702817553654313| |-| |-|
+|infrastructure| |OTHER| |0.0026885007973760366| |-| |-|
+|enterprise infrastructure| |OTHER| |0.0026656677946448326| |-| |-|
+|Jonathan Lehr| |PERSON| |0.0026655213441699743| |-| |-|
+|infrastructure| |OTHER| |0.002659306861460209| |-| |-|
+|worlds| |OTHER| |0.002619655802845955| |-| |-|
+|exit| |LOCATION| |0.002590783638879657| |-| |-|
+|world| |LOCATION| |0.0025862979236990213| |-| |-|
+|networks| |OTHER| |0.002385535044595599| |-| |-|
+|one| |OTHER| |0.0023658869322389364| |-| |-|
+|culture| |OTHER| |0.002334115095436573| |-| |-|
+|companies| |ORGANIZATION| |0.0022980328649282455| |-| |-|
+|anecdotes| |OTHER| |0.002268940908834338| |-| |-|
+|data centers| |ORGANIZATION| |0.002255645813420415| |-| |-|
+|companies| |ORGANIZATION| |0.0022414950653910637| |-| |-|
+|generation| |OTHER| |0.0021354383789002895| |-| |-|
+|series| |WORK_OF_ART| |0.0021319317165762186| |-| |-|
+|Valley| |LOCATION| |0.0021279514767229557| |-| |-|
+|East Coast| |LOCATION| |0.002092225942760706| |https://en.wikipedia.org/wiki/East_Coast_of_the_United_States| |/m/0m8cr|
+|economy| |OTHER| |0.002052970929071307| |-| |-|
+|economy| |OTHER| |0.0020316727459430695| |-| |-|
+|products| |CONSUMER_GOOD| |0.0020253979600965977| |-| |-|
+|containerization| |OTHER| |0.0020227732602506876| |-| |-|
+|shipping container| |OTHER| |0.0020227732602506876| |-| |-|
+|applications| |OTHER| |0.0020227732602506876| |-| |-|
+|success| |OTHER| |0.0020144134759902954| |-| |-|
+|applications| |OTHER| |0.0020144134759902954| |-| |-|
+|application| |OTHER| |0.0020096052903681993| |-| |-|
+|Ed Sim| |PERSON| |0.001971291843801737| |-| |-|
+|marvel| |OTHER| |0.0019463178468868136| |-| |-|
+|Security Scorecard founders| |PERSON| |0.0019462477648630738| |-| |-|
+|trading| |OTHER| |0.0018916493281722069| |-| |-|
+|way| |OTHER| |0.0018833627691492438| |-| |-|
+|trade| |OTHER| |0.0018833627691492438| |-| |-|
+|state| |LOCATION| |0.0018811544869095087| |-| |-|
+|rise| |OTHER| |0.0018755787750706077| |-| |-|
+|state| |LOCATION| |0.0018739866791293025| |-| |-|
+|rise| |OTHER| |0.0018697858322411776| |-| |-|
+|Flatiron Health| |OTHER| |0.001823331112973392| |-| |-|
+|companies| |ORGANIZATION| |0.0018194138538092375| |-| |-|
+|sale| |OTHER| |0.0018103495240211487| |-| |-|
+|Ajay Kulkarni| |PERSON| |0.001808712724596262| |-| |/m/011cg9r0|
+|founders| |PERSON| |0.0017991294153034687| |-| |-|
+|companies| |ORGANIZATION| |0.0017958544194698334| |-| |-|
+|George Avetisov| |PERSON| |0.0017941524274647236| |-| |-|
+|city| |LOCATION| |0.0017933773342519999| |-| |-|
+|TechCrunch| |OTHER| |0.0017595941899344325| |https://en.wikipedia.org/wiki/TechCrunch| |/m/0d2tlb|
+|two| |PERSON| |0.0017344196094200015| |-| |-|
+|water tunneling| |OTHER| |0.0017285399371758103| |-| |-|
+|streets| |LOCATION| |0.0017285399371758103| |-| |-|
+|economy| |OTHER| |0.0017259034793823957| |-| |-|
+|fund| |OTHER| |0.0017221926245838404| |-| |-|
+|movement| |OTHER| |0.001719934050925076| |-| |-|
+|freight ships| |OTHER| |0.001719934050925076| |-| |-|
+|startups| |OTHER| |0.001718763611279428| |-| |-|
+|Yext| |ORGANIZATION| |0.001716003054752946| |https://en.wikipedia.org/wiki/Yext| |/m/0nhhw58|
+|report| |WORK_OF_ART| |0.0017091528279706836| |-| |-|
+|articles| |WORK_OF_ART| |0.0017077955417335033| |-| |-|
+|set| |OTHER| |0.0017053212504833937| |-| |-|
+|exit environment| |OTHER| |0.0017053212504833937| |-| |-|
+|article| |WORK_OF_ART| |0.0017053212504833937| |-| |-|
+|CEO| |PERSON| |0.0016646895091980696| |-| |-|
+|leader| |PERSON| |0.001638926099985838| |-| |-|
+|Security Scorecard| |OTHER| |0.001634871819987893| |-| |-|
+|light| |OTHER| |0.0016345275798812509| |-| |-|
+|customer| |PERSON| |0.001579613541252911| |-| |-|
+|New York Enterprise Tech Meetup| |ORGANIZATION| |0.0015534330159425735| |-| |-|
+|companies| |ORGANIZATION| |0.0015509466174989939| |-| |-|
+|situation| |OTHER| |0.0015427873004227877| |-| |-|
+|Aleksandr Yampolskiy| |PERSON| |0.0015322428662329912| |-| |-|
+|startups| |LOCATION| |0.0015231916913762689| |-| |-|
+|security startups| |OTHER| |0.0015221781795844436| |-| |-|
+|startups| |LOCATION| |0.0015221781795844436| |-| |-|
+|engineering| |OTHER| |0.0015215767780318856| |-| |-|
+|infrastructure planning| |OTHER| |0.0015215767780318856| |-| |-|
+|enterprise startups| |ORGANIZATION| |0.001521217287518084| |-| |-|
+|startups| |LOCATION| |0.0015186022501438856| |-| |-|
+|reservoir systems| |OTHER| |0.0015181653434410691| |-| |-|
+|ones| |OTHER| |0.0015181653434410691| |-| |-|
+|startups| |OTHER| |0.0015170442638918757| |-| |-|
+|manufacturing| |OTHER| |0.00151528709102422| |-| |-|
+|goods| |OTHER| |0.00151528709102422| |-| |-|
+|AnnaLee Saxenian| |PERSON| |0.001515175448730588| |https://en.wikipedia.org/wiki/AnnaLee_Saxenian| |/m/053by9|
+|meaning| |OTHER| |0.001512798247858882| |-| |-|
+|tonnage| |OTHER| |0.0015106062637642026| |-| |-|
+|trucks| |CONSUMER_GOOD| |0.0015106062637642026| |-| |-|
+|bits| |OTHER| |0.0015106062637642026| |-| |-|
+|devices| |CONSUMER_GOOD| |0.0015106062637642026| |-| |-|
+|bytes| |OTHER| |0.0015106062637642026| |-| |-|
+|end users| |PERSON| |0.0015086482744663954| |-| |-|
+|companies| |ORGANIZATION| |0.0015077326679602265| |-| |-|
+|hotspots| |OTHER| |0.0015068791108205914| |-| |-|
+|internet revolution| |OTHER| |0.0015068791108205914| |-| |-|
+|sorts| |OTHER| |0.0015068791108205914| |-| |-|
+|winners| |PERSON| |0.0015037832781672478| |-| |-|
+|market share| |OTHER| |0.0015037832781672478| |-| |-|
+|number| |OTHER| |0.0015037832781672478| |-| |-|
+|unicorns| |OTHER| |0.0015037832781672478| |-| |-|
+|prognostications| |OTHER| |0.0015024120220914483| |-| |-|
+|dozens| |PERSON| |0.001499944250099361| |-| |-|
+|thoughts| |OTHER| |0.001499944250099361| |-| |-|
+|insights| |OTHER| |0.001499944250099361| |-| |-|
+|landmarks| |LOCATION| |0.0014812423614785075| |-| |-|
+|Silicon Valley| |LOCATION| |0.0014728574315086007| |https://en.wikipedia.org/wiki/Silicon_Valley| |/m/06pw6|
+|founders| |PERSON| |0.001460648374632001| |-| |-|
+|people| |PERSON| |0.001451081596314907| |-| |-|
+|customers| |PERSON| |0.0014464618870988488| |-| |-|
+|wealth| |OTHER| |0.0014410330913960934| |-| |-|
+|Sam Kassoumeh| |PERSON| |0.0013963793171569705| |-| |-|
+|people| |PERSON| |0.0013653666246682405| |-| |-|
+|competition| |OTHER| |0.0013474542647600174| |-| |-|
+|companies| |ORGANIZATION| |0.0013433940475806594| |-| |-|
+|ad measurement company| |ORGANIZATION| |0.0013390067033469677| |-| |-|
+|company| |ORGANIZATION| |0.0013369448715820909| |-| |-|
+|internet services| |OTHER| |0.001317758928053081| |-| |-|
+|Liz Maida| |PERSON| |0.0012010703794658184| |-| |-|
+|startups| |PERSON| |0.001195825170725584| |-| |-|
+|city| |LOCATION| |0.001160656800493598| |-| |-|
+|SeatGeek| |OTHER| |0.001160603715106845| |https://en.wikipedia.org/wiki/SeatGeek| |/m/0b76vk2|
+|city| |LOCATION| |0.0011550845811143517| |-| |-|
+|founders| |PERSON| |0.0011348590487614274| |-| |-|
+|founders| |PERSON| |0.0011166534386575222| |-| |-|
+|strength| |OTHER| |0.0010856053559109569| |-| |-|
+|ecosystem| |OTHER| |0.0010721180588006973| |-| |-|
+|ecosystem| |OTHER| |0.001070899423211813| |-| |-|
+|startup| |ORGANIZATION| |0.0010254844091832638| |-| |-|
+|ecosystem| |OTHER| |0.0010242551798000932| |-| |-|
+|startups| |ORGANIZATION| |0.0010230358457192779| |-| |-|
+|Lincoln Tunnel| |LOCATION| |0.0010213484056293964| |https://en.wikipedia.org/wiki/Lincoln_Tunnel| |/m/015897|
+|startups| |OTHER| |0.0010184607235714793| |-| |-|
+|region| |LOCATION| |0.0010123029351234436| |-| |-|
+|Startup ecosystems| |OTHER| |0.0009845176246017218| |-| |-|
+|Voxel| |OTHER| |0.0009826857130974531| |https://en.wikipedia.org/wiki/Voxel| |/m/01ggyt|
+|customers| |PERSON| |0.0009752457845024765| |-| |-|
+|worlds| |OTHER| |0.0009743533446453512| |-| |-|
+|three| |PERSON| |0.000972492853179574| |-| |-|
+|founders| |PERSON| |0.00094189727678895| |-| |-|
+|city| |LOCATION| |0.0009342244011349976| |-| |-|
+|network| |OTHER| |0.000906707311514765| |-| |-|
+|challenge| |OTHER| |0.0009040928562171757| |-| |-|
+|Danny Crichton| |PERSON| |0.0009015026153065264| |-| |-|
+|Boldstart| |UNKNOWN| |0.0008970566559582949| |-| |/g/11bbwwt57g|
+|Empire State Building| |LOCATION| |0.0008970128837972879| |-| |-|
+|company| |ORGANIZATION| |0.0008968650945462286| |-| |-|
+|innovation| |OTHER| |0.00089378742268309| |-| |-|
+|Regional Advantage| |OTHER| |0.0008909302414394915| |-| |/g/11byczy8_m|
+|Zac Smith| |PERSON| |0.00089063192717731| |-| |-|
+|chips| |OTHER| |0.0008890681783668697| |-| |-|
+|University ecosystems| |OTHER| |0.0008880055393092334| |-| |-|
+|SaaS| |CONSUMER_GOOD| |0.000885582878254354| |https://en.wikipedia.org/wiki/Software_as_a_service| |/m/06_4c_|
+|Olivier Pomel| |PERSON| |0.0008835018379613757| |-| |/g/11c32d7s8w|
+|exits| |OTHER| |0.0008808969287201762| |-| |-|
+|some| |OTHER| |0.0008799106581136584| |-| |-|
+|startups| |ORGANIZATION| |0.0008560779388062656| |-| |-|
+|customers| |PERSON| |0.0008538252441212535| |-| |-|
+|customers| |PERSON| |0.00085366953862831| |-| |-|
+|customer| |PERSON| |0.0008533648797310889| |-| |-|
+|Grafana| |OTHER| |0.0008480417309328914| |https://fr.wikipedia.org/wiki/Grafana| |/g/11fy132gmf|
+|Raj Dutt| |PERSON| |0.0008480417309328914| |-| |-|
+|customers| |PERSON| |0.0008475196082144976| |-| |-|
+|exit environment| |OTHER| |0.0008312070858664811| |-| |-|
+|companies| |ORGANIZATION| |0.0008285836665891111| |-| |-|
+|tech companies| |ORGANIZATION| |0.0008277282468043268| |-| |-|
+|market leaders| |PERSON| |0.000802102847956121| |-| |-|
+|generation| |PERSON| |0.0008016631472855806| |-| |-|
+|venture capital funding| |OTHER| |0.0007989270961843431| |-| |-|
+|Compass| |CONSUMER_GOOD| |0.000790504680480808| |-| |-|
+|customers| |PERSON| |0.0007822224288247526| |-| |-|
+|city| |LOCATION| |0.0007783655310049653| |-| |-|
+|founders| |PERSON| |0.000768584490288049| |-| |-|
+|founders| |PERSON| |0.0007683061412535608| |-| |-|
+|founders| |PERSON| |0.0007640154799446464| |-| |-|
+|founders| |PERSON| |0.0007635565707460046| |-| |-|
+|enterprise startup founders| |PERSON| |0.0007624997524544597| |-| |-|
+|problem| |OTHER| |0.0007565867272205651| |-| |-|
+|enterprise space| |OTHER| |0.0007558413781225681| |-| |-|
+|data analytics| |OTHER| |0.0007548256544396281| |-| |-|
+|glue| |OTHER| |0.0007510447758249938| |-| |-|
+|vitality| |OTHER| |0.0007378405425697565| |-| |-|
+|ecosystem| |OTHER| |0.000730570056475699| |-| |-|
+|company| |ORGANIZATION| |0.0007289331988431513| |-| |-|
+|ingredients| |OTHER| |0.0007288987399078906| |-| |-|
+|ecosystem| |OTHER| |0.0007258410332724452| |-| |-|
+|ecosystem| |OTHER| |0.0007200514082796872| |-| |-|
+|citys| |OTHER| |0.0007158542866818607| |-| |-|
+|city| |LOCATION| |0.000714915047865361| |-| |-|
+|cybersecurity analytics Security Scorecard| |OTHER| |0.0007064472883939743| |-| |-|
+|Silicon Valleys| |LOCATION| |0.0007051671273075044| |-| |-|
+|two| |PERSON| |0.0006931395037099719| |-| |-|
+|workspace| |LOCATION| |0.0006917850114405155| |-| |-|
+|The Valley| |LOCATION| |0.0006826550234109163| |-| |-|
+|startup technology| |OTHER| |0.0006821743445470929| |-| |-|
+|ecosystem| |OTHER| |0.0006636727484874427| |-| |-|
+|startup ecosystem| |OTHER| |0.0006635711761191487| |-| |-|
+|Fortune 500| |OTHER| |0.0006618329789489508| |https://en.wikipedia.org/wiki/Fortune_500| |/m/01pd60|
+|Companies| |ORGANIZATION| |0.0006555527215823531| |-| |-|
+|waves| |OTHER| |0.0006555402651429176| |-| |-|
+|people| |PERSON| |0.0006520335446111858| |-| |-|
+|world| |LOCATION| |0.0006516166613437235| |-| |-|
+|Dataminr| |ORGANIZATION| |0.0006463908939622343| |-| |/g/11b6g89brl|
+|cloud Packet| |OTHER| |0.0006442825542762876| |-| |-|
+|cloud| |OTHER| |0.0006442825542762876| |-| |-|
+|profile pieces| |OTHER| |0.0006442825542762876| |-| |-|
+|technology epicenter| |OTHER| |0.0006427684566006064| |-| |-|
+|software| |CONSUMER_GOOD| |0.0006424729945138097| |-| |-|
+|valuation| |OTHER| |0.0006412132643163204| |-| |-|
+|cancer research| |OTHER| |0.0006409361958503723| |-| |-|
+|list| |OTHER| |0.0006401597056537867| |-| |-|
+|gathering| |EVENT| |0.0006379478727467358| |-| |-|
+|startup dreams| |OTHER| |0.000634155236184597| |-| |-|
+|enterprise hosting solutions| |OTHER| |0.0006332360790111125| |-| |-|
+|generators| |PERSON| |0.0006266552954912186| |-| |-|
+|seed fund| |OTHER| |0.0006262094248086214| |-| |-|
+|companys| |ORGANIZATION| |0.0006216266192495823| |-| |-|
+|companies| |ORGANIZATION| |0.000621227256488055| |-| |-|
+|companies| |ORGANIZATION| |0.000620972306933254| |-| |-|
+|enterprise companies| |ORGANIZATION| |0.0006209098501130939| |-| |-|
+|Godfathers mafias| |OTHER| |0.0006125401123426855| |-| |-|
+|mafias| |OTHER| |0.00061176618328318| |-| |-|
+|startup mafias| |OTHER| |0.0006114075076766312| |-| |-|
+|mafias| |OTHER| |0.0006114075076766312| |-| |-|
+|startup communities| |LOCATION| |0.0006095858989283442| |-| |-|
+|customers| |PERSON| |0.0006007385090924799| |-| |-|
+|worlds| |OTHER| |0.0006003109738230705| |-| |-|
+|world| |LOCATION| |0.0006002264562994242| |-| |-|
+|customers| |PERSON| |0.0005862484104000032| |-| |-|
+|lighthouse customers| |PERSON| |0.0005859994562342763| |-| |-|
+|customers| |PERSON| |0.0005858781514689326| |-| |-|
+|pace| |OTHER| |0.0005848387954756618| |-| |-|
+|lot| |OTHER| |0.0005706155207008123| |-| |-|
+|Startup talent| |OTHER| |0.0005703229107894003| |-| |-|
+|example| |OTHER| |0.0005662175244651735| |-| |-|
+|trio| |PERSON| |0.0005658394074998796| |-| |-|
+|data privacy| |OTHER| |0.0005658394074998796| |-| |-|
+|security ops| |CONSUMER_GOOD| |0.0005658394074998796| |-| |-|
+|DNS provider| |ORGANIZATION| |0.0005658394074998796| |-| |-|
+|people| |PERSON| |0.0005656271823681891| |-| |-|
+|gallery| |LOCATION| |0.0005654820706695318| |-| |-|
+|need| |OTHER| |0.0005651423707604408| |-| |-|
+|criticisms| |OTHER| |0.000564818677958101| |-| |-|
+|track record| |OTHER| |0.0005645095952786505| |-| |-|
+|hub| |LOCATION| |0.0005645095952786505| |-| |-|
+|wall| |OTHER| |0.0005642137839458883| |-| |-|
+|trophies| |OTHER| |0.0005642137839458883| |-| |-|
+|lifeblood| |OTHER| |0.0005639301962219179| |-| |-|
+|mafias| |OTHER| |0.0005635335110127926| |-| |-|
+|reputation| |OTHER| |0.0005633959663100541| |-| |-|
+|brands| |ORGANIZATION| |0.0005633959663100541| |-| |-|
+|market cap| |OTHER| |0.0005633959663100541| |-| |-|
+|companies| |ORGANIZATION| |0.0005629414226859808| |-| |-|
+|depth| |OTHER| |0.0005624382174573839| |-| |-|
+|Uplevel Security| |UNKNOWN| |0.0005596615374088287| |-| |/g/11g8v4c18h|
+|Edward Chiu| |PERSON| |0.0005568702472373843| |-| |-|
+|some| |OTHER| |0.0005426761345006526| |-| |-|
+|culture| |OTHER| |0.0005425111739896238| |-| |-|
+|internet| |OTHER| |0.0005421930109150708| |-| |-|
+|culture| |OTHER| |0.0005421930109150708| |-| |-|
+|innovation culture| |OTHER| |0.000542039517313242| |-| |-|
+|fund| |OTHER| |0.0005407590069808066| |-| |-|
+|sales| |OTHER| |0.0005405602278187871| |-| |-|
+|thing| |OTHER| |0.0005377841298468411| |-| |-|
+|networks| |OTHER| |0.0005372811574488878| |-| |-|
+|generation| |PERSON| |0.0005371217266656458| |-| |-|
+|network| |OTHER| |0.0005369660793803632| |-| |-|
+|generation| |PERSON| |0.0005363781820051372| |-| |-|
+|deals| |OTHER| |0.0005334247252903879| |-| |-|
+|salespeople| |PERSON| |0.000532475532963872| |-| |-|
+|others| |PERSON| |0.000530231453012675| |-| |-|
+|individual| |PERSON| |0.0005301856435835361| |-| |-|
+|founder| |PERSON| |0.0005277152522467077| |-| |-|
+|core value| |OTHER| |0.0005210044328123331| |-| |-|
+|message| |OTHER| |0.0005205360357649624| |-| |-|
+|tech| |OTHER| |0.0005180889274924994| |-| |-|
+|database tech| |OTHER| |0.0005177120328880847| |-| |-|
+|whiz bang tech| |OTHER| |0.0005176083650439978| |-| |-|
+|customer success| |OTHER| |0.0005111265927553177| |-| |-|
+|startup talent| |OTHER| |0.0005104863084852695| |-| |-|
+|enterprise space| |OTHER| |0.0005099989357404411| |-| |-|
+|application| |OTHER| |0.000509723904542625| |-| |-|
+|database| |OTHER| |0.0005078623653389513| |-| |-|
+|data| |OTHER| |0.0005078623653389513| |-| |-|
+|startup talent| |OTHER| |0.0005071249324828386| |-| |-|
+|more| |OTHER| |0.000495232583489269| |-| |-|
+|network| |OTHER| |0.000494996493216604| |-| |-|
+|stars| |OTHER| |0.0004902876098640263| |-| |-|
+|Valley| |LOCATION| |0.00048691255506128073| |-| |-|
+|AppNexus| |ORGANIZATION| |0.00048655286082066596| |https://en.wikipedia.org/wiki/AppNexus| |/m/04ybndj|
+|home| |LOCATION| |0.00048321671783924103| |-| |-|
+|clothes discounts| |OTHER| |0.0004820870526600629| |-| |-|
+|personality| |OTHER| |0.0004761482705362141| |-| |-|
+|investors| |PERSON| |0.00047609288594685495| |-| |-|
+|trade| |OTHER| |0.0004757759743370116| |-| |-|
+|investors| |PERSON| |0.0004753787361551076| |-| |-|
+|enterprise infrastructure software industry| |OTHER| |0.00047509773867204785| |-| |-|
+|participants| |PERSON| |0.0004748297797050327| |-| |-|
+|industries| |OTHER| |0.00047474316670559347| |-| |-|
+|people| |PERSON| |0.00047246672329492867| |-| |-|
+|venture capital| |OTHER| |0.0004702653968706727| |-| |-|
+|talent| |OTHER| |0.00046699875383637846| |-| |-|
+|another| |OTHER| |0.00046699875383637846| |-| |-|
+|innovation| |OTHER| |0.0004667112079914659| |-| |-|
+|contrast| |OTHER| |0.0004665727319661528| |-| |-|
+|innovation| |OTHER| |0.00046643754467368126| |-| |-|
+|many| |PERSON| |0.000466371129732579| |-| |-|
+|internet economy| |OTHER| |0.000466371129732579| |-| |-|
+|examples| |OTHER| |0.00046440426376648247| |-| |-|
+|epicenter| |LOCATION| |0.0004608076415024698| |-| |-|
+|cohort| |PERSON| |0.0004553537582978606| |-| |-|
+|view| |OTHER| |0.0004518456116784364| |-| |-|
+|same| |OTHER| |0.0004515608598012477| |-| |-|
+|MongoDB| |ORGANIZATION| |0.00044709877693094313| |https://en.wikipedia.org/wiki/MongoDB_Inc.| |/m/0gyv7_f|
+|density| |OTHER| |0.0004455173620954156| |-| |-|
+|walking| |EVENT| |0.0004448559775482863| |-| |-|
+|computer science graduate| |PERSON| |0.00044473286834545434| |-| |-|
+|finance major| |PERSON| |0.00043928917148150504| |-| |-|
+|people| |PERSON| |0.0004371318209450692| |-| |-|
+|several| |OTHER| |0.00043635990004986525| |-| |-|
+|logging| |EVENT| |0.0004362664476502687| |-| |-|
+|rise| |OTHER| |0.0004346588102634996| |-| |-|
+|companies| |ORGANIZATION| |0.0004342172760516405| |-| |-|
+|list| |OTHER| |0.00043419498251751065| |-| |-|
+|competition| |OTHER| |0.0004340933810453862| |-| |-|
+|companies| |ORGANIZATION| |0.00043405272299423814| |-| |-|
+|movements| |OTHER| |0.0004336319398134947| |-| |-|
+|patterns| |OTHER| |0.0004335436678957194| |-| |-|
+|individuals| |PERSON| |0.00043337143142707646| |-| |-|
+|team| |ORGANIZATION| |0.00043337143142707646| |-| |-|
+|community thats| |OTHER| |0.000433123204857111| |-| |-|
+|hundreds| |OTHER| |0.0004330429947003722| |-| |-|
+|lot| |OTHER| |0.0004328861541580409| |-| |-|
+|information| |OTHER| |0.0004328094655647874| |-| |-|
+|instance| |OTHER| |0.0004328094655647874| |-| |-|
+|experiment| |OTHER| |0.00043258583173155785| |-| |-|
+|overlap| |OTHER| |0.00043117685709148645| |-| |-|
+|advantages| |OTHER| |0.00043060260941274464| |-| |-|
+|pattern| |OTHER| |0.0004303374735172838| |-| |-|
+|firms| |ORGANIZATION| |0.00043008511420339346| |-| |-|
+|transaction| |OTHER| |0.00042972801020368934| |-| |-|
+|startup standards| |OTHER| |0.0004296142142266035| |-| |-|
+|Packet| |OTHER| |0.0004293937818147242| |-| |-|
+|security team| |ORGANIZATION| |0.00042918225517496467| |-| |-|
+|end| |OTHER| |0.00042888024472631514| |-| |-|
+|worth| |OTHER| |0.00042846068390645087| |-| |-|
+|Digital Ocean| |ORGANIZATION| |0.0004271899233572185| |https://en.wikipedia.org/wiki/DigitalOcean| |/m/0wyqzs4|
+|Crunchbase| |OTHER| |0.00042702804785221815| |https://zh.wikipedia.org/wiki/CrunchBase| |/m/0cc6_7b|
+|much| |OTHER| |0.0004221645649522543| |-| |-|
+|internet| |OTHER| |0.00040677344077266753| |-| |-|
+|one| |PERSON| |0.0004066497494932264| |-| |-|
+|boot camps| |LOCATION| |0.0004018248291686177| |-| |-|
+|access| |OTHER| |0.00039672187995165586| |-| |-|
+|ambition| |OTHER| |0.0003965302894357592| |-| |-|
+|desire| |OTHER| |0.0003965302894357592| |-| |-|
+|startup hands| |OTHER| |0.00039646809455007315| |-| |-|
+|opening| |EVENT| |0.00039605374331586063| |-| |-|
+|leaders| |PERSON| |0.0003927134966943413| |-| |-|
+|firms| |ORGANIZATION| |0.0003869436332024634| |-| |-|
+|leaders| |PERSON| |0.00038547287113033235| |-| |-|
+|luminary| |OTHER| |0.0003813266521319747| |-| |-|
+|tooling| |OTHER| |0.00038115589995868504| |-| |-|
+|heart| |OTHER| |0.00038107280852273107| |-| |-|
+|product lessons| |OTHER| |0.00038107280852273107| |-| |-|
+|internet traffic juggernaut| |OTHER| |0.00038107280852273107| |-| |-|
+|course| |OTHER| |0.00038083214894868433| |-| |-|
+|entrepreneurs| |PERSON| |0.0003807546163443476| |-| |-|
+|knowledge| |OTHER| |0.00038067836430855095| |-| |-|
+|clusters| |OTHER| |0.00038060336373746395| |-| |-|
+|bet| |OTHER| |0.0003805295564234257| |-| |-|
+|bets| |OTHER| |0.0003804568841587752| |-| |-|
+|message| |OTHER| |0.00038036450860090554| |-| |-|
+|intros| |OTHER| |0.00038017716724425554| |-| |-|
+|fruition| |OTHER| |0.0003801097918767482| |-| |-|
+|politics| |OTHER| |0.0003801097918767482| |-| |-|
+|answers| |OTHER| |0.00037867596256546676| |-| |-|
+|age| |OTHER| |0.0003785446169786155| |-| |-|
+|Infor| |ORGANIZATION| |0.00037818614509887993| |https://en.wikipedia.org/wiki/Infor| |/m/026c3z3|
+|employees| |PERSON| |0.0003780537226703018| |-| |-|
+|ropes| |OTHER| |0.0003780537226703018| |-| |-|
+|size| |OTHER| |0.0003773035714402795| |-| |-|
+|hires| |OTHER| |0.00037692420301027596| |-| |-|
+|guy| |PERSON| |0.00037674568011425436| |-| |-|
+|sweatshirt| |OTHER| |0.00037674568011425436| |-| |-|
+|city| |LOCATION| |0.0003748877497855574| |-| |-|
+|city| |LOCATION| |0.0003746220318134874| |-| |-|
+|market| |OTHER| |0.00037120943306945264| |-| |-|
+|things| |OTHER| |0.0003709749726112932| |-| |-|
+|All| |OTHER| |0.0003622562508098781| |-| |-|
+|enterprise tech| |OTHER| |0.0003615451860241592| |-| |-|
+|view| |OTHER| |0.00035768660018220544| |-| |-|
+|reality| |OTHER| |0.00035753336851485074| |-| |-|
+|excitement| |OTHER| |0.00035267838393338025| |-| |-|
+|fortunes| |OTHER| |0.0003500652383081615| |-| |-|
+|sales meetings| |EVENT| |0.0003500453312881291| |-| |-|
+|production challenge| |OTHER| |0.00034993619192391634| |-| |-|
+|challenges| |OTHER| |0.0003498297883197665| |-| |-|
+|containers| |OTHER| |0.00034972597495652735| |-| |-|
+|vehicle| |CONSUMER_GOOD| |0.0003484733169898391| |-| |-|
+|office| |OTHER| |0.0003483027976471931| |-| |-|
+|latter| |OTHER| |0.0003481928142718971| |-| |-|
+|community hubs| |OTHER| |0.0003481388557702303| |-| |-|
+|development| |OTHER| |0.0003481388557702303| |-| |-|
+|support| |OTHER| |0.0003481388557702303| |-| |-|
+|customer tastes| |OTHER| |0.00034808559576049447| |-| |-|
+|differences| |OTHER| |0.00034803300513885915| |-| |-|
+|behemoths| |LOCATION| |0.0003479810548014939| |-| |-|
+|hierarchy| |OTHER| |0.0003479297156445682| |-| |-|
+|piece| |OTHER| |0.00034791333018802106| |-| |-|
+|tigers| |OTHER| |0.0003478790167719126| |-| |-|
+|name| |OTHER| |0.0003478790167719126| |-| |-|
+|nick| |PERSON| |0.0003478288999758661| |-| |-|
+|activity| |OTHER| |0.0003478288999758661| |-| |-|
+|startup neighborhoods| |LOCATION| |0.00034773044171743095| |-| |-|
+|changes| |OTHER| |0.0003476820420473814| |-| |-|
+|Internap| |ORGANIZATION| |0.0003475401026662439| |https://en.wikipedia.org/wiki/Internap| |/m/04zmz7|
+|ecosystem| |OTHER| |0.00034737109672278166| |-| |-|
+|startup ecosystem| |OTHER| |0.00034734088694676757| |-| |-|
+|bulk| |OTHER| |0.00034227105788886547| |-| |-|
+|Work-Bench| |ORGANIZATION| |0.00034058355959132314| |-| |/g/12hpg3wnp|
+|rewards| |OTHER| |0.0003363692667335272| |-| |-|
+|BigID| |ORGANIZATION| |0.00033427600283175707| |-| |/g/11fz9vhw40|
+|NYSE| |ORGANIZATION| |0.0003328323655296117| |https://en.wikipedia.org/wiki/NYSE_Euronext| |/m/0bwpfs|
+|Roche| |ORGANIZATION| |0.00033253958099521697| |https://en.wikipedia.org/wiki/Hoffmann-La_Roche| |/m/02nyk6|
+|Oracle| |ORGANIZATION| |0.00033240075572393835| |https://en.wikipedia.org/wiki/Oracle_Corporation| |/m/05njw|
+|Moat| |OTHER| |0.00033240075572393835| |-| |-|
+|UiPath| |PERSON| |0.0003321366384625435| |https://en.wikipedia.org/wiki/UiPath| |/g/11f50xjkr9|
+|WeWork| |OTHER| |0.0003321366384625435| |https://en.wikipedia.org/wiki/WeWork| |/m/01306xmp|
+|Greenhouse| |LOCATION| |0.0003321366384625435| |-| |-|
+|Zeta Global| |PERSON| |0.0003321366384625435| |https://en.wikipedia.org/wiki/Zeta_Global| |/g/11c5s6vn9t|
+|Percolate| |OTHER| |0.0003321366384625435| |-| |-|
+|InVision| |ORGANIZATION| |0.0003321366384625435| |-| |-|
+|Sprinklr| |ORGANIZATION| |0.0003321366384625435| |https://en.wikipedia.org/wiki/Sprinklr| |/m/01270tg8|
+|way| |OTHER| |0.0003259742516092956| |-| |-|
+|pain points| |OTHER| |0.00032583699794486165| |-| |-|
+|industries| |OTHER| |0.00032580344122834504| |-| |-|
+|enterprise infrastructure| |OTHER| |0.0003238007484469563| |-| |-|
+|infrastructure| |OTHER| |0.00032330380054190755| |-| |-|
+|Gilt Groupe| |ORGANIZATION| |0.00032185393502004445| |https://en.wikipedia.org/wiki/Gilt_Groupe| |/m/080cfp9|
+|worlds| |OTHER| |0.0003146395902149379| |-| |-|
+|startup world| |OTHER| |0.0003145007067359984| |-| |-|
+|everyone| |PERSON| |0.0003137118474114686| |-| |-|
+|something| |OTHER| |0.0003137118474114686| |-| |-|
+|enterprise startups| |ORGANIZATION| |0.00030853692442178726| |-| |-|
+|startup| |ORGANIZATION| |0.00030826686997897923| |-| |-|
+|startups| |ORGANIZATION| |0.0003081568283960223| |-| |-|
+|startups| |ORGANIZATION| |0.00030804993002675474| |-| |-|
+|renewal| |EVENT| |0.00030673036235384643| |-| |-|
+|institutions| |ORGANIZATION| |0.00029738256125710905| |-| |-|
+|reality| |OTHER| |0.00029728576191700995| |-| |-|
+|business| |OTHER| |0.0002972226357087493| |-| |-|
+|businesses| |ORGANIZATION| |0.00029712996911257505| |-| |-|
+|open source adoption| |OTHER| |0.00029706949135288596| |-| |-|
+|adage| |OTHER| |0.0002929584588855505| |-| |-|
+|others| |PERSON| |0.00029005209216848016| |-| |-|
+|Eliot Durbin| |PERSON| |0.0002891884942073375| |-| |-|
+|culture| |OTHER| |0.00028437268338166177| |-| |-|
+|companies| |ORGANIZATION| |0.00027292437152937055| |-| |-|
+|company| |ORGANIZATION| |0.0002726854581851512| |-| |-|
+|respect| |OTHER| |0.0002653563569765538| |-| |-|
+|respect| |OTHER| |0.0002653563569765538| |-| |-|
+|exceptions| |OTHER| |0.00026226899353787303| |-| |-|
+|radius| |OTHER| |0.0002611710224300623| |-| |-|
+|revenue| |OTHER| |0.0002611424133647233| |-| |-|
+|most| |OTHER| |0.0002610859810374677| |-| |-|
+|hesitation| |OTHER| |0.00026097605586983263| |-| |-|
+|processing| |EVENT| |0.0002609491639304906| |-| |-|
+|open source project| |OTHER| |0.0002608960494399071| |-| |-|
+|techs sake| |OTHER| |0.00026086982688866556| |-| |-|
+|word| |OTHER| |0.00026084380806423724| |-| |-|
+|use cases| |OTHER| |0.00026084380806423724| |-| |-|
+|technology purists| |PERSON| |0.0002608179929666221| |-| |-|
+|no one| |PERSON| |0.00026079241069965065| |-| |-|
+|VCs| |OTHER| |0.00025924682267941535| |-| |-|
+|customers| |PERSON| |0.0002575131366029382| |-| |-|
+|customers| |PERSON| |0.0002574792306404561| |-| |-|
+|Chwyl| |PERSON| |0.00025731537607498467| |-| |-|
+|customers| |PERSON| |0.0002570984943304211| |-| |-|
+|customers| |PERSON| |0.0002570392971392721| |-| |-|
+|customers| |PERSON| |0.00025695256772451103| |-| |-|
+|problems| |OTHER| |0.00024466009926982224| |-| |-|
+|problems| |OTHER| |0.00024466009926982224| |-| |-|
+|space| |LOCATION| |0.00024440992274321616| |-| |-|
+|community| |OTHER| |0.000244388182181865| |-| |-|
+|enterprise| |OTHER| |0.0002432816254440695| |-| |-|
+|enterprise| |OTHER| |0.00024325209960807115| |-| |-|
+|enterprise| |OTHER| |0.00024310876324307173| |-| |-|
+|challenges| |OTHER| |0.00024159564054571092| |-| |-|
+|Flatiron and Union Square| |PERSON| |0.0002339004713576287| |https://en.wikipedia.org/wiki/Flatiron_District| |/m/02t9m_|
+|paragon| |OTHER| |0.00023310462711378932| |-| |-|
+|customer focus| |OTHER| |0.00022776486002840102| |-| |-|
+|way| |OTHER| |0.00022772136435378343| |-| |-|
+|venture capitalists| |OTHER| |0.00022769987117499113| |-| |-|
+|tech| |OTHER| |0.00022762500157114118| |-| |-|
+|check| |OTHER| |0.00022761734726373106| |-| |-|
+|Catalyst| |ORGANIZATION| |0.00022516533499583602| |-| |-|
+|Akamai| |ORGANIZATION| |0.00022511625138577074| |https://en.wikipedia.org/wiki/Akamai_Technologies| |/m/02fqbt|
+|Ben Johnson| |PERSON| |0.00022506804089061916| |-| |-|
+|Timber.io| |ORGANIZATION| |0.00022506804089061916| |-| |-|
+|Zach Sherman| |PERSON| |0.00022506804089061916| |-| |-|
+|PayPal| |ORGANIZATION| |0.0002231984690297395| |https://en.wikipedia.org/wiki/PayPal| |/m/01btsf|
+|Italian| |LOCATION| |0.0002231337857665494| |-| |-|
+|culture| |OTHER| |0.0002202299510827288| |-| |-|
+|Valleys| |LOCATION| |0.00021393179486040026| |-| |-|
+|Cornell Tech| |ORGANIZATION| |0.00021365493012126535| |https://en.wikipedia.org/wiki/Cornell_Tech| |/m/0q56ljv|
+|some| |PERSON| |0.0002114384260494262| |-| |-|
+|set| |OTHER| |0.00020771889830939472| |-| |-|
+|deals| |OTHER| |0.0002076596429105848| |-| |-|
+|handful| |OTHER| |0.00020764018699992448| |-| |-|
+|exceptions| |OTHER| |0.00020764018699992448| |-| |-|
+|lack| |OTHER| |0.00020748976385220885| |-| |-|
+|ambition| |OTHER| |0.0002074715739581734| |-| |-|
+|advertising analytics platform| |OTHER| |0.000207453515031375| |-| |-|
+|opening| |EVENT| |0.00020743557251989841| |-| |-|
+|NYCs| |ORGANIZATION| |0.00020562818099278957| |-| |-|
+|Bostons Route 128| |LOCATION| |0.00020559709810186177| |-| |-|
+|EMC| |ORGANIZATION| |0.00020556640811264515| |https://en.wikipedia.org/wiki/Dell_EMC| |/m/02khrk|
+|DEC| |OTHER| |0.00020556640811264515| |-| |-|
+|Singapore| |LOCATION| |0.00020550613407976925| |https://en.wikipedia.org/wiki/Singapore| |/m/06t2t|
+|Taiwan| |LOCATION| |0.00020550613407976925| |https://en.wikipedia.org/wiki/Taiwan| |/m/06f32|
+|Asian| |LOCATION| |0.00020550613407976925| |-| |-|
+|Korea| |LOCATION| |0.00020550613407976925| |-| |-|
+|world| |LOCATION| |0.00019780168076977134| |-| |-|
+|meetings| |EVENT| |0.00019393152615521103| |-| |-|
+|cry| |OTHER| |0.00019392107788007706| |-| |-|
+|thinking| |OTHER| |0.0001933775783982128| |-| |-|
+|startup culture| |OTHER| |0.00019254810467828065| |-| |-|
+|people| |PERSON| |0.00019180866365786642| |-| |-|
+|focus| |OTHER| |0.00018319308583159| |-| |-|
+|fact| |OTHER| |0.0001823385973693803| |-| |-|
+|domain| |OTHER| |0.0001823217753553763| |-| |-|
+|sub-ecosystems| |OTHER| |0.00018230508430860937| |-| |-|
+|geography| |OTHER| |0.00018230508430860937| |-| |-|
+|biotech| |OTHER| |0.0001822720660129562| |-| |-|
+|glance| |OTHER| |0.00018223952793050557| |-| |-|
+|demarcations| |OTHER| |0.00018223952793050557| |-| |-|
+|showmanship| |OTHER| |0.000182223433512263| |-| |-|
+|aspiration| |OTHER| |0.00018220747006125748| |-| |-|
+|beacon| |OTHER| |0.00018219160847365856| |-| |-|
+|loss| |OTHER| |0.00018217584874946624| |-| |-|
+|story| |OTHER| |0.0001821446930989623| |-| |-|
+|hustle| |OTHER| |0.0001821446930989623| |-| |-|
+|scrappiness| |OTHER| |0.0001821446930989623| |-| |-|
+|decision| |OTHER| |0.00018018852279055864| |-| |-|
+|fractures| |OTHER| |0.00017780500638764352| |-| |-|
+|convening| |EVENT| |0.00017057642980944365| |-| |-|
+|fund| |OTHER| |0.0001629635808058083| |-| |-|
+|thinking| |OTHER| |0.00016267520550172776| |-| |-|
+|Boldstarts| |OTHER| |0.00016086552932392806| |-| |-|
+|Yorks| |LOCATION| |0.00015595876902807504| |-| |-|
+|California| |LOCATION| |0.00015419906412716955| |https://en.wikipedia.org/wiki/California| |/m/01n7q|
+|Dockers| |ORGANIZATION| |0.0001540583762107417| |-| |-|
+|meetups| |EVENT| |0.00015382107812911272| |-| |-|
+|success| |OTHER| |0.00015376029477920383| |-| |-|
+|Work-Bench| |ORGANIZATION| |0.00015374046051874757| |-| |-|
+|problems| |OTHER| |0.00015180085028987378| |-| |-|
+|fintech| |OTHER| |0.000149668674566783| |-| |-|
+|SpaceX| |ORGANIZATION| |0.00014434207696467638| |https://en.wikipedia.org/wiki/SpaceX| |/m/03fkyw|
+|anything| |OTHER| |0.0001439154875697568| |-| |-|
+|part| |OTHER| |0.0001431556884199381| |-| |-|
+|point| |OTHER| |0.00014289742102846503| |-| |-|
+|pain points| |OTHER| |0.0001412794372299686| |-| |-|
+|success| |OTHER| |0.0001319779985351488| |-| |-|
+|transplant| |OTHER| |0.000130625136080198| |-| |-|
+|product design| |OTHER| |0.00013059016782790422| |-| |-|
+|Thats| |OTHER| |0.0001305729674641043| |-| |-|
+|anything| |OTHER| |0.00013041046622674912| |-| |-|
+|person| |PERSON| |0.00013032040442340076| |-| |-|
+|experience| |OTHER| |0.00013030586706008762| |-| |-|
+|Elon Musk| |PERSON| |0.0001294769172091037| |https://en.wikipedia.org/wiki/Elon_Musk| |/m/03nzf1|
+|boon| |OTHER| |0.00012177653843536973| |-| |-|
+|evolution| |OTHER| |0.00011471829930087551| |-| |-|
+|nature| |OTHER| |0.00011465753050288185| |-| |-|
+|incubator| |OTHER| |0.00011462811380624771| |-| |-|
+|technology vendors| |ORGANIZATION| |0.00011462811380624771| |-| |-|
+|potential| |OTHER| |0.00011459930101409554| |-| |-|
+|issues| |OTHER| |0.00011459930101409554| |-| |-|
+|decision-making| |OTHER| |0.00011458511289674789| |-| |-|
+|technology purchasing| |OTHER| |0.00011457107029855251| |-| |-|
+|CTO| |PERSON| |0.00011455716594355181| |-| |-|
+|front| |OTHER| |0.00011454339983174577| |-| |-|
+|thing heads| |OTHER| |0.00011454339983174577| |-| |-|
+|proximity| |OTHER| |0.00011450290185166523| |-| |-|
+|relationships| |OTHER| |0.00011448965960880741| |-| |-|
+|subway line| |OTHER| |0.00011443791299825534| |-| |-|
+|decisions| |OTHER| |0.00011319892655592412| |-| |-|
+|vice grip| |OTHER| |0.00011316849122522399| |-| |-|
+|service partnership mentality| |OTHER| |0.00011311436537653208| |-| |-|
+|Manhattan| |LOCATION| |0.00010768224456114694| |https://en.wikipedia.org/wiki/Manhattan| |/m/0cc56|
+|Princeton| |ORGANIZATION| |0.0001076628832379356| |-| |-|
+|Columbia| |LOCATION| |0.0001076628832379356| |-| |-|
+|NYU| |ORGANIZATION| |0.0001076628832379356| |https://en.wikipedia.org/wiki/New_York_University| |/m/0bwfn|
+|Rodney Dangerfield| |PERSON| |0.00010760645818663761| |https://en.wikipedia.org/wiki/Rodney_Dangerfield| |/m/015b67|
+|feedback| |OTHER| |8.72929158504121e-05| |-| |-|
+|Morgan Stanley| |ORGANIZATION| |7.710212230449542e-05| |https://en.wikipedia.org/wiki/Morgan_Stanley| |/m/0jvs0|
+|CIOs| |ORGANIZATION| |7.644997094757855e-05| |https://en.wikipedia.org/wiki/Chief_information_officer| |/m/0142rn|
+|IBM| |ORGANIZATION| |6.891167868161574e-05| |https://en.wikipedia.org/wiki/IBM| |/m/03sc8|
+|San Francisco| |LOCATION| |6.775701331207529e-05| |https://en.wikipedia.org/wiki/San_Francisco| |/m/0d6lp|
+|Google| |OTHER| |6.760050018783659e-05| |https://en.wikipedia.org/wiki/Google| |/m/045c7b|
+|AWS| |ORGANIZATION| |6.760050018783659e-05| |https://en.wikipedia.org/wiki/Amazon_Web_Services| |/m/05nrgx|
+|Roman| |OTHER| |6.760050018783659e-05| |-| |-|

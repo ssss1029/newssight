@@ -10,6 +10,7 @@ if (process.env.DEBUG == undefined) {
 const mysql    = require('mysql');
 const fs       = require('fs');
 const path     = require('path');
+const parse    = require('csv-parse');
 const debug    = require('debug')('newssight:database-conns');
 const debugERR = require('debug')('newssight:ERROR:database-conns');
       debugERR.color = require('debug').colors[5] /* RED */
@@ -20,6 +21,22 @@ const connection = mysql.createConnection({
   password : 'developer',
   multipleStatements : true
 });
+
+const articlesFilepath = 'data/articles.csv' // Filepath
+const entityData = 'data/entityanalysis/'    // Directory path
+
+const tables     = global.TABLES;
+const articleTableColumns = [
+    "sourceId",
+    "id",
+    "author",
+    "title",
+    "description",
+    "url",
+    "urlToImage",
+    "publishedAt",
+    "savedAt"
+]
 
 /**
  * Sets up the database
@@ -40,7 +57,15 @@ function setupDb(options) {
         promises.push(queryDatabase(SQL.toString(), connection));
     }
 
-    return Promise.all(promises)
+    return Promise.all(promises).then(function() {
+        debug("Initializing articles")
+        return initArticles();
+    }).then(function() {
+        debug("Initializing entity data")
+        return initEntities();
+    }).catch(function(error) {
+        debugERR(error)
+    })
 }
 
 /**
@@ -60,6 +85,148 @@ function queryDatabase(query, connection) {
     });
 }
 
+/**
+ * Initializes all the articles in the database using articlesFilepath
+ */
+function initArticles() {
+    const input  = fs.createReadStream(articlesFilepath)
+    const articleCSVcols = [
+        "sourceId",
+        "articleId",
+        "author",
+        "title",
+        "description",
+        "url",
+        "urlToImage",
+        "publishedAt"
+    ]
+
+    const parser = parse({
+        delimiter: " ",
+        quote: "|",
+        escape: "",
+        columns: articleCSVcols
+    });
+
+    return new Promise(function(fulfill, reject) {
+        input.pipe(parser).on('readable', function() {
+            var record = parser.read();
+            if (record == undefined || record == undefined){
+                return; // Don't continue if no actual new data
+            } else if (record[articleTableColumns[0]] == articleTableColumns[0]) {
+                return; // Skip the first line
+            }
+
+            var columns = ""
+            for (var i = 0; i < articleTableColumns.length; i++) {
+                columns = columns + articleTableColumns[i] + ", "
+            }
+            columns = columns.slice(0, columns.length - 2) // Remove trailing space and comma
+            
+            var values = ""
+            for (var i = 0; i < articleCSVcols.length; i++) {
+                values = values + connection.escape(record[articleCSVcols[i]]) + ", "
+            }
+
+            values = values + connection.escape(Date().toString());
+
+            var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE title=title;".format(tables.ARTICLES, columns, values);
+            queryDatabase(query, connection).catch(function(error) {
+                debugERR(error)
+            })
+        }).on('error', function(error) {
+            debugERR(error)
+            reject()
+        }).on('finish', function() {
+            debug("Done reading articles from {0}".format(articlesFilepath))
+            fulfill()
+        });
+    })
+    
+}
+
+function initEntities() {
+    const q1 = "SELECT id FROM {0}".format(tables.ARTICLES)
+    queryDatabase(q1, connection).then(function(results) {
+        var entities = []
+        var parsers = []
+
+        for (var i = 0; i < results.length; i++) {
+            var articleId = results[i]["id"]
+            var entityFile = fs.createReadStream(entityData + "{0}.csv".format(articleId))
+            entities.push(parseEntityCSV(entityFile, articleId))
+        }
+
+        Promise.all(entities).then(function(data) {
+            for (var a = 0; a < data.length; a++) {
+                var articleId = data[a]["articleId"]
+                var entities  = data[a]["entities"]
+                for (var e = 0; e < entities.length; e++) {
+                    addEntityToTable(tables.ENTITIES, entities[e], articleId)
+                }
+            }
+        }).catch(function(err) {
+            debugERR(err)
+        })
+
+    }).catch(function(error) {
+        debugERR(error);
+    })
+}
+
+/**
+ * Adds the given entity to tablename under PK articleId
+ * @param {String} tablename 
+ * @param {Object} entity 
+ * @param {Integer} articleId 
+ */
+function addEntityToTable(tablename, entity, articleId) {
+    const entityTableCols = [
+        "articleId", "type", "target", "salience"
+    ]
+
+    const values = [
+        articleId, entity["type"], entity["target"], entity["salience"]
+    ]
+
+    for (var v = 0; v < values.length; v++) {
+        values[v] = connection.escape(values[v])
+    }
+
+    var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE type=type;".format(tablename, entityTableCols, values);
+    queryDatabase(query, connection).catch(function(error) {
+        debugERR(error)
+    })
+}
+
+function parseEntityCSV(entityFile, articleId) {
+    return new Promise(function(resolve, reject) {
+        var parser = parse({
+            delimiter: " ",
+            quote: "|",
+            escape: "",
+            columns: [
+                "target", "type", "salience", "wikipedia-link", "mid"
+            ]
+        });
+        
+        var records = []
+
+        entityFile.pipe(parser).on('readable', function() {
+            while(record = parser.read()) {
+                if (records.length < 10) {
+                    records.push(record)
+                }
+            }
+        }).on('error', function(err) {
+            debugERR(err)
+            resolve(err)
+        }).on('finish', function() {
+            resolve({articleId : articleId, entities : records})
+        })
+    });
+}
+
 if (!module.parent) {
     // This is the main module
     setupDb({
@@ -71,5 +238,6 @@ if (!module.parent) {
 }
 
 module.exports = {
-    setupDb
+    setupDb, 
+    initArticles
 };

@@ -1,0 +1,51 @@
+|Donald Trump| |UNKNOWN| |0.1711442470550537| |https://en.wikipedia.org/wiki/Donald_Trump| |/m/0cqt90|
+|James Comey| |PERSON| |0.1637071669101715| |https://en.wikipedia.org/wiki/James_Comey| |/m/06r04p|
+|Robert Mueller| |PERSON| |0.12979210913181305| |https://en.wikipedia.org/wiki/Robert_Mueller| |/m/02djmh|
+|counsel| |PERSON| |0.07920952886343002| |-| |-|
+|probe| |OTHER| |0.02943616919219494| |-| |-|
+|Jonathan Ernst| |PERSON| |0.029303032904863358| |-| |-|
+|Russia| |LOCATION| |0.028744321316480637| |-| |-|
+|interference| |OTHER| |0.026872780174016953| |-| |-|
+|legality| |OTHER| |0.023630809038877487| |-| |-|
+|election| |EVENT| |0.023630809038877487| |-| |-|
+|information| |OTHER| |0.022210758179426193| |-| |-|
+|president| |PERSON| |0.015153847634792328| |-| |-|
+|Reuters| |ORGANIZATION| |0.01413198746740818| |https://en.wikipedia.org/wiki/Reuters| |/m/0ps53|
+|director| |PERSON| |0.013804195448756218| |-| |-|
+|probe| |OTHER| |0.011174464598298073| |-| |-|
+|justice| |OTHER| |0.010222815908491611| |-| |-|
+|information| |OTHER| |0.01019486878067255| |-| |-|
+|memos| |WORK_OF_ART| |0.010181362740695477| |-| |-|
+|Rod Rosenstein| |PERSON| |0.00935489684343338| |https://en.wikipedia.org/wiki/Rod_Rosenstein| |/m/04y7p0_|
+|obstruction| |OTHER| |0.00898230355232954| |-| |-|
+|campaign| |EVENT| |0.00898230355232954| |-| |-|
+|collusion| |EVENT| |0.00898230355232954| |-| |-|
+|press| |OTHER| |0.008643820881843567| |-| |-|
+|president| |PERSON| |0.008552365005016327| |-| |-|
+|counsel| |PERSON| |0.008155125193297863| |-| |-|
+|memos| |OTHER| |0.007594337686896324| |-| |-|
+|memos| |WORK_OF_ART| |0.007513951975852251| |-| |-|
+|counsel| |PERSON| |0.007462914567440748| |-| |-|
+|content| |OTHER| |0.007052910514175892| |-| |-|
+|interactions| |OTHER| |0.006854375824332237| |-| |-|
+|FBI| |ORGANIZATION| |0.006811781786382198| |https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation| |/m/02_1m|
+|friend| |PERSON| |0.006714720278978348| |-| |-|
+|hopes| |OTHER| |0.006086096167564392| |-| |-|
+|appointment| |OTHER| |0.006086096167564392| |-| |-|
+|testimony| |OTHER| |0.006011764518916607| |-| |-|
+|review| |WORK_OF_ART| |0.005576333962380886| |-| |-|
+|watchdog| |ORGANIZATION| |0.005576333962380886| |-| |-|
+|power| |OTHER| |0.00419247942045331| |-| |-|
+|attacks| |EVENT| |0.004187995567917824| |-| |-|
+|Sarah Sanders| |PERSON| |0.003836421063169837| |https://en.wikipedia.org/wiki/Sarah_Huckabee_Sanders| |/m/0k21z38|
+|Trump Tweet| |WORK_OF_ART| |0.0035672513768076897| |-| |-|
+|Congress| |ORGANIZATION| |0.0035546503495424986| |-| |-|
+|Justice Department| |ORGANIZATION| |0.003296955255791545| |https://en.wikipedia.org/wiki/United_States_Department_of_Justice| |/m/0dtj5|
+|investigation| |EVENT| |0.0029314453713595867| |-| |-|
+|report| |WORK_OF_ART| |0.0029285596683621407| |-| |-|
+|probe| |OTHER| |0.0022976791951805353| |-| |-|
+|confidants| |PERSON| |0.0021006572060287| |-| |-|
+|witch hunt| |OTHER| |0.0018405899172648787| |-| |-|
+|Bloomberg| |ORGANIZATION| |0.0017307406524196267| |https://en.wikipedia.org/wiki/Bloomberg_L.P.| |/m/027sm6|
+|president| |PERSON| |0.0015774782514199615| |-| |-|
+|White House| |ORGANIZATION| |0.0010862973285838962| |-| |/g/11bc8dkd19|

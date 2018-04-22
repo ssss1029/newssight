@@ -699,6 +699,8 @@ module.exports = {
 
     TABLES : {
         USERS: "users",
-        SOURCES: "sources"
+        SOURCES: "sources",
+        ENTITIES: "article_entities",
+        ARTICLES: "articles"
     }
 }

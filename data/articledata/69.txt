@@ -1,0 +1,20 @@
+['cnbc', '69', 'Alex Sherman', "Carl Icahn has taken a 'medium'-sized stake in VMware, sources say", 'Activist investor Carl Icahn has acquired a stake in VMware while Dell is considering a reverse merger with the virtualization company.', 'https://www.cnbc.com/2018/04/17/carl-icahn-has-a-medium-sized-stake-in-vmware-sources-say.html', 'https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2016/09/14/103940630-20160913-9076-2269.1910x1000.jpg', '2018-04-18T02:30:08Z']
+Tech Guide
+Carl Icahn has taken a 'medium'-sized stake in VMware, sources say
+Activist investor Carl Icahn has acquired a medium-sized stake in VMware that is below the 5 percent disclosure threshold, sources say.
+Dell Technologies, which owns about 80 percent of VMware, is considering a reverse merger with the company.
+Icahn attempted to thwart Michael Dell's 2013 effort to take Dell private.
+Published 10:30  PM ET Tue, 17 April 2018
+Updated   8:52  AM ET Wed, 18 April 2018
+CNBC.com
+David A. Grogan | CNBC
+Carl Icahn speaking at Delivering Alpha in New York on Sept. 13, 2016.
+Legendary activist investor Carl Icahn has accumulated a medium-sized stake in VMware , according to sources familiar with the matter.
+Icahn's stake is below the 5 percent threshold that mandates public disclosure. It's unclear if Icahn has a particular agenda or is pushing for anything specific from VMware or Dell, which owns about 80 percent of the company.
+Dell is considering a reverse-merger with VMware, where Dell and its tracker stock, DVMT , would be rolled into one publicly-traded company. Talks between Dell and VMware have continued this week about a deal, according to sources familiar with the matter, who asked not to be named because the discussions are private.
+A deal between Dell and VMware remains tricky, said the people, because VMware shareholders will need to be convinced a transaction is in the company's best interest. Conversations between the two companies continue to center around synergies and crafting a deal that will make VMware investors pleased, said the sources.
+While it's not mandatory for VMware shareholders to have a vote on a transaction, any deal will probably come up with a so-called "majority of the minority" provision, allowing VMware investors to have a say on an acquisition, sources familiar with the structure of the deal have told CNBC .
+If Dell and VMware don't go forward with a merger, Dell has also said it will consider an initial public offering. This would allow Silver Lake to monetize its 2013 investment in Dell, although it wouldn't simplify the capital structure between Dell and VMware. Dell's tracking stock DVMT is built to mimic the performance of VMware within Dell. It trades at a significant discount to VMware. An acquisition would eliminate the tracker, according to sources familiar with the matter.
+Icahn publicly and unsuccessfully challenged Michael Dell in his 2013 effort to take Dell private. Icahn accumulated an 8.9 percent stake in Dell and made a counter-bid for Dell, along with Blackstone Group . Michael Dell and Silver Lake ultimately acquired the company for $24.4 billion, a price tag Icahn said "greatly undervalues it."
+Alex Sherman Technology Reporter for CNBC.com
+Related Securities

@@ -1,0 +1,272 @@
+|Donald J. Trump| |PERSON| |0.4295133948326111| |https://en.wikipedia.org/wiki/Donald_Trump| |/m/0cqt90|
+|North and South Korea| |UNKNOWN| |0.28606078028678894| |https://en.wikipedia.org/wiki/North_Korea| |/m/05b7q|
+|meeting| |EVENT| |0.01866653747856617| |-| |-|
+|Kim Jong Un| |PERSON| |0.014572993852198124| |https://en.wikipedia.org/wiki/Kim_Jong-un| |/m/0fgw19|
+|SEOUL| |UNKNOWN| |0.014192108064889908| |https://en.wikipedia.org/wiki/Seoul| |/m/0hsqf|
+|country| |LOCATION| |0.013001363724470139| |-| |-|
+|announcement| |OTHER| |0.012341580353677273| |-| |-|
+|announcement| |OTHER| |0.004830912686884403| |-| |-|
+|Shinzo Abe| |PERSON| |0.004664659034460783| |https://en.wikipedia.org/wiki/Shinz_Abe| |/m/07t7hy|
+|level| |OTHER| |0.004187553655356169| |-| |-|
+|intention| |OTHER| |0.004037032835185528| |-| |-|
+|tests| |OTHER| |0.003891635686159134| |-| |-|
+|Washington| |LOCATION| |0.003850490553304553| |https://en.wikipedia.org/wiki/Washington_(state)| |/m/081yw|
+|news| |OTHER| |0.003782999701797962| |-| |-|
+|announcement| |EVENT| |0.0037464872002601624| |-| |-|
+|summits| |EVENT| |0.0028553290758281946| |-| |-|
+|summits| |EVENT| |0.0028475094586610794| |-| |-|
+|country| |LOCATION| |0.0026186718605458736| |-| |-|
+|testing| |OTHER| |0.002606357680633664| |-| |-|
+|CBS| |ORGANIZATION| |0.00256727309897542| |https://en.wikipedia.org/wiki/CBS| |/m/09d5h|
+|China| |ORGANIZATION| |0.0024848885368555784| |-| |-|
+|party| |ORGANIZATION| |0.0024645261000841856| |-| |-|
+|meeting| |EVENT| |0.0024645261000841856| |-| |-|
+|weapons| |OTHER| |0.002457100199535489| |-| |-|
+|party| |ORGANIZATION| |0.002454353030771017| |-| |-|
+|missile| |OTHER| |0.0023524791467934847| |-| |-|
+|forces| |OTHER| |0.00226445565931499| |-| |-|
+|Moon Jae-in| |PERSON| |0.0022537996992468834| |https://en.wikipedia.org/wiki/Moon_Jae-in| |/m/0hncsd4|
+|intention| |OTHER| |0.002219287445768714| |-| |-|
+|AP| |ORGANIZATION| |0.002057035220786929| |-| |-|
+|test-launching| |EVENT| |0.002048935741186142| |-| |-|
+|tests| |OTHER| |0.0020304988138377666| |-| |-|
+|South Korea| |UNKNOWN| |0.0019921560306102037| |https://en.wikipedia.org/wiki/South_Korea| |/m/06qd3|
+|Antonio Guterres| |PERSON| |0.001965851755812764| |https://en.wikipedia.org/wiki/Antnio_Guterres| |/m/02dkv_|
+|arsenal| |OTHER| |0.001901002717204392| |-| |-|
+|Email| |OTHER| |0.00189154630061239| |-| |-|
+|arsenal| |OTHER| |0.001884865341708064| |-| |-|
+|table| |OTHER| |0.0018796995282173157| |-| |-|
+|negotiations| |EVENT| |0.0018796995282173157| |-| |-|
+|media| |OTHER| |0.001875489135272801| |-| |-|
+|situation| |OTHER| |0.0016852322733029723| |-| |-|
+|revolution| |EVENT| |0.0016442766645923257| |-| |-|
+|favor| |OTHER| |0.0016442766645923257| |-| |-|
+|suspension| |OTHER| |0.0016442766645923257| |-| |-|
+|tunnel collapses| |EVENT| |0.0016415779246017337| |-| |-|
+|subway stations| |LOCATION| |0.0015141868498176336| |-| |-|
+|news| |OTHER| |0.0013993977336212993| |-| |-|
+|Lu Kang| |PERSON| |0.0013948010746389627| |https://de.wikipedia.org/wiki/Lu_Kang_(Diplomat)| |/g/11b7q5sz05|
+|Korean| |UNKNOWN| |0.001302914461120963| |https://en.wikipedia.org/wiki/Korea| |/m/048fz|
+|testing facility| |LOCATION| |0.0012369782198220491| |-| |-|
+|Kim Dong-gil| |PERSON| |0.0012022699229419231| |-| |-|
+|Pyongyang| |LOCATION| |0.0011870514135807753| |https://en.wikipedia.org/wiki/Pyongyang| |/m/0cw5k|
+|test| |EVENT| |0.0011573588708415627| |-| |-|
+|economy| |OTHER| |0.0011423879768699408| |-| |-|
+|residents| |PERSON| |0.0011129167396575212| |-| |-|
+|Son Kum Chol| |PERSON| |0.0011080462718382478| |-| |-|
+|newspapers| |WORK_OF_ART| |0.0010973039316013455| |-| |-|
+|summit| |EVENT| |0.0010660745901986957| |-| |-|
+|edges| |OTHER| |0.001063803443685174| |-| |-|
+|Summit| |EVENT| |0.0010631508193910122| |-| |-|
+|The Associated Press| |ORGANIZATION| |0.0010524881072342396| |https://en.wikipedia.org/wiki/Associated_Press| |/m/0cv_2|
+|development| |OTHER| |0.000986322294920683| |-| |-|
+|denuclearization| |OTHER| |0.0009810238843783736| |-| |-|
+|Central Committee| |ORGANIZATION| |0.0009758503874763846| |https://en.wikipedia.org/wiki/Central_Committee| |/m/0223f|
+|ICBMs| |OTHER| |0.0009702214156277478| |https://en.wikipedia.org/wiki/Intercontinental_ballistic_missile| |/m/03vs5|
+|Punggye-ri| |LOCATION| |0.0009702214156277478| |https://en.wikipedia.org/wiki/Punggye-ri| |/m/0102qbw2|
+|Progress| |OTHER| |0.0009430861682631075| |-| |-|
+|news| |OTHER| |0.0009346805745735765| |-| |-|
+|missiles| |OTHER| |0.000874346646014601| |-| |-|
+|Yoon Young-chan| |PERSON| |0.0008632434182800353| |-| |-|
+|test site| |LOCATION| |0.0008522550342604518| |-| |-|
+|summit talks| |EVENT| |0.0008312694262713194| |-| |-|
+|progress| |OTHER| |0.0008301920024678111| |-| |-|
+|progress| |OTHER| |0.0008267605444416404| |-| |-|
+|resort| |LOCATION| |0.0007729677599854767| |-| |-|
+|World| |LOCATION| |0.0007720613502897322| |-| |-|
+|launches| |OTHER| |0.0007679350092075765| |-| |-|
+|all| |OTHER| |0.0007668842445127666| |-| |-|
+|Vipin Narang| |PERSON| |0.0007617303635925055| |-| |-|
+|lot| |OTHER| |0.0007594532798975706| |-| |-|
+|development| |OTHER| |0.0007442657370120287| |-| |-|
+|newspaper| |ORGANIZATION| |0.0007397555746138096| |-| |-|
+|news| |OTHER| |0.0007394665153697133| |-| |-|
+|bomb| |OTHER| |0.0007069103303365409| |-| |-|
+|Nuclear Tests| |OTHER| |0.0006798474350944161| |https://en.wikipedia.org/wiki/Nuclear_weapons_testing| |/m/01xqc2|
+|@realDonaldTrump| |OTHER| |0.0006685073603875935| |-| |-|
+|countries| |LOCATION| |0.0006489770603366196| |-| |-|
+|party| |ORGANIZATION| |0.0006225292454473674| |-| |-|
+|tone| |OTHER| |0.0006199663621373475| |-| |-|
+|tweet| |WORK_OF_ART| |0.0006184365483932197| |-| |-|
+|parties| |OTHER| |0.0006156828021630645| |-| |-|
+|message| |OTHER| |0.0006001688307151198| |-| |-|
+|Margot Wallstrom| |PERSON| |0.0005975618259981275| |https://en.wikipedia.org/wiki/Margot_Wallstrm| |/m/01_w9d|
+|statement| |WORK_OF_ART| |0.000587781541980803| |-| |-|
+|missiles| |OTHER| |0.0005871522007510066| |-| |-|
+|weapons| |OTHER| |0.0005871522007510066| |-| |-|
+|nothing| |OTHER| |0.000585890025831759| |-| |-|
+|Korean Peninsula| |LOCATION| |0.0005812558229081333| |https://en.wikipedia.org/wiki/Korean_Peninsula| |/m/01krx6|
+|party meeting| |EVENT| |0.0005702709895558655| |-| |-|
+|talks| |EVENT| |0.0005583259626291692| |-| |-|
+|progress| |OTHER| |0.0005547752953134477| |-| |-|
+|denuclearization| |OTHER| |0.0005547752953134477| |-| |-|
+|talks| |EVENT| |0.000554457597900182| |-| |-|
+|reports| |OTHER| |0.0005536942626349628| |-| |-|
+|development| |OTHER| |0.0005530612543225288| |-| |-|
+|economy| |OTHER| |0.0005530612543225288| |-| |-|
+|railway station| |LOCATION| |0.0005424413247965276| |-| |-|
+|items| |OTHER| |0.0005364354583434761| |-| |-|
+|tests| |OTHER| |0.0005336331087164581| |-| |-|
+|power| |OTHER| |0.0005328460247255862| |-| |-|
+|test site| |OTHER| |0.0005294039146974683| |-| |-|
+|world| |LOCATION| |0.0005208523361943662| |-| |-|
+|office| |ORGANIZATION| |0.000516527215950191| |-| |-|
+|decision| |OTHER| |0.0005162314628250897| |-| |-|
+|decision| |OTHER| |0.0005151706864126027| |-| |-|
+|road| |LOCATION| |0.0005137171829119325| |-| |-|
+|sanctions| |OTHER| |0.0005122198490425944| |-| |-|
+|economy| |OTHER| |0.0005122198490425944| |-| |-|
+|news| |OTHER| |0.0005079380935057998| |-| |-|
+|pressure| |OTHER| |0.0004985398263670504| |-| |-|
+|policy| |OTHER| |0.0004945411346852779| |-| |-|
+|concerns| |OTHER| |0.0004887701361440122| |-| |-|
+|reaction| |OTHER| |0.0004773530235979706| |-| |-|
+|resolution| |OTHER| |0.0004765690246131271| |-| |-|
+|force| |OTHER| |0.0004765690246131271| |-| |-|
+|leader| |PERSON| |0.0004764082550536841| |-| |-|
+|screens| |OTHER| |0.0004748269566334784| |-| |-|
+|media| |OTHER| |0.00047444977099075913| |-| |-|
+|summit negotiations| |EVENT| |0.00047427002573385835| |-| |-|
+|move| |EVENT| |0.000473147927550599| |-| |-|
+|people| |PERSON| |0.0004696249670814723| |-| |-|
+|dialogue| |OTHER| |0.0004694146919064224| |-| |-|
+|vow| |OTHER| |0.00046883555478416383| |-| |-|
+|reaction| |OTHER| |0.0004591063770931214| |-| |-|
+|reporters| |PERSON| |0.00045787281123921275| |-| |-|
+|prospects| |OTHER| |0.00045071745989844203| |-| |-|
+|concessions| |OTHER| |0.00044186043669469655| |-| |-|
+|speech| |EVENT| |0.0004347875656094402| |-| |-|
+|speech| |EVENT| |0.00043463677866384387| |-| |-|
+|People| |PERSON| |0.00043449015356600285| |-| |-|
+|television news screen| |OTHER| |0.00043449015356600285| |-| |-|
+|technology| |OTHER| |0.0004342086031101644| |-| |-|
+|email| |WORK_OF_ART| |0.00043407324119471014| |-| |-|
+|pledges| |OTHER| |0.0004339412844274193| |-| |-|
+|pledges| |OTHER| |0.0004339412844274193| |-| |-|
+|force| |OTHER| |0.0004318612045608461| |-| |-|
+|economy| |OTHER| |0.00043076014844700694| |-| |-|
+|pressure| |OTHER| |0.00041978832450695336| |-| |-|
+|safety| |OTHER| |0.0004171961627434939| |-| |-|
+|bargaining chip| |OTHER| |0.0004171961627434939| |-| |-|
+|rest| |PERSON| |0.0004171961627434939| |-| |-|
+|public| |PERSON| |0.0004170220345258713| |-| |-|
+|plans| |OTHER| |0.0004170220345258713| |-| |-|
+|city plazas| |LOCATION| |0.0004170220345258713| |-| |-|
+|dark| |OTHER| |0.0004170220345258713| |-| |-|
+|recognition| |OTHER| |0.00041653288644738495| |-| |-|
+|strength| |OTHER| |0.00041653288644738495| |-| |-|
+|position| |OTHER| |0.00041653288644738495| |-| |-|
+|nugget| |OTHER| |0.0004160404787398875| |-| |-|
+|dismantlement| |EVENT| |0.0004130517481826246| |-| |-|
+|destruction| |OTHER| |0.0004130517481826246| |-| |-|
+|arms| |OTHER| |0.0004130517481826246| |-| |-|
+|ally| |OTHER| |0.00041264481842517853| |-| |-|
+|results| |OTHER| |0.00041245311149396| |-| |-|
+|standards| |OTHER| |0.00041245311149396| |-| |-|
+|relations| |OTHER| |0.00041226844768971205| |-| |-|
+|consultations| |EVENT| |0.00041226844768971205| |-| |-|
+|weapons| |OTHER| |0.00040714317583478987| |-| |-|
+|peninsula| |LOCATION| |0.00040704390266910195| |-| |-|
+|midrange missile| |OTHER| |0.00040694657946005464| |-| |-|
+|missile| |OTHER| |0.000406851147999987| |-| |-|
+|analysts| |PERSON| |0.0003877809795085341| |-| |-|
+|acronym| |OTHER| |0.00038607200258411467| |-| |-|
+|Beijing| |LOCATION| |0.00038432131987065077| |https://en.wikipedia.org/wiki/Beijing| |/m/01914|
+|interest| |OTHER| |0.0003840572026092559| |-| |-|
+|development| |OTHER| |0.0003839635755866766| |-| |-|
+|concessions| |OTHER| |0.0003838717530015856| |-| |-|
+|talks| |EVENT| |0.0003838717530015856| |-| |-|
+|victory| |EVENT| |0.00038185546873137355| |-| |-|
+|goals| |OTHER| |0.00038172301719896495| |-| |-|
+|name| |OTHER| |0.0003813469666056335| |-| |-|
+|provocation| |EVENT| |0.0003813469666056335| |-| |-|
+|circumstances| |OTHER| |0.0003813469666056335| |-| |-|
+|nuclear proliferation expert| |PERSON| |0.00038122807745821774| |-| |-|
+|moratoria| |OTHER| |0.000381112186005339| |-| |-|
+|wiggle room| |LOCATION| |0.000381112186005339| |-| |-|
+|eye| |OTHER| |0.00037411265657283366| |-| |-|
+|threats| |OTHER| |0.00037206962588243186| |-| |-|
+|Florida| |LOCATION| |0.0003658189671114087| |https://en.wikipedia.org/wiki/Florida| |/m/02xry|
+|Mar-a-Lago| |LOCATION| |0.0003658189671114087| |https://en.wikipedia.org/wiki/Mar-a-Lago| |/m/052rh6|
+|Northern Side| |LOCATION| |0.00036318061756901443| |-| |-|
+|resolution| |OTHER| |0.0003574029542505741| |-| |-|
+|space rocket launches| |OTHER| |0.0003574029542505741| |-| |-|
+|summit| |EVENT| |0.00034533118014223874| |-| |-|
+|concept| |OTHER| |0.0003436823026277125| |-| |-|
+|arrangements| |OTHER| |0.00033016205998137593| |-| |-|
+|Foreign Ministry| |ORGANIZATION| |0.00032675714464858174| |https://en.wikipedia.org/wiki/Foreign_minister| |/m/01t_55|
+|resemblance| |OTHER| |0.0003260310331825167| |-| |-|
+|bomb| |OTHER| |0.00032587660825811327| |-| |-|
+|ambassador| |PERSON| |0.00032580160768702626| |-| |-|
+|material| |WORK_OF_ART| |0.0003038508875761181| |-| |-|
+|working meeting| |EVENT| |0.00029893440660089254| |-| |-|
+|Japanese| |LOCATION| |0.00029892780003137887| |-| |-|
+|definition| |OTHER| |0.0002863361150957644| |-| |-|
+|troops| |PERSON| |0.0002863361150957644| |-| |-|
+|steps| |OTHER| |0.0002862005203496665| |-| |-|
+|everything| |OTHER| |0.0002862005203496665| |-| |-|
+|sanctions regime| |OTHER| |0.0002862005203496665| |-| |-|
+|statement| |WORK_OF_ART| |0.00028441264294087887| |-| |-|
+|Xi Jinping| |PERSON| |0.00028251350158825517| |https://en.wikipedia.org/wiki/Xi_Jinping| |/m/06ff60|
+|Korean Peninsula Center| |ORGANIZATION| |0.0002772099105641246| |-| |-|
+|sanctions| |OTHER| |0.00026840230566449463| |-| |-|
+|denuclearization| |EVENT| |0.00026834275922738016| |-| |-|
+|way| |OTHER| |0.0002592880337033421| |-| |-|
+|establishment| |OTHER| |0.00025905994698405266| |-| |-|
+|decision| |OTHER| |0.0002498383109923452| |-| |-|
+|office| |ORGANIZATION| |0.00024978385772556067| |-| |-|
+|leaders| |PERSON| |0.00024973033578135073| |-| |-|
+|report| |WORK_OF_ART| |0.0002495253283996135| |-| |-|
+|Korean War| |EVENT| |0.0002464747813064605| |https://en.wikipedia.org/wiki/Korean_War| |/m/048n7|
+|Xinhua News Agency| |ORGANIZATION| |0.00024367225705645978| |https://en.wikipedia.org/wiki/Xinhua_News_Agency| |/m/01n13b|
+|Peking University| |ORGANIZATION| |0.00024345790734514594| |-| |-|
+|U.N. Security Council| |ORGANIZATION| |0.00024141230096574873| |https://en.wikipedia.org/wiki/United_Nations_Security_Council| |/m/07vnr|
+|path| |OTHER| |0.00024071127700153738| |-| |-|
+|testing| |OTHER| |0.00023444375256076455| |-| |-|
+|tests| |OTHER| |0.00023444375256076455| |-| |-|
+|ambassadors| |PERSON| |0.00022790244838688523| |-| |-|
+|table| |OTHER| |0.00022790244838688523| |-| |-|
+|dialogue| |OTHER| |0.00022780221479479223| |-| |-|
+|Jung Yeon-je| |PERSON| |0.00022536488540936261| |-| |-|
+|AFP| |ORGANIZATION| |0.00022536488540936261| |https://en.wikipedia.org/wiki/Agence_France-Presse| |/m/02dlk9|
+|Getty Images| |ORGANIZATION| |0.00022536488540936261| |https://en.wikipedia.org/wiki/Getty_Images| |/m/01wxvs|
+|Massachusetts Institute of Technology| |ORGANIZATION| |0.00022522256767842919| |https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology| |/m/04rwx|
+|summits| |EVENT| |0.0002169592771679163| |-| |-|
+|summits| |OTHER| |0.00021684053353965282| |-| |-|
+|pressure| |OTHER| |0.0002034564095083624| |-| |-|
+|order| |OTHER| |0.0002001981920329854| |-| |-|
+|behavior| |OTHER| |0.0002001529501285404| |-| |-|
+|task| |OTHER| |0.000200064925593324| |-| |-|
+|success| |OTHER| |0.000200064925593324| |-| |-|
+|peace| |OTHER| |0.000200064925593324| |-| |-|
+|telephone link| |OTHER| |0.00020002207020297647| |-| |-|
+|file footage| |WORK_OF_ART| |0.0001986705610761419| |-| |-|
+|Sweden| |LOCATION| |0.0001979601802304387| |https://en.wikipedia.org/wiki/Sweden| |/m/0d0vqn|
+|country| |LOCATION| |0.0001959257060661912| |-| |-|
+|party| |EVENT| |0.00018772461044136435| |-| |-|
+|announcement| |EVENT| |0.00018767264555208385| |-| |-|
+|isolation| |OTHER| |0.00017265357018914074| |-| |-|
+|American| |LOCATION| |0.00016915678861550987| |https://en.wikipedia.org/wiki/United_States| |/m/09c7w0|
+|U.S.| |LOCATION| |0.0001690377393970266| |-| |-|
+|denuclearization| |OTHER| |0.0001686461182544008| |-| |-|
+|sanctions| |OTHER| |0.0001685495226411149| |-| |-|
+|moves| |OTHER| |0.00016182844410650432| |-| |-|
+|CBS Interactive Inc| |ORGANIZATION| |0.00015842415450606495| |https://en.wikipedia.org/wiki/CBS_Interactive| |/m/0f25q1|
+|summit| |EVENT| |0.00014445888518821448| |-| |-|
+|United Nations| |ORGANIZATION| |0.00014188601926434785| |https://en.wikipedia.org/wiki/United_Nations| |/m/07t65|
+|All Rights Reserved| |OTHER| |0.0001344894990324974| |-| |-|
+|CBS News| |ORGANIZATION| |0.00013168306031730026| |https://en.wikipedia.org/wiki/CBS_News| |/m/01_8w2|
+|variety| |OTHER| |0.00012576016888488084| |-| |-|
+|desire| |OTHER| |0.00012568813690450042| |-| |-|
+|focus| |OTHER| |0.00012568813690450042| |-| |-|
+|strategy| |OTHER| |0.00012568813690450042| |-| |-|
+|beginning| |EVENT| |0.0001256533432751894| |-| |-|
+|news conference| |EVENT| |0.00012558606977108866| |-| |-|
+|Nikki Haley| |PERSON| |0.00010981653031194583| |https://en.wikipedia.org/wiki/Nikki_Haley| |/m/027fsyf|
+|silence| |OTHER| |0.00010191495675826445| |-| |-|
+|idea| |OTHER| |9.580190089764073e-05| |-| |-|
+|Moon| |OTHER| |8.449669257970527e-05| |-| |-|
+|Pakistan| |LOCATION| |7.426895172102377e-05| |https://en.wikipedia.org/wiki/Pakistan| |/m/05sb1|
+|India| |LOCATION| |7.426895172102377e-05| |https://en.wikipedia.org/wiki/India| |/m/03rk0|
+|Chinese| |LOCATION| |7.422737689921632e-05| |-| |-|
+|Errol Barnett| |PERSON| |5.52008677914273e-05| |https://en.wikipedia.org/wiki/Errol_Barnett| |/m/04jssb|

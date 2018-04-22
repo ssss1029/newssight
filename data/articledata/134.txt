@@ -1,0 +1,64 @@
+['the-new-york-times', '134', 'https://www.nytimes.com/by/nellie-bowles, http://www.nytimes.com/by/david-streitfeld', 'Electric Scooters Are Causing Havoc. This Man Is Shrugging It Off.', 'Travis VanderZanden, chief executive of electric scooter start-up Bird, is unperturbed by how San Francisco and other cities are in an uproar over the dockless vehicles.', 'https://www.nytimes.com/2018/04/20/technology/electric-scooters-are-causing-havoc-this-man-is-shrugging-it-off.html', 'https://static01.nyt.com/images/2018/04/21/business/21SCOOTERS-2/merlin_134164781_97d13740-9e17-4957-8854-cf9cb64117cb-facebookJumbo.jpg', '2018-04-21T16:29:09.206Z']
+By Nellie Bowles and David Streitfeld
+April 20, 2018
+VENICE, Calif.  Travis VanderZanden, the chief executive of electric scooter company Bird Rides , surveyed the new indoor park at his office one morning this week.
+While the space is still under construction, it will eventually have a winding path and a park scene, with benches and trees, he said.
+Image
+Electric scooter start-ups have spread from Santa Monica, Calif. to several cities around the country. Not everyone is happy about that.CreditColey Brown for The New York Times
+It will be made to take his little Bird scooters on scenic trips inside the confines of the 20,000-square-foot office situated near the Pacific Ocean and, more important to him, on Electric Avenue here in Venice, Calif.
+When you ride a Bird, it reminds you of being free, said the 39-year-old. It gives you freedom. Like you have wings.
+Mr. VanderZanden did not act like a man in the middle of a controversy. But he is here to disrupt  by any means necessary.
+Electric scooters have arrived en masse in cities like Los Angeles, San Francisco and Washington , with companies competing to offer the dockless and rechargeable vehicles. Leading the pack is Mr. VanderZandens Bird, with rivals including Spin and LimeBike. The start-ups are buoyed with more than $250 million in venture capital and a firm belief that electric scooters are the future of transportation, at least for a few speedy blocks.
+Image
+When you ride a Bird, it reminds you of being free, said Travis VanderZanden, chief executive of Bird.CreditColey Brown for The New York Times
+The premise of the start-ups is simple: People can rent the electric scooters for about a $1, plus 10 cents to 15 cents a minute to use, for so-called last-mile transportation. To recharge the scooters, the companies have chargers, or people who roam the streets looking to plug in the scooters at night, for which they get paid $5 to $20 per scooter.
+The problem is that cities have been shocked to discover that thousands of electric scooters have been dropped onto their sidewalks seemingly overnight. Often, the companies ignored all the usual avenues of getting city approval to set up shop. And since the scooters are dockless, riders can just grab one, go a few blocks and leave it wherever they want, causing a commotion on sidewalks and scenes of scooters strewn across wheelchair ramps and in doorways.
+So officials in cities like San Francisco and Santa Monica, Calif., have been sending cease-and-desist notices and holding emergency meetings. Some even filed charges against the scooter companies.
+They just appeared, said Mohammed Nuru, director of the San Francisco Public Works, which has been confiscating the scooters. I dont know who comes up with these ideas or where these people come from.
+Dennis Herrera, the San Francisco city attorney who sent cease-and-desist letters to Bird and others, described the chaos as a free for all.
+Mr. VanderZanden said given how enormous a social shift he believes his scooters are, he was not surprised it ruffled some feathers. But people would eventually adjust, he said.
+Go back to the early 1900s, and people would have a similar reaction to cars because they were used to horses, he said. They had to figure out where to park all the dockless cars.
+Image
+Electric scooters are often strewn across city sidewalks, including outside a San Francisco train station.CreditJason Henry for The New York Times
+Image
+People can rent the electric scooters for about a $1, plus 10 cents to 15 cents a minute to use.CreditColey Brown for The New York Times
+Image
+City officials have been sending cease-and-desist notices, holding emergency meetings, and filing charges against the scooter companies. CreditJason Henry for The New York Times
+If there is something familiar about these scooter companies strategy of just showing up in cities without permission, thats because that has now become a tried-and-true playbook for many start-ups. In its early days, Uber, the ride-hailing giant, also barreled into towns overnight to launch its service and only asked for forgiveness later .
+Cities dont know what it is, Caen Contee, the head of marketing for LimeBike, said of the arrival of electric scooters. They dont know how to permit it until theyve seen it.
+That has led to scenes like a crowded and contentious transportation committee meeting at San Francisco City Hall on Monday, where so many people wanted to speak about the scooters that everyone was limited to one minute each.
+David Valladares, who works as a charger for Bird, said the work helped supplement my income due to the large cost of living in the Bay Area.
+He urged the city to concentrate on deadly cars instead, noting, Ive never seen a scooter-on-scooter accident kill somebody.
+Image
+At a transportation committee meeting at San Francisco City Hall on Monday, people who wanted to speak about the scooters were limited to one minute each.CreditJason Henry for The New York Times
+Advocates for the disabled said they would have trouble moving through the streets if the scooters were zooming around or left on sidewalks. Advocates for older people said rampaging scooters would also encourage them to seek the safety of their homes, becoming shut-ins.
+Somebody whizzing along at 15 miles an hour, thats a symbol of entitlement and arrogance, said Fran Taylor, a retired medical reporter. She called the scooters a plot of the young people to kill off all us old farts so they can have our rent-controlled apartments.
+Back in Venice, Mr. VanderZanden seated himself upstairs in a barren conference room with a view of the parking lot. He leaned back and kept his eyes on his open computer screen as he talked. He wore his blond hair slicked back.
+He said efforts to regulate his Bird scooters differently than personally owned scooters was discrimination against the poor.
+Not everyone can afford their own electric scooter, he said. We shouldnt discriminate against people that are renting versus owning.
+Before launching Bird, Mr. VanderZanden had worked at tech companies and founded an on-demand carwash service called Cherry. Cherry was acquired by Lyft in 2013 and Mr. VanderZanden became chief operating officer at the ride-hailing company.
+Image
+Dennis Herrera, the San Francisco city attorney, described the influx of electric scooters as a free for all.CreditJason Henry for The New York Times
+He left Lyft in 2014 and joined Uber as vice president of growth that same year. Lyft sued him for breaching a confidentiality agreement and fiduciary duty. The litigation was eventually settled .
+Of his time at Uber, which has since been exposed as having had a growth-at-all-costs environment , Mr. VanderZanden said: I learned some good things, and I learned some bad things.
+He left Uber in 2016 and moved to Southern California. Last year, he founded Bird to bring electric scooters, already popular in cities across China, to America. To date, Bird has raised $115 million from investors, including Craft Ventures and Index Ventures. Mr. VanderZanden now has a team of more than 100 people.
+He likes wordplay. The scooters are called Birds. He calls a group of people riding on the scooters a flock. The areas where scooters are supposed to be generally kept are called nests. His moms name is Robin.
+We might have taken the birds too far, Mr. VanderZanden said.
+Bird initially rolled out its scooter-rental service in Santa Monica and now operates in seven cities. The company will not disclose how many scooters are in operation but said it has sent out 22,500 helmets to riders, as part of a compliance effort for cities that require riders to use helmets. Bird has also hit one million rides.
+Mr. VanderZanden said greater Los Angeles, including Santa Monica, has been especially excited about Bird and that the area has become a transportation tech hub.
+The citys been very receptive, he said.
+It actually has not.
+Image
+Bird initially rolled out its scooter-rental service in Santa Monica and now operates in seven cities, including San Francisco.CreditJason Henry for The New York Times
+In Santa Monica, the city attorneys office filed a nine-count misdemeanor criminal complaint against Bird and Mr. VanderZanden last year for operating a commercial scooter rental business without a mobile vending business license and for failing to comply with citations. The company pleaded no contest and paid a settlement of $300,000 .
+Those who work for Santa Monicas city government even went so far as to reach out to other towns to caution them about electric scooters.
+My brother and sister legislators from Santa Monica warned me that that phenomenon has hit their cities, said Aaron Peskin, who is on San Franciscos board of supervisors, the citys legislative branch. Referring to the scooter start-ups, he added, These people are out of their minds.
+Even other scooter companies dont seem to like each other much. When Mr. VanderZanden recently announced a pledge for scooter start-ups to sign that promised responsible growth and revenue sharing with cities, he did not get much of a response. Were still waiting for others to sign the pledge, he said.
+Mr. VanderZanden also feigns ignorance about all the controversy he has caused.
+Anything any citys asked us to do, aside from shut down, we do, he said.
+And even though Bird is handing out helmets, he said the requirement that scooter riders wear them is absurd unless all pedestrians have to wear helmets because cars are the real danger.
+Were not going to be happy till there are more Birds than cars, Mr. VanderZanden said.
+Nellie Bowles covers tech and internet culture. Follow her on Twitter: @nelliebowles
+David Streitfeld has written about technology and its effects for twenty years. In 2013, he was part of a team that won a Pulitzer Prize for Explanatory Reporting.
+A version of this article appears in print on , on Page B1 of the New York edition with the headline: Charged Up Over Scooters Despite Uproar. Order Reprints | Todays Paper | Subscribe
+Advertisement

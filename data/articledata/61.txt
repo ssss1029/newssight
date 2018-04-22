@@ -1,0 +1,24 @@
+['cnbc', '61', 'Todd Haselton', 'How to stay connected on your phone when you travel out of the country', "If you're planning a trip out of the country, here are your best options for staying connected.", 'https://www.cnbc.com/2018/04/21/phone-plans-for-international-travel.html', 'https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/03/26/105089604-Capture.1910x1000.JPG', '2018-04-21T17:15:02Z']
+CNBC.com
+Source: VistaJet
+There are a lot of options to choose from if you're traveling out of the country and still want to get access to the internet on your phone.
+Here's what you need to know:
+International data plans
+Each of the major wireless carriers in the United States offers add-on international data plans for your smartphone. This is your best bet if you want to keep the same number that you currently have so people can reach you easil. Also, prices have dropped considerably over the last several years, so you no longer have to pay too much to get the basics abroad.
+Here's what the US carriers offer:
+T-Mobile: "T-Mobile ONE" and Simple Choice North America unlimited plans include support for global text messaging and 2G (very slow) data in more than 140 countries. You'll pay for calls ($0.20/minute in Europe for example). You can sign up for faster speeds and pay more. T-Mobile offers faster speeds in Canada and Mexico.
+Verizon: Verizon has an option called TravelPass that lets you pay $5 per day in Canada and Mexico and $10 a day in more than 130 countries. You get 512MB of data per day, so don't plan on downloading movies or music or you'll quickly chew through that.
+AT&T: Like Verizon, AT&T offers an International Day Pass that provides text, talk and data in more than 100 countries. It also charges a flat rate of $60 for an AT&T Passport plan that includes calls, text and 1GB of data. Again, that's not a lot if you're downloading music or uploading lots of pictures. Overages cost $50 per additional 1GB of data, so consider AT&T's Passport 3GB plan if you think you'll be using more data.
+Sprint: Sprint, like T-Mobile, offers global roaming support with up to 2G data speeds (again, that's very slow) and text messages in more than 165 countries. Calls are also $0.20 per minute. You can add high-speed data with either a $5 one-day pass or a $25 7-day pass that offers speeds up to 4G.
+Google Fi
+If you travel a lot, you might want to consider a phone that supports Google Fi . Google's Fi network piggybacks on T-Mobile and Sprint's high-speed networks in the U.S. and also works in more than 170 countries abroad for the the exact same price $10/GB you'll pay when you're at home. Calls are $0.20 when you're abroad in one of those countries, and text messages are included
+Only some phones are supported , however, including the Google Pixel devices, the earlier Nexus 5X and Nexus 6P, and the Moto X4 and Android One Moto X4. .
+Buy a SIM card
+Another cheap way to stay connected when you're abroad is to buy a SIM card -- the card that pops into your phone and connects it to a wireless carrier -- when you land in another country. This is usually a lot cheaper than using one of these plans from a U.S. carrier.
+But it can be a little tricky if you don't know what you're doing.
+You'll need to make sure you're using an unlocked phone that works on other networks (visit your carrier store or call support to confirm if you're not sure).
+If you paid full price for your phone then chances are it's already unlocked.
+Also, all of Verizon's modern 4G LTE phones are unlocked from the get-go, which means they might work with another SIM card in another country. It comes down to whether your particular phone's radios work properly with global networks, however, so double check with Verizon before you go.
+Stick to Wi-Fi
+If you don't want to pay more when you're abroad, you can always try to rely on Wi-Fi networks. iMessage, FaceTime, Skype, WhatsApp and many other chat and video clients will all work just fine over Wi-Fi, just don't expect to be able to search for restaurants or directions when you're not in your hotel or another spot with a wireless network.
+show chapters
