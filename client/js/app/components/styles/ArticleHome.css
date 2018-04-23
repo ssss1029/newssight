@@ -1,0 +1,40 @@
+
+.ArticleHome {
+    width:80%;
+    margin-left: 10%;
+    padding-top: 50px;
+    background-color: #F0F8FF;
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.slideContainer {
+    height: 200px;
+    background-color: darkgrey;
+    width:400px;
+}
+
+.slideContent {
+    padding-top:20px;
+    padding-left:70px;
+    color: #000000;
+}
+
+.articleColLeft {
+    width:40%;
+    display:block;
+    float:left;      
+    margin-left: 40px;  
+}
+
+.articleColRight {
+    width:40%;
+    display:block;
+    float:right;       
+    margin-right:40px;   
+}
+
+.background {
+    width:100%;
+    height: 100%;
+}

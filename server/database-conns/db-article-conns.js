@@ -6,25 +6,86 @@ const connection = require('./connection');
 const tables     = global.TABLES;
 
 
- /**
-  * Updates the sources of the database with the given data
-  * @param {List} sources A list of all the article Objects info to update 
-  */
-function updateArticles(articles) {
-      throw Error("Not implemented");
-      
-      promises = []
-      for (index in articles) {
-          promises.push(_doUpdateQuery(articles[index]));
+const validEntityColumns = [
+      'articleId', 'type', 'target', 'salience'
+]
+
+const validArticleColumns = [
+      'id', 'title', 'author', 'sourceId', 'description', 'url', 'urlToImage', 'publisedAt', 'savedAt'
+]
+
+/**
+ * Returns a promise for a db query
+ * @param {*} query The SQL String to pass to the connection
+ * @param {*} connection MySQL connection
+ */
+function queryDatabase(query, connection) {
+      return new Promise(function(fulfill, reject) {
+          connection.query(query, function(error, results, fields) {
+              if (error) {
+                  reject(error)
+              } else {
+                  fulfill(results)
+              }
+          });
+      });
+  }
+
+/**
+ * Get all of the entities that match the given options
+ * @param {Object} options 
+ * @returns {Promise}
+ */
+function getEntities(options) {
+      if (options == null || options == undefined) options = {}
+
+      var whereClause = ""
+      for (var option in options) {
+            if (validEntityColumns.indexOf(option) > -1 ) {
+                  let escapedOption = connection.escape(option)
+                  let escaptedValue = connection.escape(options[option])
+                  whereClause = whereClause + "{0} = {1} AND ".format(escapedOption, escaptedValue);
+            }
       }
-  
-      return Promise.all(promises)  
+      
+      if (whereClause.length == 0) {
+            whereClause = "1"
+      } else {
+            whereClause = whereClause.slice(0, whereClause.length - 5) // Remove the last " AND "
+      }
+
+      var query = "SELECT * FROM {0} WHERE {1} ORDER BY target ASC".format(tables.ENTITIES, whereClause)
+      return queryDatabase(query, connection);
 }
 
-function _doUpdateQuery(article) {
+/**
+ * Get all of the articles that match the given options
+ * @param {Object} options 
+ * @returns {Promise}
+ */
+function getArticles(options) {
+      if (options == null || options == undefined) options = {}
 
+      var whereClause = ""
+      for (var option in options) {
+            if (validArticleColumns.indexOf(option) > -1) {
+                  let escapedOption = option
+                  let escaptedValue = connection.escape(options[option])  
+                  whereClause = whereClause + "{0} = {1} AND ".format(escapedOption, escaptedValue);                
+            }
+      }
+
+      if (whereClause.length == 0) {
+            whereClause = "1"
+      } else {
+            whereClause = whereClause.slice(0, whereClause.length - 5) // Remove the last " AND "
+      }
+      
+      var query = "SELECT * FROM {0} WHERE {1}".format(tables.ARTICLES, whereClause)
+      return queryDatabase(query, connection);
 }
 
 module.exports = {
-      updateArticles
+      getEntities,
+      getArticles
 }

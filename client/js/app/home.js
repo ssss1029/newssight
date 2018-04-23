@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import NavigationComponent from './components/NavigationComponent.js'
 import FooterComponent from './components/FooterComponent.js';
 import HomeJumbotron from './components/HomeJumbotron.js';
-
+import ArticleHome from './components/ArticleHome.js'
 window.app = window.app || {}
 
 if (typeof app.user != "undefined") {
@@ -14,5 +14,6 @@ if (typeof app.user != "undefined") {
 }
 
 ReactDOM.render(<NavigationComponent loggedIn={app.userLoggedIn} />, document.getElementById('nav'));
-ReactDOM.render(<HomeJumbotron loggedIn={app.userLoggedIn} />, document.getElementById('main'));
+ReactDOM.render(<HomeJumbotron loggedIn={app.userLoggedIn} />, document.getElementById('jumbotron'));
+ReactDOM.render(<ArticleHome loggedIn={app.userLoggedIn} />, document.getElementById("main"));
 ReactDOM.render(<FooterComponent loggedIn={app.userLoggedIn} />, document.getElementById('footer'));

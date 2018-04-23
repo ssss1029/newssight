@@ -353,3 +353,17 @@ table {
 	font-family: "Raleway";
 	font-size: 15px;
 }
+
+.slick-prev {
+	left:10px;
+	z-index: 100;
+}
+
+.slick-next {
+	right:10px;
+	z-index: 100;
+}
+
+.slick-dots {
+	bottom:10px;
+}

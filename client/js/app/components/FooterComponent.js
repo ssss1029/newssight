@@ -19,16 +19,16 @@ class FooterComponent extends React.Component {
                                 <li> Search </li>
                                 <li> Current Stories </li>
                                 <li> Trending Stories </li>
-                                <li> About Us </li>
+                                <li> More stuff </li>
                             </ul>
                         </div>
                     </div>
                     <div className="footerCol col-md-3">
                         <div className="quickLinksWrapper">
                             <ul className="quickLinks footerUL">
-                                <li className="title" >Company</li>
-                                <li> Contact Us </li>
-                                <li> About Us </li>
+                                <li className="title" > Some stuff </li>
+                                <li> Some more stuff </li>
+                                <li> Even more stuff </li>
                             </ul>
                         </div>
                     </div>
