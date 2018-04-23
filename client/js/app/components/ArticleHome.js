@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import styles from './styles/ArticleHome.css'
 import CSSModules from 'react-css-modules';
 import Slider from "react-slick";
+
+import ArticleSlide from './ArticleSlide.js';
+import styles from './styles/ArticleHome.css'
 
 console.log(styles)
 
@@ -22,56 +23,110 @@ class ArticleHome extends React.Component {
             slidesToScroll: 1
         };
 
-        var mystyles = {
-            backgroundImage: "url(" + "https://placeimg.com/640/480/tech" + ")"
-        }
-
         return (
             <div styleName='ArticleHome'>
-                <div style={mystyles} styleName="articleColLeft">
+                <div styleName="articleColLeft">
+                    <div styleName="entityLabel">
+                        Entity 1
+                    </div>
                     <Slider {...settings}>
-                        <div styleName="slideContainer">
-                            <div style={mystyles} styleName="background">
-                                <h3 styleName="slideContent">1</h3>
-                            </div>
-                        </div>
-                        <div style={mystyles} styleName="slideContainer">
-                            <div style={mystyles} styleName="background">
-                                    <h3 styleName="slideContent">2</h3>
-                                </div>
-                        </div>
-                        <div style={mystyles} styleName="slideContainer">
-                            <div style={mystyles} styleName="background">
-                                    <h3 styleName="slideContent">3</h3>
-                                </div>
-                        </div>
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description. This is the description. This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
+                    </Slider>
+                    <div styleName="entityLabel">
+                        Entity 1
+                    </div>
+                    <Slider {...settings}>
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
                     </Slider>
                 </div>
                 <div styleName="articleColRight">
+                    <div styleName="entityLabel">
+                        Entity 1
+                    </div>
                     <Slider {...settings}>
-                        <div styleName="slideContainer">
-                            <h3 styleName="slideContent">1</h3>
-                        </div>
-                        <div styleName="slideContainer">
-                            <h3 styleName="slideContent">2</h3>
-                        </div>
-                        <div styleName="slideContainer">
-                            <h3 styleName="slideContent">3</h3>
-                        </div>
-                        <div styleName="slideContainer">
-                            <h3 styleName="slideContent">4</h3>
-                        </div>
-                        <div styleName="slideContainer">
-                            <h3 styleName="slideContent">5</h3>
-                        </div>
-                        <div styleName="slideContainer">
-                            <h3 styleName="slideContent">6</h3>
-                        </div>
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
+                    </Slider>
+                    <div styleName="entityLabel">
+                        Entity 1
+                    </div>
+                    <Slider {...settings}>
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
+                        <ArticleSlide 
+                            backgroundImageURL="https://placeimg.com/820/640/tech"
+                            title="Hello There!"
+                            description="This is the description"
+                            URL="https://placeimg.com/820/640/tech"
+                        />
                     </Slider>
                 </div>
             </div>
         );
     }
+}
+
+function getEntityTitle(entity) {
+    return (
+        <div styleName="entityLabel">
+            Entity 1
+        </div>
+    )
+}
+
+function getSlider(articles) {
+    return (
+        <Slider {...settings}>
+            <ArticleSlide 
+                backgroundImageURL="https://placeimg.com/820/640/tech"
+                title="Hello There!"
+                description="This is the description"
+                URL="https://placeimg.com/820/640/tech"
+            />
+            <ArticleSlide 
+                backgroundImageURL="https://placeimg.com/820/640/tech"
+                title="Hello There!"
+                description="This is the description"
+                URL="https://placeimg.com/820/640/tech"
+            />
+        </Slider>
+    )
 }
 
 export default CSSModules(ArticleHome, styles);
