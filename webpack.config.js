@@ -6,7 +6,8 @@ module.exports = {
     entry: {
         login : ['./client/js/app/login.js', 'whatwg-fetch'],
         home : ['./client/js/app/home.js', 'whatwg-fetch'],
-        landing : ['./client/js/app/landing.js', 'whatwg-fetch']
+        landing : ['./client/js/app/landing.js', 'whatwg-fetch'],
+        article : ['./client/js/app/article.js', 'whatwg-fetch']
     },
     
     output: {

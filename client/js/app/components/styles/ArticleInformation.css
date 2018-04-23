@@ -1,0 +1,49 @@
+.ArticleInformation {
+    width:80%;
+    background-color: purple;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: table;
+    min-height: 350px;
+}
+
+.AILeft {
+    width: 50%;
+    background-color: #ecf0f1;
+    display: table-cell;
+    padding:20px;
+}
+
+.AIRight {
+    width: 50%;
+    height: auto;
+    background-color: #ecf0f1;
+    display: table-cell;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4em;
+    margin-bottom:5px;
+    color:#000000;
+}
+
+.author {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    margin-bottom:40px;
+    color:#000000;
+}
+
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color:#000000;
+}
+
+.gotoarticlebutton {
+    margin-top: 40px;
+    float:right;
+}
