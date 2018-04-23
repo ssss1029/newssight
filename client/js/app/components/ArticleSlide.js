@@ -19,7 +19,9 @@ class ArticleSlide extends React.Component {
 
     render() {
         var style = {
-            backgroundImage: "url(" + this.props.backgroundImageURL + ")"
+            backgroundImage: "url(" + this.props.backgroundImageURL + ")",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
         }
 
         return (
