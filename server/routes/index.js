@@ -15,6 +15,11 @@ router.get('/login', function(req, res, next) {
     res.render('login');
 });
 
+router.get('/logout', function(req, res, next) {
+    req.logout();
+    res.redirect('/login')
+})
+
 router.get('/article', function(req, res, next) {
     if (req.query.articleId == undefined || req.query.articleId == null) {
         res.redirect('/home')

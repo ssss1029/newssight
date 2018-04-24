@@ -50,10 +50,7 @@ function getHomepageArticles(req, res) {
         for (var entity in uniqueEntities) {
             if (entity.indexOf("Donald") > -1) {
                 debug("Keyword {0} has matched with {1} entity results".format(entity, uniqueEntities[entity].length))
-//                debug(uniqueEntities[entity])
             }
-
-//            debug("Keyword {0} has matched with {1} entity results".format(entity, uniqueEntities[entity].length))
         }
 
         // Finished mapping String -> Array of entities.

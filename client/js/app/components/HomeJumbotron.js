@@ -10,11 +10,17 @@ import CSSModules from 'react-css-modules';
 
 class HomeJumbotron extends React.Component {
     render() {
+        var greeting = "News Home"
+        
+        if (this.props.user != undefined && this.props.user.first_name != undefined) {
+            greeting = "Welcome to your News Home, " + this.props.user.first_name;
+        }
+
         return (
             <div styleName='HomeJumbotron'>
                 <div styleName="titleDiv">
                     <h1 styleName="title">
-                        News Home
+                        {greeting}
                     </h1>
                 </div>
                 <div styleName="messageDiv">
