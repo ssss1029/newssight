@@ -21,7 +21,9 @@ module.exports = {
 To run:
 
 ```
-$ npm start
+$ npm installl
+$ npm run webpack
+$ npm run nodemon
 ```
 
 The app should be live at `http://127.0.0.1:3000/`
@@ -137,4 +139,3 @@ Data is not being updated day-to-day right now. The data that the app is working
  - `/data/articles.csv` contains metadata about each article
  - `/data/articledata/<ID>.txt` contains data about article `<ID>` and its full scraped contents
  - `/data/entityanalysis/<ID>.txt` contains GCP's entity analysis data for article `<ID>`
- 
