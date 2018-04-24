@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const { loginRedirects } = require('./util')
 const { getArticles } = require("../database-conns/db-article-conns")
+const { getEntities } = require("../database-conns/db-article-conns")
 
 router.get('/', function(req, res, next) {  
     res.render('landing');
@@ -25,9 +26,16 @@ router.get('/article', function(req, res, next) {
             res.redirect('/home')
             return;
         }
-
-        res.expose(results[0], 'app.article', 'article')
-        res.render('article')
+        
+        return results[0]
+    }).then(function(article) {
+        var articleId = article.id;
+        console.log("ARTICLE = {0}".format(articleId))
+        getEntities({articleId : articleId}).then(function(result) {
+            article["entities"] = result;
+            res.expose(article, 'app.article', 'article')
+            res.render('article')    
+        })
     })
 })
 

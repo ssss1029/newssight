@@ -21,16 +21,17 @@ class ArticleSlide extends React.Component {
         var style = {
             backgroundImage: "url(" + this.props.backgroundImageURL + ")",
             backgroundSize: "cover",
-            backgroundPosition: "center"
+            backgroundPosition: "center",
+            position: "relative"
         }
 
         return (
             <div styleName="slideContainer" onClick={this.handleClick.bind(this)}>
                 <div style={style} styleName="background">
-                    <div styleName="title">
-                        <h3>{this.props.title}</h3>
-                    </div>
                     <div styleName="description">
+                        <div styleName="title">
+                            <h3>{this.props.title}</h3>
+                        </div>
                         <h2>{this.props.description}</h2>
                     </div>
                 </div>

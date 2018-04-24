@@ -1,0 +1,61 @@
+.SourceArticleInfo {
+    margin-top:50px;
+    width:80%;
+    margin-left: 10%;
+    background-color: #ecf0f1;
+    min-height:400px;
+    margin-bottom:50px;
+    display: table;
+}
+
+.SAIRight {
+    display: table-cell;
+    width:50%;
+    height: 100%;
+    background-color: #7f8c8d;
+    color:#FFFFFF;
+    padding:30px;
+}
+
+.SAILeft {
+    display: table-cell;
+    width:50%;
+    height: 100%;
+    background-color: #ecf0f1;
+    color:#000000;
+    padding:30px;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4em;
+    margin-bottom:5px;
+    color: inherit;
+    margin-bottom: 20px;
+}
+
+.entityRating {
+    display: table;
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.entity {
+    display: table-cell;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    padding: 15px;
+    color: #000000;
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 50%;
+}
+
+.bar {
+    display: table-cell;
+    width:50%;
+    background-color: #bdc3c7;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}

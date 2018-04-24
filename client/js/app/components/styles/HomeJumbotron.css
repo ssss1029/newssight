@@ -1,7 +1,10 @@
 
 .HomeJumbotron {
     width: 100%;
-    background-color: #FFFFFF;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFFFFF;
     padding-left: 10%;
     padding-right:50px;
     padding-top:100px;
@@ -16,15 +19,15 @@
 
 .messageDiv {
     margin-top:40px;
-    width:60%;
+    width:40%;
 }
 
 .title {
-    color: #1A237E;
+    color: #FFFFFF;
     font-size: 3em;
 }
 
 .message {
-    color: #1A237E;
+    color: #FFFFFF;
     font-size: 1em;
 }

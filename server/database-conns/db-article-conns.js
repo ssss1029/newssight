@@ -42,7 +42,7 @@ function getEntities(options) {
       var whereClause = ""
       for (var option in options) {
             if (validEntityColumns.indexOf(option) > -1 ) {
-                  let escapedOption = connection.escape(option)
+                  let escapedOption = option
                   let escaptedValue = connection.escape(options[option])
                   whereClause = whereClause + "{0} = {1} AND ".format(escapedOption, escaptedValue);
             }

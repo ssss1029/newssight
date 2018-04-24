@@ -10,7 +10,6 @@ import styles from './styles/ArticleHome.css'
 /**
  * The list of all articles for the home page
  */
-
 class ArticleHome extends React.Component {
 
     /**
@@ -42,7 +41,7 @@ class ArticleHome extends React.Component {
                     backgroundImageURL={entity.articles.articles[a].urlToImage}
                     title={entity.articles.articles[a].sourceId.toUpperCase() + ": " + entity.articles.articles[a].title}
                     description={entity.articles.articles[a].description}
-                    URL={entity.articles.articles[a].url}
+                    URL={"http://127.0.0.1:3000/article?articleId=" + entity.articles.articles[a].id}
                 />
             )
         }

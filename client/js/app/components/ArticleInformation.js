@@ -15,21 +15,23 @@ class ArticleInformation extends React.Component {
 
     render() {
         var rightStyle = {
-            backgroundImage: "url(https://placeimg.com/800/500/tech)"
+            backgroundImage: "url(" + this.props.article.urlToImage +")",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
         }
         return (
             <div styleName='ArticleInformation'>
                 <div styleName="AILeft">
                     <div styleName="title"> {/* Title */}
-                        Rick and Morty
+                        {this.props.article.title}
                     </div>
                     <div styleName="author"> {/* Author */}
-                        BY: Dwight Schrute, @ BBC
+                        BY: {this.props.article.author}, @ {this.props.article.sourceId}
                     </div>
                     <div styleName="description"> {/* Description */}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et neque euismod, ullamcorper lacus condimentum, vulputate eros. Aenean porttitor dapibus sollicitudin. In placerat nisl sit amet turpis lacinia bibendum. Suspendisse sed libero a magna malesuada vulputate. Maecenas eu tellus at tellus volutpat efficitur. Cras quis ipsum bibendum, fringilla nisi eget, convallis risus. Nam finibus consectetur nulla et molestie.                        
+                        {this.props.article.description}
                     </div>
-                    <a styleName="gotoarticlebutton" className="waves-effect waves-light btn"><i className="material-icons right">input</i>Go to article</a>
+                    <a target="_blank" href={this.props.article.url} styleName="gotoarticlebutton" className="waves-effect waves-light btn"><i className="material-icons right">input</i>Go to article</a>
                 </div>
                 <div styleName="AIRight" style={rightStyle}></div>
             </div>
