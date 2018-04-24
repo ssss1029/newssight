@@ -1,6 +1,5 @@
 # Newssight Overview
-Node.js app, similar to Polisight. This is still in the works.
-README coming soon!
+Node, React, and MySQL app, similar to Polisight. This is still in the works.
 
 # Setup
 
@@ -76,7 +75,7 @@ POST `/api/user/login`
  - Looks for POST parameters: `username` and `password`. Login, cookie creation, and session handling are handled by Passport.js
 
 GET `/api/articles/homepage`
- - Returns all the top articles that belong on the homepage organized by entities and sorted by mmost salient.
+ - Returns all the top articles that belong on the homepage organized by entities and sorted by most salient.
     ```json
     [
         [
@@ -119,7 +118,7 @@ Where each articleObect looks like the following:
 
 # User endpoints
  `/logout`
- - Loggs out the current logged in passport user. 
+ - Logs out the current logged in passport user. 
 
  `/`
  - Landing page for the app. Contains some pretty pictures and a catchy tagline about the future. 
@@ -139,3 +138,5 @@ Data is not being updated day-to-day right now. The data that the app is working
  - `/data/articles.csv` contains metadata about each article
  - `/data/articledata/<ID>.txt` contains data about article `<ID>` and its full scraped contents
  - `/data/entityanalysis/<ID>.txt` contains GCP's entity analysis data for article `<ID>`
+
+See `https://github.com/ssss1029/newssight-scraper` for instructions on how to update the `/data` folder
