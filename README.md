@@ -4,7 +4,18 @@ README coming soon!
 
 # Setup
 
-Coming soon
+ - Create a new file, called `addons-process-env.js`. This file contains global variables that the app requires to run. Here is an example of what if should look like:
+
+ ```js
+
+module.exports = {
+	/** ENVIRONMENT */
+	NODE_ENV : 'development',
+	DEBUG : 'newssight:*',
+}
+ ```
+
+ - Make sure MySQL is up and running. Modify `/server/database-conns/connection.js` and the connection object in `/server/database-conns/db-setup.js` with the correct credentials. Right now, it tries to connect to `localhost` with the username and pass: `localhost` and `localhost`.
 
 # Running
 To run:
@@ -119,3 +130,11 @@ Where each articleObect looks like the following:
 
  `/article?article=<articleId>`
  - Provides information about the article with id `articleId`. Contains Title, picture, link, source, description, and entities. Will also contains comments in the future (separated out into positive and negative ones?)
+
+# Data
+
+Data is not being updated day-to-day right now. The data that the app is working off of is currently in `/data`. 
+ - `/data/articles.csv` contains metadata about each article
+ - `/data/articledata/<ID>.txt` contains data about article `<ID>` and its full scraped contents
+ - `/data/entityanalysis/<ID>.txt` contains GCP's entity analysis data for article `<ID>`
+ 
