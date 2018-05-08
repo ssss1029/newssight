@@ -7,7 +7,10 @@ const debug    = require('debug')('newssight:users-conns');
 const debugERR = require('debug')('newssight:ERROR:users-conns');
       debugERR.color = require('debug').colors[5] /* RED */
 const connection = require('./connection')
+const queryDatabase = require("./utils").queryDatabase;
 const tables     = global.TABLES;
+
+const userTableColumns = ["id", "username", "password", "first_name", "last_name", "email"]
 
  /**
   * Remove all the users in the database
@@ -15,15 +18,7 @@ const tables     = global.TABLES;
   */
  function removeAllUsers() {
     var query = "DELETE FROM users WHERE 1";
-    return new Promise(function (fulfill, reject) {
-        connection.query(query, function(err, results, fields) {
-            if (err) {
-                reject(err);
-            } else {
-                fulfill(results);
-            }
-        });
-    });
+    return queryDatabase(query, connection)
  }
 
  /**
@@ -53,15 +48,7 @@ const tables     = global.TABLES;
  function getUser(userSettings) {
     var query = _appendWhereClauses(userSettings, "SELECT * FROM {0} WHERE".format(tables.USERS)); 
     debug("Query = {0}".format(query))
-    return new Promise(function(fulfill, reject) {
-        connection.query(query, function(error, results, fields) {
-            if (error) {
-                reject(error)
-            } else {
-                fulfill(results);
-            }
-        });
-    })
+    return queryDatabase(query, connection)
  }
 
  /**
@@ -71,11 +58,10 @@ const tables     = global.TABLES;
   */
  function _appendWhereClauses(userSettings, query) {
     var whereClauses = []
-    var acceptableClauses = ["id", "username", "password", "first_name", "last_name", "email"]
 
     // Create all clauses
     for (var key in userSettings) {
-        if (acceptableClauses.indexOf(key) > -1) {
+        if (userTableColumns.indexOf(key) > -1) {
             // Acceptable to add into the query
             whereClauses.push("{0} = {1}".format(key, connection.escape(userSettings[key])))
         }

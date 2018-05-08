@@ -1,4 +1,6 @@
 
+const queryDatabase = require('./utils').queryDatabase;
+
 const debug    = require('debug')('newssight:articles-conns');
 const debugERR = require('debug')('newssight:ERROR:articles-conns');
       debugERR.color = require('debug').colors[5] /* RED */
@@ -13,23 +15,6 @@ const validEntityColumns = [
 const validArticleColumns = [
       'id', 'title', 'author', 'sourceId', 'description', 'url', 'urlToImage', 'publisedAt', 'savedAt'
 ]
-
-/**
- * Returns a promise for a db query
- * @param {*} query The SQL String to pass to the connection
- * @param {*} connection MySQL connection
- */
-function queryDatabase(query, connection) {
-      return new Promise(function(fulfill, reject) {
-          connection.query(query, function(error, results, fields) {
-              if (error) {
-                  reject(error)
-              } else {
-                  fulfill(results)
-              }
-          });
-      });
-  }
 
 /**
  * Get all of the entities that match the given options

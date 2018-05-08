@@ -7,6 +7,7 @@ const debug    = require('debug')('newssight:source-conns');
 const debugERR = require('debug')('newssight:ERROR:source-conns');
       debugERR.color = require('debug').colors[5] /* RED */
 const connection = require('./connection')
+const queryDatabase = require('./utils').queryDatabase;
 const tables     = global.TABLES;
 
 acceptedColumns = new Set(["id", "name", "desciption", "url", "category", "country", "language", "topSortByAvailable", "latestSortByAvailable", "popularSortByAvailable"])
@@ -27,16 +28,20 @@ acceptedColumns = new Set(["id", "name", "desciption", "url", "category", "count
     
     debug("Querying for sources: {0}".format(query));
     
-    return new Promise(function(fulfill, reject) {
-        connection.query(query, function(error, result, fields) {
-            if (error) {
-                reject(error)
-            } else {
-                result = result.length == 0 ? "None" : result
-                fulfill(result);
-            }
-        })
-    });
+    return queryDatabase(query, connection)
+ }
+
+ /**
+  * Updates the sources of the database with the given data
+  * @param {List} sources A list of all the source Objects info to update 
+  */
+ function updateSources(sources) {
+    promises = []
+    for (index in sources) {
+        promises.push(_doUpdateQuery(sources[index]));
+    }
+
+    return Promise.all(promises)
  }
 
  /**
@@ -94,19 +99,6 @@ acceptedColumns = new Set(["id", "name", "desciption", "url", "category", "count
     return clauses
  }
 
-
- /**
-  * Updates the sources of the database with the given data
-  * @param {List} sources A list of all the source Objects info to update 
-  */
- function updateSources(sources) {
-    promises = []
-    for (index in sources) {
-        promises.push(_doUpdateQuery(sources[index]));
-    }
-
-    return Promise.all(promises)
- }
 
  /**
   * Returns the number of properties in the given object

@@ -11,6 +11,8 @@ const mysql    = require('mysql');
 const fs       = require('fs');
 const path     = require('path');
 const parse    = require('csv-parse');
+
+const queryDatabase = require('./utils').queryDatabase;
 const debug    = require('debug')('newssight:database-conns');
 const debugERR = require('debug')('newssight:ERROR:database-conns');
       debugERR.color = require('debug').colors[5] /* RED */
@@ -79,22 +81,6 @@ function setupDb(options) {
     })
 }
 
-/**
- * Returns a promise for a db query
- * @param {*} query The SQL String to pass to the connection
- * @param {*} connection MySQL connection
- */
-function queryDatabase(query, connection) {
-    return new Promise(function(fulfill, reject) {
-        connection.query(query, function(error, results, fields) {
-            if (error) {
-                reject(error)
-            } else {
-                fulfill(results)
-            }
-        });
-    });
-}
 
 /**
  * Initializes all the articles in the database using articlesFilepath
