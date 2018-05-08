@@ -24,9 +24,19 @@ const connection = mysql.createConnection({
 
 const articlesFilepath = 'data/articles.csv' // Filepath
 const entityData = 'data/entityanalysis/'    // Directory path
+const articleCSVcols = [ // The columns for the articles data CSV initialization file
+    "sourceId",
+    "articleId",
+    "author",
+    "title",
+    "description",
+    "url",
+    "urlToImage",
+    "publishedAt"
+]
 
 const tables     = global.TABLES;
-const articleTableColumns = [
+const articleTableColumns = [ // The columns for the articles table in the database
     "sourceId",
     "id",
     "author",
@@ -37,6 +47,7 @@ const articleTableColumns = [
     "publishedAt",
     "savedAt"
 ]
+
 
 /**
  * Sets up the database
@@ -91,16 +102,6 @@ function queryDatabase(query, connection) {
 function initArticles() {
     const input  = fs.createReadStream(articlesFilepath)
     // The columns that exist in the CSV file
-    const articleCSVcols = [
-        "sourceId",
-        "articleId",
-        "author",
-        "title",
-        "description",
-        "url",
-        "urlToImage",
-        "publishedAt"
-    ]
 
     const parser = parse({
         delimiter: " ",
