@@ -53,8 +53,7 @@ const articleTableColumns = [ // The columns for the articles table in the datab
 
 /**
  * Sets up the database
- * @param {Object} options 
- * @param {String} options.scripts The locations for the scripts to be executed
+ * @param {Object} options : {scripts : ["<path1>", "<path2>"]}
  */
 function setupDb(options) {
     debug("Clearing and resetting up DB");
@@ -141,6 +140,9 @@ function initArticles() {
     
 }
 
+/**
+ * Initializes all the entities in the database using entityData (folder path)
+ */
 function initEntities() {
     const q1 = "SELECT id FROM {0}".format(tables.ARTICLES)
     queryDatabase(q1, connection).then(function(results) {
@@ -171,30 +173,10 @@ function initEntities() {
 }
 
 /**
- * Adds the given entity to tablename under PK articleId
- * @param {String} tablename 
- * @param {Object} entity 
+ * 
+ * @param {String} entityFile 
  * @param {Integer} articleId 
  */
-function addEntityToTable(tablename, entity, articleId) {
-    const entityTableCols = [
-        "articleId", "type", "target", "salience"
-    ]
-
-    const values = [
-        articleId, entity["type"], entity["target"], entity["salience"]
-    ]
-
-    for (var v = 0; v < values.length; v++) {
-        values[v] = connection.escape(values[v])
-    }
-
-    var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE type=type;".format(tablename, entityTableCols, values);
-    queryDatabase(query, connection).catch(function(error) {
-        debugERR(error)
-    })
-}
-
 function parseEntityCSV(entityFile, articleId) {
     return new Promise(function(resolve, reject) {
         var parser = parse({
@@ -221,6 +203,31 @@ function parseEntityCSV(entityFile, articleId) {
             resolve({articleId : articleId, entities : records})
         })
     });
+}
+
+/**
+ * Adds the given entity to tablename under PK articleId
+ * @param {String} tablename 
+ * @param {Object} entity : {type: <String>, target: <String>, salience: <String>}
+ * @param {Integer} articleId 
+ */
+function addEntityToTable(tablename, entity, articleId) {
+    const entityTableCols = [
+        "articleId", "type", "target", "salience"
+    ]
+
+    const values = [
+        articleId, entity["type"], entity["target"], entity["salience"]
+    ]
+
+    for (var v = 0; v < values.length; v++) {
+        values[v] = connection.escape(values[v])
+    }
+
+    var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE type=type;".format(tablename, entityTableCols, values);
+    queryDatabase(query, connection).catch(function(error) {
+        debugERR(error)
+    })
 }
 
 /**

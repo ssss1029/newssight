@@ -1,10 +1,9 @@
 
-const queryDatabase = require('./utils').queryDatabase;
-
 const debug    = require('debug')('newssight:articles-conns');
 const debugERR = require('debug')('newssight:ERROR:articles-conns');
       debugERR.color = require('debug').colors[5] /* RED */
 const connection = require('./connection');
+const queryDatabase = require('./utils').queryDatabase;
 const tables     = global.TABLES;
 
 
@@ -18,7 +17,7 @@ const validArticleColumns = [
 
 /**
  * Get all of the entities that match the given options
- * @param {Object} options 
+ * @param {Object} options : {articleId : 2, type : "ORGANIZATION"}
  * @returns {Promise}
  */
 function getEntities(options) {
@@ -45,7 +44,7 @@ function getEntities(options) {
 
 /**
  * Get all of the articles that match the given options
- * @param {Object} options 
+ * @param {Object} options : {sourceId : "cnn", author : "Billy Jones"}
  * @returns {Promise}
  */
 function getArticles(options) {

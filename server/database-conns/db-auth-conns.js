@@ -1,5 +1,6 @@
 /**
  * Contains all connections to the database for authentication purposes.
+ * This will not contain much since express-mysql-session + passport will handle most of this stuff.
  */
 
 
