@@ -90,6 +90,7 @@ function queryDatabase(query, connection) {
  */
 function initArticles() {
     const input  = fs.createReadStream(articlesFilepath)
+    // The columns that exist in the CSV file
     const articleCSVcols = [
         "sourceId",
         "articleId",
@@ -125,10 +126,18 @@ function initArticles() {
             
             var values = ""
             for (var i = 0; i < articleCSVcols.length; i++) {
-                values = values + connection.escape(record[articleCSVcols[i]]) + ", "
+                if (articleCSVcols[i] == "publishedAt") {
+                    // Do some reformatting for the publishedAt column
+                    let publishedAt = record[articleCSVcols[i]]
+                    values = values + connection.escape(convertToMySQLTime(publishedAt)) + ", "
+                } else {
+                    // No reformatting needed for this column
+                    values = values + connection.escape(record[articleCSVcols[i]]) + ", "
+                }
             }
-
-            values = values + connection.escape(Date().toString());
+            
+            // The last column in articleTableColumns is the savedAt column. Do this on our own.
+            values = values + connection.escape(getMySQLTime());
 
             var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE title=title;".format(tables.ARTICLES, columns, values);
             queryDatabase(query, connection).catch(function(error) {
@@ -225,6 +234,21 @@ function parseEntityCSV(entityFile, articleId) {
             resolve({articleId : articleId, entities : records})
         })
     });
+}
+
+/**
+ * Converts str to MySQL time. Assumes str is in the NewsAPI UTC+0000 format.
+ * @param {String} str 
+ */
+function convertToMySQLTime(str) {
+    return str.replace('T', ' ').replace('Z', '').slice(0, 19);
+}
+
+/**
+ * Returns the current MySQL-formatted time
+ */
+function getMySQLTime() {
+    return new Date().toISOString().slice(0, 19).replace('T', ' ');
 }
 
 if (!module.parent) {

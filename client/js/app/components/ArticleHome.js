@@ -25,8 +25,8 @@ class ArticleHome extends React.Component {
     }
 
     /**
-     * Returns a slider that uses the given articles.
-     * @param {List} articles 
+     * Returns a slider that uses the given entity.
+     * @param {List} entity 
      */
     getSlider(entity) {
         var slider = [] // List containing: title and <Slider /> object
