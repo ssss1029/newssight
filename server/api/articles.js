@@ -16,6 +16,7 @@ const LEV_MATCH_THRESHOLD = 0.83;
 /**
  * Get the articles that belong on the home page, grouped by the top trendin entities
  * Right now, we pull ALL articles from the DB, and group them by trending entities
+ * TODO: Move this logic to the worker. Maybe add a new table of entities? Not sure.
  *      
  *      result: {
  *          entity1: [ {<article1 information>}, {<article2 information>} ... ],
@@ -27,6 +28,7 @@ const LEV_MATCH_THRESHOLD = 0.83;
  * @param {Object} res 
  */
 function getHomepageArticles(req, res) {
+    console.log("Getting homepage articles")
     Articles.getEntities().then(function(result) {
         var uniqueEntities = {}
         for (var i = 0; i < result.length; i++) {
@@ -44,12 +46,6 @@ function getHomepageArticles(req, res) {
                 // We have a brand new one here
                 uniqueEntities[current["target"]] = []
                 uniqueEntities[current["target"]].push(current)
-            }
-        }
-
-        for (var entity in uniqueEntities) {
-            if (entity.indexOf("Donald") > -1) {
-                debug("Keyword {0} has matched with {1} entity results".format(entity, uniqueEntities[entity].length))
             }
         }
 
