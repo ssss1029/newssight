@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var sha1 = require('sha1');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var expose = require('express-expose');
 	app = expose(app);
 
@@ -133,7 +133,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   if (err) {
-    console.log(err);
+    console.log("ERROR: " + err.message + ", for more information look inside app.js error handler, and console.log(err) instead of err.message");
   }
 
   // render the error page

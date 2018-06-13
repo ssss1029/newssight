@@ -96,20 +96,20 @@ function initArticles() {
     });
 
     return new Promise(function(fulfill, reject) {
-        input.pipe(parser).on('readable', function() {
-            var record = parser.read();
-            if (record == undefined || record == undefined){
-                return; // Don't continue if no actual new data
+        input.pipe(parser).on('data', function(record) {
+            if (record == undefined || record == null){
+				return; // Don't continue if no actual new data
             } else if (record[articleTableColumns[0]] == articleTableColumns[0]) {
-                return; // Skip the first line
+				return; // Skip the first line
             }
 
             var columns = ""
             for (var i = 0; i < articleTableColumns.length; i++) {
                 columns = columns + articleTableColumns[i] + ", "
             }
-            columns = columns.slice(0, columns.length - 2) // Remove trailing space and comma
             
+            columns = columns.slice(0, columns.length - 2) // Remove trailing space and comma
+                        
             var values = ""
             for (var i = 0; i < articleCSVcols.length; i++) {
                 if (articleCSVcols[i] == "publishedAt") {
@@ -122,11 +122,14 @@ function initArticles() {
                 }
             }
             
+			
             // The last column in articleTableColumns is the savedAt column. Do this on our own.
             values = values + connection.escape(getMySQLTime());
-
+			
+			// This can be done in parallel since db setup is all inserts
             var query = "INSERT INTO {0} ({1}) VALUES ({2}) ON DUPLICATE KEY UPDATE title=title;".format(tables.ARTICLES, columns, values);
-            queryDatabase(query, connection).catch(function(error) {
+
+	    	queryDatabase(query, connection).catch(function(error) {
                 debugERR(error)
             })
         }).on('error', function(error) {
@@ -190,11 +193,9 @@ function parseEntityCSV(entityFile, articleId) {
         
         var records = []
 
-        entityFile.pipe(parser).on('readable', function() {
-            while(record = parser.read()) {
-                if (records.length < 10) {
-                    records.push(record)
-                }
+        entityFile.pipe(parser).on('data', function(record) {
+            if (records.length < 10) {
+                records.push(record)
             }
         }).on('error', function(err) {
             debugERR(err)

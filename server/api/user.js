@@ -11,7 +11,7 @@ const debugERR = require('debug')('newssight:ERROR:/api/makeUser');
       debugERR.color = require('debug').colors[5] /* RED */
 
 
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var saltRounds = 10 // To use with bcrypt
 var sha1 = require("sha1");
 
