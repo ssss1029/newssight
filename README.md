@@ -14,7 +14,7 @@ module.exports = {
 }
  ```
 
- - Make sure MySQL is up and running. Modify `/server/database-conns/connection.js` and the connection object in `/server/database-conns/db-setup.js` with the correct credentials. Right now, it tries to connect to `localhost` with the username and pass: `localhost` and `localhost`.
+ - Make sure MySQL is up and running. Modify `/server/database-conns/connection.js` and the connection object in `/server/database-conns/db-setup.js` with the correct credentials. Right now, it tries to connect to `localhost` with the username and pass: `developer` and `developer`.
 
 # Running
 To run:
