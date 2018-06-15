@@ -3,6 +3,10 @@ const { loginRedirects } = require('./util')
 const { getArticles } = require("../database-conns/db-article-conns")
 const { getEntities } = require("../database-conns/db-article-conns")
 
+/**
+ * This file contains all client routes. (NO API routes)
+ */
+
 router.get('/', function(req, res, next) {  
     res.render('landing');
 });

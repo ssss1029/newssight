@@ -1,6 +1,6 @@
 
 /**
- * The API router
+ * The API router. No client routes should be here
  */
 
 var express = require('express');
